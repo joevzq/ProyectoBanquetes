@@ -198,7 +198,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(427, 369);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnNEXT);
             this.Controls.Add(this.btnAnterior);
             this.Controls.Add(this.grbOne);
             this.Controls.Add(this.label2);
