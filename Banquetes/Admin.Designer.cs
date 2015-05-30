@@ -50,7 +50,7 @@
             // lstPorRealizar
             // 
             this.lstPorRealizar.FormattingEnabled = true;
-            this.lstPorRealizar.Location = new System.Drawing.Point(29, 93);
+            this.lstPorRealizar.Location = new System.Drawing.Point(29, 78);
             this.lstPorRealizar.Name = "lstPorRealizar";
             this.lstPorRealizar.Size = new System.Drawing.Size(159, 238);
             this.lstPorRealizar.TabIndex = 0;
@@ -67,7 +67,7 @@
             // lblPorRealizar
             // 
             this.lblPorRealizar.AutoSize = true;
-            this.lblPorRealizar.Location = new System.Drawing.Point(29, 77);
+            this.lblPorRealizar.Location = new System.Drawing.Point(29, 62);
             this.lblPorRealizar.Name = "lblPorRealizar";
             this.lblPorRealizar.Size = new System.Drawing.Size(64, 13);
             this.lblPorRealizar.TabIndex = 2;
@@ -76,7 +76,7 @@
             // lblRealizados
             // 
             this.lblRealizados.AutoSize = true;
-            this.lblRealizados.Location = new System.Drawing.Point(191, 77);
+            this.lblRealizados.Location = new System.Drawing.Point(191, 62);
             this.lblRealizados.Name = "lblRealizados";
             this.lblRealizados.Size = new System.Drawing.Size(59, 13);
             this.lblRealizados.TabIndex = 3;
@@ -85,7 +85,7 @@
             // lstRealizados
             // 
             this.lstRealizados.FormattingEnabled = true;
-            this.lstRealizados.Location = new System.Drawing.Point(194, 93);
+            this.lstRealizados.Location = new System.Drawing.Point(194, 78);
             this.lstRealizados.Name = "lstRealizados";
             this.lstRealizados.Size = new System.Drawing.Size(159, 238);
             this.lstRealizados.TabIndex = 4;
@@ -93,7 +93,7 @@
             // lstCancelados
             // 
             this.lstCancelados.FormattingEnabled = true;
-            this.lstCancelados.Location = new System.Drawing.Point(359, 93);
+            this.lstCancelados.Location = new System.Drawing.Point(359, 78);
             this.lstCancelados.Name = "lstCancelados";
             this.lstCancelados.Size = new System.Drawing.Size(159, 238);
             this.lstCancelados.TabIndex = 6;
@@ -102,7 +102,7 @@
             // 
             this.lblCancelados.AutoSize = true;
             this.lblCancelados.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCancelados.Location = new System.Drawing.Point(356, 77);
+            this.lblCancelados.Location = new System.Drawing.Point(356, 62);
             this.lblCancelados.Name = "lblCancelados";
             this.lblCancelados.Size = new System.Drawing.Size(63, 13);
             this.lblCancelados.TabIndex = 5;
@@ -111,9 +111,9 @@
             // panel1
             // 
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.panel1.Location = new System.Drawing.Point(194, -5);
+            this.panel1.Location = new System.Drawing.Point(513, -5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(375, 27);
+            this.panel1.Size = new System.Drawing.Size(56, 27);
             this.panel1.TabIndex = 7;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -123,7 +123,7 @@
             this.lblEventos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(88)))), ((int)(((byte)(70)))));
             this.lblEventos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEventos.ForeColor = System.Drawing.Color.White;
-            this.lblEventos.Location = new System.Drawing.Point(22, 50);
+            this.lblEventos.Location = new System.Drawing.Point(22, 37);
             this.lblEventos.Name = "lblEventos";
             this.lblEventos.Size = new System.Drawing.Size(69, 18);
             this.lblEventos.TabIndex = 0;
@@ -131,16 +131,17 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(29, 337);
+            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.Location = new System.Drawing.Point(29, 322);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 35);
             this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar Evento";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(113, 337);
+            this.btnEditar.Location = new System.Drawing.Point(113, 322);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 35);
             this.btnEditar.TabIndex = 9;
@@ -152,7 +153,7 @@
             this.grpFecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.grpFecha.Controls.Add(this.btnGuardar);
             this.grpFecha.Controls.Add(this.dateTimePicker1);
-            this.grpFecha.Location = new System.Drawing.Point(303, 337);
+            this.grpFecha.Location = new System.Drawing.Point(303, 322);
             this.grpFecha.Name = "grpFecha";
             this.grpFecha.Size = new System.Drawing.Size(215, 83);
             this.grpFecha.TabIndex = 10;
@@ -179,7 +180,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(29, 397);
+            this.btnSalir.Location = new System.Drawing.Point(29, 382);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 11;
@@ -191,7 +192,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(549, 431);
+            this.ClientSize = new System.Drawing.Size(549, 418);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.grpFecha);
             this.Controls.Add(this.btnEditar);
@@ -207,7 +208,6 @@
             this.Controls.Add(this.lstPorRealizar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Admin";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Banquetes Haquers";
             this.grpFecha.ResumeLayout(false);
             this.ResumeLayout(false);

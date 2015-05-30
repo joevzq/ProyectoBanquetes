@@ -52,7 +52,7 @@
             this.lblCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(88)))), ((int)(((byte)(70)))));
             this.lblCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCancelar.ForeColor = System.Drawing.Color.White;
-            this.lblCancelar.Location = new System.Drawing.Point(12, 9);
+            this.lblCancelar.Location = new System.Drawing.Point(12, 12);
             this.lblCancelar.Name = "lblCancelar";
             this.lblCancelar.Size = new System.Drawing.Size(132, 18);
             this.lblCancelar.TabIndex = 0;

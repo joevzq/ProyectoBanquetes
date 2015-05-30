@@ -1,0 +1,41 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Banquetes
+{
+    public partial class Menu : Form
+    {
+        private Button btnTEST1 = new Button();
+        public Menu()
+        {
+            InitializeComponent();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(System.Drawing.ColorTranslator.FromHtml("#D85846"));
+            System.Drawing.Graphics formGraphics;
+            formGraphics = this.CreateGraphics();
+            formGraphics.FillRectangle(myBrush, new Rectangle(5, 9, 305, 22));
+            myBrush.Dispose();
+            formGraphics.Dispose();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(System.Drawing.ColorTranslator.FromHtml("#D85846"));
+            System.Drawing.Graphics formGraphics;
+            formGraphics = this.CreateGraphics();
+            formGraphics.FillRectangle(myBrush, new Rectangle(349, 9, 220, 22));
+            myBrush.Dispose();
+            formGraphics.Dispose();
+        }
+    }
+}
