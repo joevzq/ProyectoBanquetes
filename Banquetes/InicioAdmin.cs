@@ -10,11 +10,15 @@ using System.Windows.Forms;
 
 namespace Banquetes
 {
-    public partial class Form1 : Form
+    public partial class InicioAdmin : Form
     {
-        public Form1()
+        public InicioAdmin()
         {
             InitializeComponent();
         }
+
+       
+
+       
     }
 }
