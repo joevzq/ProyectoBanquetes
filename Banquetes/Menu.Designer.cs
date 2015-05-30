@@ -668,9 +668,9 @@
             this.lblTuMenu.ForeColor = System.Drawing.Color.White;
             this.lblTuMenu.Location = new System.Drawing.Point(321, 12);
             this.lblTuMenu.Name = "lblTuMenu";
-            this.lblTuMenu.Size = new System.Drawing.Size(125, 18);
+            this.lblTuMenu.Size = new System.Drawing.Size(73, 18);
             this.lblTuMenu.TabIndex = 2;
-            this.lblTuMenu.Text = "Menú x invitado";
+            this.lblTuMenu.Text = "Tu menú";
             // 
             // pnlTuMenu
             // 
@@ -743,6 +743,7 @@
             this.btnContinuar.TabIndex = 27;
             this.btnContinuar.Text = "Continuar";
             this.btnContinuar.UseVisualStyleBackColor = true;
+            this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);
             // 
             // Menu
             // 

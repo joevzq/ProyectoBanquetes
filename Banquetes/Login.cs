@@ -10,26 +10,21 @@ using System.Windows.Forms;
 
 namespace Banquetes
 {
-    public partial class Entrada : Form
+    public partial class Login : Form
     {
-        public Entrada()
+        public Login()
         {
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
         {
             System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(System.Drawing.ColorTranslator.FromHtml("#D85846"));
             System.Drawing.Graphics formGraphics;
             formGraphics = this.CreateGraphics();
-            formGraphics.FillRectangle(myBrush, new Rectangle(5, 9, 543, 22));
+            formGraphics.FillRectangle(myBrush, new Rectangle(5, 9, 220, 22));
             myBrush.Dispose();
             formGraphics.Dispose();
-        }
-
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

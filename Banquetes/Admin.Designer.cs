@@ -41,8 +41,8 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.grpFecha = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnSalir = new System.Windows.Forms.Button();
             this.grpFecha.SuspendLayout();
             this.SuspendLayout();
@@ -153,30 +153,31 @@
             this.grpFecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.grpFecha.Controls.Add(this.btnGuardar);
             this.grpFecha.Controls.Add(this.dateTimePicker1);
-            this.grpFecha.Location = new System.Drawing.Point(303, 322);
+            this.grpFecha.Location = new System.Drawing.Point(359, 322);
             this.grpFecha.Name = "grpFecha";
-            this.grpFecha.Size = new System.Drawing.Size(215, 83);
+            this.grpFecha.Size = new System.Drawing.Size(159, 83);
             this.grpFecha.TabIndex = 10;
             this.grpFecha.TabStop = false;
             this.grpFecha.Text = "Editar Fecha";
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(6, 19);
-            this.dateTimePicker1.MaxDate = new System.DateTime(2019, 12, 25, 0, 0, 0, 0);
-            this.dateTimePicker1.MinDate = new System.DateTime(2015, 3, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 0;
-            // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(131, 45);
+            this.btnGuardar.Location = new System.Drawing.Point(78, 52);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 25);
             this.btnGuardar.TabIndex = 1;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(6, 21);
+            this.dateTimePicker1.MaxDate = new System.DateTime(2019, 12, 25, 0, 0, 0, 0);
+            this.dateTimePicker1.MinDate = new System.DateTime(2015, 3, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(147, 20);
+            this.dateTimePicker1.TabIndex = 0;
             // 
             // btnSalir
             // 
