@@ -16,7 +16,7 @@ namespace Banquetes
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CancelarEvento());
+            Application.Run(new Entrada());
         }
     }
 }
