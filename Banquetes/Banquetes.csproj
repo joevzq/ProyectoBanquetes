@@ -62,6 +62,12 @@
     <Compile Include="Entrada.Designer.cs">
       <DependentUpon>Entrada.cs</DependentUpon>
     </Compile>
+    <Compile Include="InicioCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioCliente.Designer.cs">
+      <DependentUpon>InicioCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Entrada.resx">
       <DependentUpon>Entrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InicioCliente.resx">
+      <DependentUpon>InicioCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Invitados.resx">
       <DependentUpon>Invitados.cs</DependentUpon>
