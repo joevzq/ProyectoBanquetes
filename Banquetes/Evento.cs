@@ -12,6 +12,7 @@ namespace Banquetes
 {
     public partial class Evento : Form
     {
+        Invitados inv = new Invitados();
         public Evento()
         {
             InitializeComponent();
@@ -25,6 +26,12 @@ namespace Banquetes
             formGraphics.FillRectangle(myBrush, new Rectangle(5, 9, 570, 22));
             myBrush.Dispose();
             formGraphics.Dispose();
+        }
+
+        private void btnAnterior_Click(object sender, EventArgs e)
+        {
+            inv.Show();
+            this.Hide();
         }
     }
 }
