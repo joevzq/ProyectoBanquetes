@@ -39,9 +39,11 @@
             this.lblEventos = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpFecha = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.groupBox1.SuspendLayout();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.grpFecha.SuspendLayout();
             this.SuspendLayout();
             // 
             // lstPorRealizar
@@ -118,11 +120,11 @@
             // 
             this.lblEventos.AutoSize = true;
             this.lblEventos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(88)))), ((int)(((byte)(70)))));
-            this.lblEventos.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEventos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEventos.ForeColor = System.Drawing.Color.White;
             this.lblEventos.Location = new System.Drawing.Point(22, 50);
             this.lblEventos.Name = "lblEventos";
-            this.lblEventos.Size = new System.Drawing.Size(67, 18);
+            this.lblEventos.Size = new System.Drawing.Size(69, 18);
             this.lblEventos.TabIndex = 0;
             this.lblEventos.Text = "Eventos";
             // 
@@ -144,30 +146,53 @@
             this.btnEditar.Text = "Editar Fecha de Evento";
             this.btnEditar.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // grpFecha
             // 
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Location = new System.Drawing.Point(264, 337);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 100);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.grpFecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.grpFecha.Controls.Add(this.btnGuardar);
+            this.grpFecha.Controls.Add(this.dateTimePicker1);
+            this.grpFecha.Location = new System.Drawing.Point(303, 337);
+            this.grpFecha.Name = "grpFecha";
+            this.grpFecha.Size = new System.Drawing.Size(215, 83);
+            this.grpFecha.TabIndex = 10;
+            this.grpFecha.TabStop = false;
+            this.grpFecha.Text = "Editar Fecha";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(3, 16);
+            this.dateTimePicker1.Location = new System.Drawing.Point(6, 19);
+            this.dateTimePicker1.MaxDate = new System.DateTime(2019, 12, 25, 0, 0, 0, 0);
+            this.dateTimePicker1.MinDate = new System.DateTime(2015, 3, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 0;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(131, 45);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 25);
+            this.btnGuardar.TabIndex = 1;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(29, 397);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 11;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(680, 468);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(549, 431);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.grpFecha);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lblEventos);
@@ -181,7 +206,7 @@
             this.Controls.Add(this.lstPorRealizar);
             this.Name = "Admin";
             this.Text = "Admin";
-            this.groupBox1.ResumeLayout(false);
+            this.grpFecha.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,7 +225,9 @@
         private System.Windows.Forms.Label lblEventos;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpFecha;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
