@@ -12,8 +12,6 @@ namespace Banquetes
 {
     public partial class Cliente : Form
     {
-        Menu menu = new Menu();
-        Invitados inv = new Invitados();
         public Cliente()
         {
             InitializeComponent();
@@ -27,18 +25,6 @@ namespace Banquetes
             formGraphics.FillRectangle(myBrush, new Rectangle(5, 9, 270, 22));
             myBrush.Dispose();
             formGraphics.Dispose();
-        }
-
-        private void btnAnterior_Click(object sender, EventArgs e)
-        {
-            menu.Show();
-            this.Hide();
-        }
-
-        private void btnSiguiente_Click(object sender, EventArgs e)
-        {
-            inv.Show();
-            this.Hide();
         }
     }
 }
