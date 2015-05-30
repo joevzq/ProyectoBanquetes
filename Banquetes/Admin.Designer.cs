@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             this.lstPorRealizar = new System.Windows.Forms.ListBox();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.lblPorRealizar = new System.Windows.Forms.Label();
@@ -204,8 +205,10 @@
             this.Controls.Add(this.lblPorRealizar);
             this.Controls.Add(this.lblBienvenido);
             this.Controls.Add(this.lstPorRealizar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Admin";
-            this.Text = "Admin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Banquetes Haquers";
             this.grpFecha.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
