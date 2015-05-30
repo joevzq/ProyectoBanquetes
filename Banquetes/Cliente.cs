@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Banquetes
 {
-    public partial class Entrada : Form
+    public partial class RegistroCliente : Form
     {
-        public Entrada()
+        public RegistroCliente()
         {
             InitializeComponent();
         }
@@ -22,14 +22,13 @@ namespace Banquetes
             System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(System.Drawing.ColorTranslator.FromHtml("#D85846"));
             System.Drawing.Graphics formGraphics;
             formGraphics = this.CreateGraphics();
-            formGraphics.FillRectangle(myBrush, new Rectangle(5, 9, 542, 22));
+            formGraphics.FillRectangle(myBrush, new Rectangle(20, 49, 520, 20));
             myBrush.Dispose();
             formGraphics.Dispose();
         }
 
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+      
+
+       
     }
 }
