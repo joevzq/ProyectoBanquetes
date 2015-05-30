@@ -88,6 +88,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="images\delete.png" />
+    <None Include="images\descarga.png" />
     <Content Include="images\redpad-lock-hi.png" />
     <Content Include="images\user-red.png" />
   </ItemGroup>
