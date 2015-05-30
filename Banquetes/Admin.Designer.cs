@@ -110,7 +110,7 @@
             // panel1
             // 
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.panel1.Location = new System.Drawing.Point(168, 9);
+            this.panel1.Location = new System.Drawing.Point(194, -5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(375, 27);
             this.panel1.TabIndex = 7;
