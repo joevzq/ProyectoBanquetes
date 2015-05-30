@@ -12,6 +12,7 @@ namespace Banquetes
 {
     public partial class Menu : Form
     {
+        Entrada ent = new Entrada();
         private Button btnTEST1 = new Button();
         public Menu()
         {
@@ -36,6 +37,16 @@ namespace Banquetes
             formGraphics.FillRectangle(myBrush, new Rectangle(315, 9, 216, 22));
             myBrush.Dispose();
             formGraphics.Dispose();
+        }
+
+        private void picTEST1_Click(object sender, EventArgs e)
+        {
+            ent.ShowDialog();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

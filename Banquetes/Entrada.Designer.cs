@@ -138,6 +138,7 @@
             this.btnRegresar.TabIndex = 24;
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // Entrada
             // 
@@ -154,6 +155,7 @@
             this.Controls.Add(this.picEntrada);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblNombreEntrada);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Entrada";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Información del platillo";

@@ -26,5 +26,10 @@ namespace Banquetes
             myBrush.Dispose();
             formGraphics.Dispose();
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

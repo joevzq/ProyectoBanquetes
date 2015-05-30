@@ -407,6 +407,7 @@
             // 
             // picTEST1
             // 
+            this.picTEST1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picTEST1.Image = ((System.Drawing.Image)(resources.GetObject("picTEST1.Image")));
             this.picTEST1.Location = new System.Drawing.Point(6, 6);
             this.picTEST1.Name = "picTEST1";
@@ -414,6 +415,7 @@
             this.picTEST1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picTEST1.TabIndex = 1;
             this.picTEST1.TabStop = false;
+            this.picTEST1.Click += new System.EventHandler(this.picTEST1_Click);
             // 
             // PlatosFuertes
             // 
@@ -731,6 +733,7 @@
             this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnContinuar
             // 
