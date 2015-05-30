@@ -33,11 +33,6 @@
             this.lblMenu = new System.Windows.Forms.Label();
             this.tabMenu = new System.Windows.Forms.TabControl();
             this.Entradas = new System.Windows.Forms.TabPage();
-            this.numericUpDown12 = new System.Windows.Forms.NumericUpDown();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -59,26 +54,6 @@
             this.checkTEST1 = new System.Windows.Forms.CheckBox();
             this.picTEST1 = new System.Windows.Forms.PictureBox();
             this.PlatosFuertes = new System.Windows.Forms.TabPage();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.Postres = new System.Windows.Forms.TabPage();
             this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
             this.label15 = new System.Windows.Forms.Label();
@@ -110,8 +85,6 @@
             this.btnContinuar = new System.Windows.Forms.Button();
             this.tabMenu.SuspendLayout();
             this.Entradas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -120,15 +93,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTEST1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTEST1)).BeginInit();
-            this.PlatosFuertes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.Postres.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -175,11 +139,6 @@
             // Entradas
             // 
             this.Entradas.AutoScroll = true;
-            this.Entradas.Controls.Add(this.numericUpDown12);
-            this.Entradas.Controls.Add(this.label23);
-            this.Entradas.Controls.Add(this.label24);
-            this.Entradas.Controls.Add(this.checkBox12);
-            this.Entradas.Controls.Add(this.pictureBox12);
             this.Entradas.Controls.Add(this.numericUpDown3);
             this.Entradas.Controls.Add(this.label5);
             this.Entradas.Controls.Add(this.label6);
@@ -208,63 +167,22 @@
             this.Entradas.Text = "Entradas";
             this.Entradas.UseVisualStyleBackColor = true;
             // 
-            // numericUpDown12
+            // numericUpDown3
             // 
-            this.numericUpDown12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDown12.Location = new System.Drawing.Point(211, 201);
-            this.numericUpDown12.Name = "numericUpDown12";
-            this.numericUpDown12.Size = new System.Drawing.Size(33, 20);
-            this.numericUpDown12.TabIndex = 25;
-            this.numericUpDown12.Value = new decimal(new int[] {
+            this.numericUpDown3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numericUpDown3.Location = new System.Drawing.Point(216, 159);
+            this.numericUpDown3.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDown3.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(170, 196);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(25, 13);
-            this.label23.TabIndex = 24;
-            this.label23.Text = "$45";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(52, 214);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(66, 13);
-            this.label24.TabIndex = 23;
-            this.label24.Text = "pato, francia";
-            // 
-            // checkBox12
-            // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(52, 196);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(89, 17);
-            this.checkBox12.TabIndex = 22;
-            this.checkBox12.Text = "Pato Frances";
-            this.checkBox12.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(6, 190);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 21;
-            this.pictureBox12.TabStop = false;
-            // 
-            // numericUpDown3
-            // 
-            this.numericUpDown3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDown3.Location = new System.Drawing.Point(211, 155);
             this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(33, 20);
+            this.numericUpDown3.Size = new System.Drawing.Size(28, 20);
             this.numericUpDown3.TabIndex = 20;
             this.numericUpDown3.Value = new decimal(new int[] {
             1,
@@ -275,9 +193,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(170, 150);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(214, 145);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(25, 13);
+            this.label5.Size = new System.Drawing.Size(20, 12);
             this.label5.TabIndex = 19;
             this.label5.Text = "$45";
             // 
@@ -286,18 +205,18 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(52, 168);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 13);
+            this.label6.Size = new System.Drawing.Size(71, 13);
             this.label6.TabIndex = 18;
-            this.label6.Text = "pato, francia";
+            this.label6.Text = "[Ingredientes]";
             // 
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
             this.checkBox3.Location = new System.Drawing.Point(52, 150);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(89, 17);
+            this.checkBox3.Size = new System.Drawing.Size(109, 17);
             this.checkBox3.TabIndex = 17;
-            this.checkBox3.Text = "Pato Frances";
+            this.checkBox3.Text = "[Nombre Entrada]";
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // pictureBox3
@@ -313,9 +232,19 @@
             // numericUpDown2
             // 
             this.numericUpDown2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDown2.Location = new System.Drawing.Point(211, 109);
+            this.numericUpDown2.Location = new System.Drawing.Point(216, 113);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(33, 20);
+            this.numericUpDown2.Size = new System.Drawing.Size(28, 20);
             this.numericUpDown2.TabIndex = 15;
             this.numericUpDown2.Value = new decimal(new int[] {
             1,
@@ -326,9 +255,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(170, 104);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(214, 99);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(25, 13);
+            this.label3.Size = new System.Drawing.Size(20, 12);
             this.label3.TabIndex = 14;
             this.label3.Text = "$45";
             // 
@@ -337,18 +267,18 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(52, 122);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 13);
+            this.label4.Size = new System.Drawing.Size(71, 13);
             this.label4.TabIndex = 13;
-            this.label4.Text = "pato, francia";
+            this.label4.Text = "[Ingredientes]";
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Location = new System.Drawing.Point(52, 104);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(89, 17);
+            this.checkBox2.Size = new System.Drawing.Size(109, 17);
             this.checkBox2.TabIndex = 12;
-            this.checkBox2.Text = "Pato Frances";
+            this.checkBox2.Text = "[Nombre Entrada]";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // pictureBox2
@@ -364,9 +294,19 @@
             // numericUpDown1
             // 
             this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDown1.Location = new System.Drawing.Point(211, 63);
+            this.numericUpDown1.Location = new System.Drawing.Point(216, 67);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(33, 20);
+            this.numericUpDown1.Size = new System.Drawing.Size(28, 20);
             this.numericUpDown1.TabIndex = 10;
             this.numericUpDown1.Value = new decimal(new int[] {
             1,
@@ -377,9 +317,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(170, 58);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(214, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 13);
+            this.label1.Size = new System.Drawing.Size(20, 12);
             this.label1.TabIndex = 9;
             this.label1.Text = "$45";
             // 
@@ -388,18 +329,18 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(52, 76);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 13);
+            this.label2.Size = new System.Drawing.Size(71, 13);
             this.label2.TabIndex = 8;
-            this.label2.Text = "pato, francia";
+            this.label2.Text = "[Ingredientes]";
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(52, 58);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(89, 17);
+            this.checkBox1.Size = new System.Drawing.Size(109, 17);
             this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "Pato Frances";
+            this.checkBox1.Text = "[Nombre Entrada]";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
@@ -415,7 +356,7 @@
             // numTEST1
             // 
             this.numTEST1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numTEST1.Location = new System.Drawing.Point(211, 17);
+            this.numTEST1.Location = new System.Drawing.Point(216, 21);
             this.numTEST1.Maximum = new decimal(new int[] {
             10,
             0,
@@ -427,7 +368,7 @@
             0,
             0});
             this.numTEST1.Name = "numTEST1";
-            this.numTEST1.Size = new System.Drawing.Size(33, 20);
+            this.numTEST1.Size = new System.Drawing.Size(28, 20);
             this.numTEST1.TabIndex = 5;
             this.numTEST1.Value = new decimal(new int[] {
             1,
@@ -438,9 +379,10 @@
             // lblPrice1
             // 
             this.lblPrice1.AutoSize = true;
-            this.lblPrice1.Location = new System.Drawing.Point(170, 12);
+            this.lblPrice1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice1.Location = new System.Drawing.Point(214, 7);
             this.lblPrice1.Name = "lblPrice1";
-            this.lblPrice1.Size = new System.Drawing.Size(25, 13);
+            this.lblPrice1.Size = new System.Drawing.Size(20, 12);
             this.lblPrice1.TabIndex = 4;
             this.lblPrice1.Text = "$45";
             // 
@@ -449,18 +391,18 @@
             this.lblIng1.AutoSize = true;
             this.lblIng1.Location = new System.Drawing.Point(52, 30);
             this.lblIng1.Name = "lblIng1";
-            this.lblIng1.Size = new System.Drawing.Size(66, 13);
+            this.lblIng1.Size = new System.Drawing.Size(71, 13);
             this.lblIng1.TabIndex = 3;
-            this.lblIng1.Text = "pato, francia";
+            this.lblIng1.Text = "[Ingredientes]";
             // 
             // checkTEST1
             // 
             this.checkTEST1.AutoSize = true;
             this.checkTEST1.Location = new System.Drawing.Point(52, 12);
             this.checkTEST1.Name = "checkTEST1";
-            this.checkTEST1.Size = new System.Drawing.Size(89, 17);
+            this.checkTEST1.Size = new System.Drawing.Size(109, 17);
             this.checkTEST1.TabIndex = 2;
-            this.checkTEST1.Text = "Pato Frances";
+            this.checkTEST1.Text = "[Nombre Entrada]";
             this.checkTEST1.UseVisualStyleBackColor = true;
             // 
             // picTEST1
@@ -475,26 +417,6 @@
             // 
             // PlatosFuertes
             // 
-            this.PlatosFuertes.Controls.Add(this.numericUpDown4);
-            this.PlatosFuertes.Controls.Add(this.label7);
-            this.PlatosFuertes.Controls.Add(this.label8);
-            this.PlatosFuertes.Controls.Add(this.checkBox4);
-            this.PlatosFuertes.Controls.Add(this.pictureBox4);
-            this.PlatosFuertes.Controls.Add(this.numericUpDown5);
-            this.PlatosFuertes.Controls.Add(this.label9);
-            this.PlatosFuertes.Controls.Add(this.label10);
-            this.PlatosFuertes.Controls.Add(this.checkBox5);
-            this.PlatosFuertes.Controls.Add(this.pictureBox5);
-            this.PlatosFuertes.Controls.Add(this.numericUpDown6);
-            this.PlatosFuertes.Controls.Add(this.label11);
-            this.PlatosFuertes.Controls.Add(this.label12);
-            this.PlatosFuertes.Controls.Add(this.checkBox6);
-            this.PlatosFuertes.Controls.Add(this.pictureBox6);
-            this.PlatosFuertes.Controls.Add(this.numericUpDown7);
-            this.PlatosFuertes.Controls.Add(this.label13);
-            this.PlatosFuertes.Controls.Add(this.label14);
-            this.PlatosFuertes.Controls.Add(this.checkBox7);
-            this.PlatosFuertes.Controls.Add(this.pictureBox7);
             this.PlatosFuertes.Location = new System.Drawing.Point(4, 22);
             this.PlatosFuertes.Name = "PlatosFuertes";
             this.PlatosFuertes.Padding = new System.Windows.Forms.Padding(3);
@@ -502,210 +424,6 @@
             this.PlatosFuertes.TabIndex = 1;
             this.PlatosFuertes.Text = "Platos Fuertes";
             this.PlatosFuertes.UseVisualStyleBackColor = true;
-            // 
-            // numericUpDown4
-            // 
-            this.numericUpDown4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDown4.Location = new System.Drawing.Point(211, 155);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(33, 20);
-            this.numericUpDown4.TabIndex = 40;
-            this.numericUpDown4.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(170, 150);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(25, 13);
-            this.label7.TabIndex = 39;
-            this.label7.Text = "$45";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(52, 168);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 13);
-            this.label8.TabIndex = 38;
-            this.label8.Text = "pato, francia";
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(52, 150);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(89, 17);
-            this.checkBox4.TabIndex = 37;
-            this.checkBox4.Text = "Pato Frances";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(6, 144);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 36;
-            this.pictureBox4.TabStop = false;
-            // 
-            // numericUpDown5
-            // 
-            this.numericUpDown5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDown5.Location = new System.Drawing.Point(211, 109);
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(33, 20);
-            this.numericUpDown5.TabIndex = 35;
-            this.numericUpDown5.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(170, 104);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(25, 13);
-            this.label9.TabIndex = 34;
-            this.label9.Text = "$45";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(52, 122);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(66, 13);
-            this.label10.TabIndex = 33;
-            this.label10.Text = "pato, francia";
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(52, 104);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(89, 17);
-            this.checkBox5.TabIndex = 32;
-            this.checkBox5.Text = "Pato Frances";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(6, 98);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 31;
-            this.pictureBox5.TabStop = false;
-            // 
-            // numericUpDown6
-            // 
-            this.numericUpDown6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDown6.Location = new System.Drawing.Point(211, 63);
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(33, 20);
-            this.numericUpDown6.TabIndex = 30;
-            this.numericUpDown6.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(170, 58);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(25, 13);
-            this.label11.TabIndex = 29;
-            this.label11.Text = "$45";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(52, 76);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(66, 13);
-            this.label12.TabIndex = 28;
-            this.label12.Text = "pato, francia";
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(52, 58);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(89, 17);
-            this.checkBox6.TabIndex = 27;
-            this.checkBox6.Text = "Pato Frances";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(6, 52);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 26;
-            this.pictureBox6.TabStop = false;
-            // 
-            // numericUpDown7
-            // 
-            this.numericUpDown7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDown7.Location = new System.Drawing.Point(211, 17);
-            this.numericUpDown7.Name = "numericUpDown7";
-            this.numericUpDown7.Size = new System.Drawing.Size(33, 20);
-            this.numericUpDown7.TabIndex = 25;
-            this.numericUpDown7.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(170, 12);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(25, 13);
-            this.label13.TabIndex = 24;
-            this.label13.Text = "$45";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(52, 30);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(66, 13);
-            this.label14.TabIndex = 23;
-            this.label14.Text = "pato, francia";
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(52, 12);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(89, 17);
-            this.checkBox7.TabIndex = 22;
-            this.checkBox7.Text = "Pato Frances";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(6, 6);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 21;
-            this.pictureBox7.TabStop = false;
             // 
             // Postres
             // 
@@ -946,7 +664,7 @@
             this.lblTuMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(88)))), ((int)(((byte)(70)))));
             this.lblTuMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTuMenu.ForeColor = System.Drawing.Color.White;
-            this.lblTuMenu.Location = new System.Drawing.Point(356, 12);
+            this.lblTuMenu.Location = new System.Drawing.Point(321, 12);
             this.lblTuMenu.Name = "lblTuMenu";
             this.lblTuMenu.Size = new System.Drawing.Size(125, 18);
             this.lblTuMenu.TabIndex = 2;
@@ -958,24 +676,25 @@
             this.pnlTuMenu.Controls.Add(this.lblTotal);
             this.pnlTuMenu.Controls.Add(this.lblSeparator);
             this.pnlTuMenu.Controls.Add(this.lstTuMenu);
-            this.pnlTuMenu.Location = new System.Drawing.Point(359, 42);
+            this.pnlTuMenu.Location = new System.Drawing.Point(324, 62);
             this.pnlTuMenu.Name = "pnlTuMenu";
-            this.pnlTuMenu.Size = new System.Drawing.Size(196, 220);
+            this.pnlTuMenu.Size = new System.Drawing.Size(196, 200);
             this.pnlTuMenu.TabIndex = 3;
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(57, 195);
+            this.lblTotal.Location = new System.Drawing.Point(75, 174);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(127, 13);
+            this.lblTotal.Size = new System.Drawing.Size(106, 13);
             this.lblTotal.TabIndex = 2;
-            this.lblTotal.Text = "Total x invitado : $255.00";
+            this.lblTotal.Text = "Total x invitado : $$$";
+            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // lblSeparator
             // 
             this.lblSeparator.AutoSize = true;
-            this.lblSeparator.Location = new System.Drawing.Point(3, 179);
+            this.lblSeparator.Location = new System.Drawing.Point(3, 159);
             this.lblSeparator.Name = "lblSeparator";
             this.lblSeparator.Size = new System.Drawing.Size(191, 13);
             this.lblSeparator.TabIndex = 1;
@@ -986,13 +705,14 @@
             this.lstTuMenu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstTuMenu.FormattingEnabled = true;
             this.lstTuMenu.Items.AddRange(new object[] {
-            "Pato Francés\tx2\t$45.00",
-            "Pato Inglés \tx1\t$55.00",
-            "Pato Portugués\tx1\t$50.00",
-            "Pato Japonés\tx1\t$60.00"});
+            "[Nombre Entrada]\t[porcion]\t[precio]",
+            "[Nombre Entrada]\t[porcion]\t[precio]",
+            "[Nombre Entrada]\t[porcion]\t[precio]",
+            "[Nombre Entrada]\t[porcion]\t[precio]"});
             this.lstTuMenu.Location = new System.Drawing.Point(3, 3);
             this.lstTuMenu.Name = "lstTuMenu";
-            this.lstTuMenu.Size = new System.Drawing.Size(188, 169);
+            this.lstTuMenu.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.lstTuMenu.Size = new System.Drawing.Size(188, 143);
             this.lstTuMenu.TabIndex = 0;
             // 
             // panel2
@@ -1014,7 +734,7 @@
             // 
             // btnContinuar
             // 
-            this.btnContinuar.Location = new System.Drawing.Point(480, 273);
+            this.btnContinuar.Location = new System.Drawing.Point(445, 273);
             this.btnContinuar.Name = "btnContinuar";
             this.btnContinuar.Size = new System.Drawing.Size(75, 23);
             this.btnContinuar.TabIndex = 27;
@@ -1026,7 +746,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(580, 306);
+            this.ClientSize = new System.Drawing.Size(536, 306);
             this.Controls.Add(this.btnContinuar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.panel2);
@@ -1042,8 +762,6 @@
             this.tabMenu.ResumeLayout(false);
             this.Entradas.ResumeLayout(false);
             this.Entradas.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
@@ -1052,16 +770,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTEST1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTEST1)).EndInit();
-            this.PlatosFuertes.ResumeLayout(false);
-            this.PlatosFuertes.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.Postres.ResumeLayout(false);
             this.Postres.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
@@ -1091,41 +799,6 @@
         private System.Windows.Forms.Label lblIng1;
         private System.Windows.Forms.CheckBox checkTEST1;
         private System.Windows.Forms.NumericUpDown numTEST1;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.NumericUpDown numericUpDown6;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.NumericUpDown numericUpDown7;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.NumericUpDown numericUpDown8;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
@@ -1146,11 +819,6 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.CheckBox checkBox11;
         private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.NumericUpDown numericUpDown12;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.CheckBox checkBox12;
-        private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Label lblTuMenu;
         private System.Windows.Forms.Panel pnlTuMenu;
         private System.Windows.Forms.Label lblSeparator;
@@ -1159,5 +827,20 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnContinuar;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

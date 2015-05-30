@@ -56,6 +56,12 @@
     <Compile Include="CancelarEvento.Designer.cs">
       <DependentUpon>CancelarEvento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entrada.Designer.cs">
+      <DependentUpon>Entrada.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CancelarEvento.resx">
       <DependentUpon>CancelarEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entrada.resx">
+      <DependentUpon>Entrada.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Invitados.resx">
       <DependentUpon>Invitados.cs</DependentUpon>

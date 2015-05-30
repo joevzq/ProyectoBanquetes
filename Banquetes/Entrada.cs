@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Banquetes
 {
-    public partial class Invitados : Form
+    public partial class Entrada : Form
     {
-        public Invitados()
+        public Entrada()
         {
             InitializeComponent();
         }
@@ -22,17 +22,7 @@ namespace Banquetes
             System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(System.Drawing.ColorTranslator.FromHtml("#D85846"));
             System.Drawing.Graphics formGraphics;
             formGraphics = this.CreateGraphics();
-            formGraphics.FillRectangle(myBrush, new Rectangle(5, 9, 255, 22));
-            myBrush.Dispose();
-            formGraphics.Dispose();
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-            System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(System.Drawing.ColorTranslator.FromHtml("#D85846"));
-            System.Drawing.Graphics formGraphics;
-            formGraphics = this.CreateGraphics();
-            formGraphics.FillRectangle(myBrush, new Rectangle(265, 9, 200, 22));
+            formGraphics.FillRectangle(myBrush, new Rectangle(5, 9, 474, 22));
             myBrush.Dispose();
             formGraphics.Dispose();
         }

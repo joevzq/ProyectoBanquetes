@@ -85,7 +85,7 @@
             this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnEliminar.Location = new System.Drawing.Point(304, 203);
+            this.btnEliminar.Location = new System.Drawing.Point(279, 203);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 25);
             this.btnEliminar.TabIndex = 2;
@@ -97,7 +97,7 @@
             this.btnEliminarTodo.BackColor = System.Drawing.Color.Transparent;
             this.btnEliminarTodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarTodo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnEliminarTodo.Location = new System.Drawing.Point(385, 203);
+            this.btnEliminarTodo.Location = new System.Drawing.Point(360, 203);
             this.btnEliminarTodo.Name = "btnEliminarTodo";
             this.btnEliminarTodo.Size = new System.Drawing.Size(96, 25);
             this.btnEliminarTodo.TabIndex = 1;
@@ -140,7 +140,7 @@
             this.btnSiguiente.BackColor = System.Drawing.Color.Transparent;
             this.btnSiguiente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSiguiente.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSiguiente.Location = new System.Drawing.Point(405, 234);
+            this.btnSiguiente.Location = new System.Drawing.Point(380, 234);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(75, 25);
             this.btnSiguiente.TabIndex = 7;
@@ -173,7 +173,7 @@
             this.lblListaInvitados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(88)))), ((int)(((byte)(70)))));
             this.lblListaInvitados.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblListaInvitados.ForeColor = System.Drawing.Color.White;
-            this.lblListaInvitados.Location = new System.Drawing.Point(301, 12);
+            this.lblListaInvitados.Location = new System.Drawing.Point(276, 12);
             this.lblListaInvitados.Name = "lblListaInvitados";
             this.lblListaInvitados.Size = new System.Drawing.Size(139, 18);
             this.lblListaInvitados.TabIndex = 12;
@@ -201,7 +201,7 @@
             // lstInvitados
             // 
             this.lstInvitados.FormattingEnabled = true;
-            this.lstInvitados.Location = new System.Drawing.Point(304, 37);
+            this.lstInvitados.Location = new System.Drawing.Point(279, 37);
             this.lstInvitados.Name = "lstInvitados";
             this.lstInvitados.Size = new System.Drawing.Size(176, 160);
             this.lstInvitados.TabIndex = 14;
@@ -211,7 +211,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(500, 269);
+            this.ClientSize = new System.Drawing.Size(471, 269);
             this.Controls.Add(this.lstInvitados);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.lblListaInvitados);
