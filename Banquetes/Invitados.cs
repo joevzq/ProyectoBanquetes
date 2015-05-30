@@ -32,20 +32,9 @@ namespace Banquetes
             System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(System.Drawing.ColorTranslator.FromHtml("#D85846"));
             System.Drawing.Graphics formGraphics;
             formGraphics = this.CreateGraphics();
-            formGraphics.FillRectangle(myBrush, new Rectangle(290, 9, 205, 22));
+            formGraphics.FillRectangle(myBrush, new Rectangle(290, 9, 200, 22));
             myBrush.Dispose();
             formGraphics.Dispose();
-        }
-
-
-        private void Invitados_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
