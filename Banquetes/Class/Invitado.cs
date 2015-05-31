@@ -8,8 +8,11 @@ namespace Banquetes.Class
 {
     public class Invitado
     {
+        //Crear invitado
         public void Crear() { }
+        //Borrar invitado
         public void Eliminar() { }
+        //Borrar todos los invitados
         public void EliminarTodos() { }
     }
 }
