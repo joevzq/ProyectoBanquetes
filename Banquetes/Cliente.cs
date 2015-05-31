@@ -12,6 +12,8 @@ namespace Banquetes
 {
     public partial class Cliente : Form
     {
+        Menu menu = new Menu();
+        Invitados inv = new Invitados();
         public Cliente()
         {
             InitializeComponent();
@@ -29,7 +31,13 @@ namespace Banquetes
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
-            
+            menu.Show();
+            this.Hide();
+        }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            inv.Show();
             this.Hide();
         }
     }
