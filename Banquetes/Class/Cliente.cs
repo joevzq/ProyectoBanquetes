@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace Banquetes.Class
 {
-    class Cliente
+   public class Cliente
     {
+       //Método para crear Cliente
+       public void Crear() 
+       {
+
+       }
+       //Método para editar Cliente
+       public void Editar() 
+       {
+
+       }
     }
 }

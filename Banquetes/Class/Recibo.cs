@@ -6,7 +6,22 @@ using System.Threading.Tasks;
 
 namespace Banquetes.Class
 {
-    class Recibo
+   public class Recibo
     {
+       //Método para Calcular total monetario
+       public void CalcularTotal() 
+       {
+
+       }
+       //Método para imprimir recibo
+       public void ImprimirRecibo() 
+       {
+
+       }
+       //Método para guardar datos del recibo
+       public void GuardarRecibo() 
+       {
+
+       }
     }
 }
