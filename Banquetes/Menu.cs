@@ -13,7 +13,6 @@ namespace Banquetes
     public partial class Menu : Form
     {
         Entrada ent = new Entrada();
-        Cliente cli = new Cliente();
         public Menu()
         {
             InitializeComponent();
@@ -51,6 +50,7 @@ namespace Banquetes
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
+            Cliente cli = new Cliente();
             cli.Show();
             this.Hide();
         }
