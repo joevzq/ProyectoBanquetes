@@ -32,6 +32,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblComentario = new System.Windows.Forms.Label();
+            this.lblAsterisco = new System.Windows.Forms.Label();
             this.grbOne = new System.Windows.Forms.GroupBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -41,8 +43,10 @@
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtComentario = new System.Windows.Forms.TextBox();
             this.btnAnterior = new System.Windows.Forms.Button();
             this.btnNEXT = new System.Windows.Forms.Button();
+            this.btnSiguiente = new System.Windows.Forms.Button();
             this.grbOne.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,6 +80,25 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Completar los Campos";
             // 
+            // lblComentario
+            // 
+            this.lblComentario.AutoSize = true;
+            this.lblComentario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComentario.Location = new System.Drawing.Point(327, 53);
+            this.lblComentario.Name = "lblComentario";
+            this.lblComentario.Size = new System.Drawing.Size(60, 13);
+            this.lblComentario.TabIndex = 12;
+            this.lblComentario.Text = "Comentario";
+            // 
+            // lblAsterisco
+            // 
+            this.lblAsterisco.AutoSize = true;
+            this.lblAsterisco.Location = new System.Drawing.Point(440, 272);
+            this.lblAsterisco.Name = "lblAsterisco";
+            this.lblAsterisco.Size = new System.Drawing.Size(126, 13);
+            this.lblAsterisco.TabIndex = 16;
+            this.lblAsterisco.Text = "(*) Información obligatoria";
+            // 
             // grbOne
             // 
             this.grbOne.Controls.Add(this.textBox3);
@@ -86,7 +109,7 @@
             this.grbOne.Controls.Add(this.dtpFecha);
             this.grbOne.Controls.Add(this.label4);
             this.grbOne.Controls.Add(this.label3);
-            this.grbOne.Location = new System.Drawing.Point(15, 76);
+            this.grbOne.Location = new System.Drawing.Point(12, 71);
             this.grbOne.Name = "grbOne";
             this.grbOne.Size = new System.Drawing.Size(339, 167);
             this.grbOne.TabIndex = 2;
@@ -168,17 +191,25 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Nombre del Evento";
             // 
+            // txtComentario
+            // 
+            this.txtComentario.Location = new System.Drawing.Point(330, 69);
+            this.txtComentario.Multiline = true;
+            this.txtComentario.Name = "txtComentario";
+            this.txtComentario.Size = new System.Drawing.Size(236, 121);
+            this.txtComentario.TabIndex = 13;
+            // 
             // btnAnterior
             // 
             this.btnAnterior.BackColor = System.Drawing.Color.White;
             this.btnAnterior.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnterior.ForeColor = System.Drawing.Color.Black;
-            this.btnAnterior.Location = new System.Drawing.Point(15, 264);
+            this.btnAnterior.Location = new System.Drawing.Point(15, 305);
             this.btnAnterior.Name = "btnAnterior";
-            this.btnAnterior.Size = new System.Drawing.Size(75, 35);
-            this.btnAnterior.TabIndex = 3;
-            this.btnAnterior.Text = "Atrás";
-            this.btnAnterior.UseVisualStyleBackColor = false;
+            this.btnAnterior.Size = new System.Drawing.Size(75, 23);
+            this.btnAnterior.TabIndex = 14;
+            this.btnAnterior.Text = "Anterior";
+            this.btnAnterior.UseVisualStyleBackColor = true;
             // 
             // btnNEXT
             // 
@@ -192,24 +223,20 @@
             this.btnNEXT.Text = "Continuar";
             this.btnNEXT.UseVisualStyleBackColor = false;
             // 
-            // lblComentario
+            // btnSiguiente
             // 
-            // 
-            // btnAnterior
-            // 
-            this.btnAnterior.Location = new System.Drawing.Point(15, 305);
-            this.btnAnterior.Name = "btnAnterior";
-            this.btnAnterior.Size = new System.Drawing.Size(75, 23);
-            this.btnAnterior.TabIndex = 14;
-            this.btnAnterior.Text = "Anterior";
-            this.btnAnterior.UseVisualStyleBackColor = true;
-            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
+            this.btnSiguiente.Location = new System.Drawing.Point(491, 305);
+            this.btnSiguiente.Name = "btnSiguiente";
+            this.btnSiguiente.Size = new System.Drawing.Size(75, 23);
+            this.btnSiguiente.TabIndex = 15;
+            this.btnSiguiente.Text = "Siguiente";
+            this.btnSiguiente.UseVisualStyleBackColor = true;
             // 
             // Evento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(427, 369);
+            this.ClientSize = new System.Drawing.Size(812, 518);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAnterior);
             this.Controls.Add(this.grbOne);
@@ -236,6 +263,10 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtComentario;
+        private System.Windows.Forms.Button btnSiguiente;
+        private System.Windows.Forms.Label lblComentario;
+        private System.Windows.Forms.Label lblAsterisco;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dtpFecha;

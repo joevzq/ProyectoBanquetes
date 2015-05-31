@@ -157,7 +157,7 @@
             // 
             // btnRegresarC
             // 
-            this.btnRegresarC.Location = new System.Drawing.Point(77, 79);
+            this.btnRegresarC.Location = new System.Drawing.Point(65, 214);
             this.btnRegresarC.Name = "btnRegresarC";
             this.btnRegresarC.Size = new System.Drawing.Size(66, 23);
             this.btnRegresarC.TabIndex = 18;
@@ -195,7 +195,6 @@
             this.gbCancelar.Controls.Add(this.btnCancelar);
             this.gbCancelar.Controls.Add(this.label2);
             this.gbCancelar.Controls.Add(this.txtCancelar);
-            this.gbCancelar.Controls.Add(this.btnRegresarC);
             this.gbCancelar.Location = new System.Drawing.Point(8, 33);
             this.gbCancelar.Name = "gbCancelar";
             this.gbCancelar.Size = new System.Drawing.Size(238, 113);
@@ -206,7 +205,7 @@
             // 
             // btnEditarE
             // 
-            this.btnEditarE.Location = new System.Drawing.Point(12, 84);
+            this.btnEditarE.Location = new System.Drawing.Point(12, 185);
             this.btnEditarE.Name = "btnEditarE";
             this.btnEditarE.Size = new System.Drawing.Size(100, 23);
             this.btnEditarE.TabIndex = 18;
@@ -216,7 +215,7 @@
             // 
             // btnCancelarE
             // 
-            this.btnCancelarE.Location = new System.Drawing.Point(140, 84);
+            this.btnCancelarE.Location = new System.Drawing.Point(146, 214);
             this.btnCancelarE.Name = "btnCancelarE";
             this.btnCancelarE.Size = new System.Drawing.Size(100, 23);
             this.btnCancelarE.TabIndex = 20;
@@ -228,11 +227,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(257, 166);
+            this.ClientSize = new System.Drawing.Size(358, 292);
             this.Controls.Add(this.btnCancelarE);
             this.Controls.Add(this.btnEditarE);
             this.Controls.Add(this.gbCancelar);
             this.Controls.Add(this.gbEditar);
+            this.Controls.Add(this.btnRegresarC);
             this.Controls.Add(this.lblInicioCliente);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnNuevo);
