@@ -40,5 +40,7 @@ namespace Banquetes
             inv.Show();
             this.Hide();
         }
+
+      
     }
 }
