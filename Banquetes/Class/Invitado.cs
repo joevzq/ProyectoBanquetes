@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Banquetes.Class
 {
-    class Invitado
+    public class Invitado
     {
+        public void Crear() { }
+        public void Eliminar() { }
+        public void EliminarTodos() { }
     }
 }
