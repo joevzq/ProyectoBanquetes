@@ -23,7 +23,7 @@ namespace Banquetes
             System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(System.Drawing.ColorTranslator.FromHtml("#D85846"));
             System.Drawing.Graphics formGraphics;
             formGraphics = this.CreateGraphics();
-            formGraphics.FillRectangle(myBrush, new Rectangle(5, 9, 570, 22));
+            formGraphics.FillRectangle(myBrush, new Rectangle(5, 9, 320, 22));
             myBrush.Dispose();
             formGraphics.Dispose();
         }
