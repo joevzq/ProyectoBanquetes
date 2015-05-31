@@ -56,6 +56,7 @@
     <Compile Include="CancelarEvento.Designer.cs">
       <DependentUpon>CancelarEvento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class\Administrador.cs" />
     <Compile Include="Class\Cliente.cs" />
     <Compile Include="Class\Evento.cs" />
     <Compile Include="Class\Invitado.cs" />

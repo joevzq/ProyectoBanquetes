@@ -8,6 +8,8 @@ namespace Banquetes.Class
 {
     public class Evento
     {
+        
+       
         //Crear evento
         public void Crear() { }
         //Actualizar status de evento

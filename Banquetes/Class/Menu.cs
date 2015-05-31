@@ -8,6 +8,32 @@ namespace Banquetes.Class
 {
     public  class Menu
     {
+        #region variables
+        private int folioEvento;
+
+        public int FolioEvento
+        {
+            get { return folioEvento; }
+            set { folioEvento = value; }
+        }
+        private int idEntrada;
+
+        public int IdEntrada
+        {
+            get { return idEntrada; }
+            set { idEntrada = value; }
+        }
+        private int porciones;
+
+        public int Porciones
+        {
+            get { return porciones; }
+            set { porciones = value; }
+        }
+
+
+
+        #endregion 
         //Método para Actualizar lista
         public void ActualizarLista() 
         {
