@@ -13,6 +13,8 @@ namespace Banquetes
 {
     public partial class Invitados : Form
     {
+        Cliente cli = new Cliente();
+        Evento ev = new Evento();
         public Invitados()
         {
             InitializeComponent();
@@ -91,6 +93,18 @@ namespace Banquetes
             DialogResult result = MessageBox.Show("¿Esta seguro de eliminar toda la lista de invitados?", "Atencion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == System.Windows.Forms.DialogResult.Yes)
                 lstInvitados.Items.Clear();
+        }
+
+        private void btnAnterior_Click(object sender, EventArgs e)
+        {
+            cli.Show();
+            this.Hide();
+        }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            ev.Show();
+            this.Hide();
         }
     }
 }
