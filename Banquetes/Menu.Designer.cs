@@ -77,15 +77,15 @@
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.lblTuMenu = new System.Windows.Forms.Label();
             this.pnlTuMenu = new System.Windows.Forms.Panel();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.lblSeparator = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnContinuar = new System.Windows.Forms.Button();
             this.lstvMenu = new System.Windows.Forms.ListView();
             this.colPlatillo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colPorciones = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colPU = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblSeparator = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnSiguiente = new System.Windows.Forms.Button();
             this.tabMenu.SuspendLayout();
             this.Entradas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -686,6 +686,36 @@
             this.pnlTuMenu.Size = new System.Drawing.Size(196, 200);
             this.pnlTuMenu.TabIndex = 3;
             // 
+            // lstvMenu
+            // 
+            this.lstvMenu.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colPlatillo,
+            this.colPorciones,
+            this.colPU});
+            this.lstvMenu.GridLines = true;
+            this.lstvMenu.Location = new System.Drawing.Point(3, 3);
+            this.lstvMenu.Name = "lstvMenu";
+            this.lstvMenu.Size = new System.Drawing.Size(188, 141);
+            this.lstvMenu.TabIndex = 23;
+            this.lstvMenu.UseCompatibleStateImageBehavior = false;
+            this.lstvMenu.View = System.Windows.Forms.View.Details;
+            // 
+            // colPlatillo
+            // 
+            this.colPlatillo.Text = "Platillo";
+            this.colPlatillo.Width = 109;
+            // 
+            // colPorciones
+            // 
+            this.colPorciones.Text = "Porciones";
+            this.colPorciones.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colPorciones.Width = 34;
+            // 
+            // colPU
+            // 
+            this.colPU.Text = "P/U";
+            this.colPU.Width = 41;
+            // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
@@ -723,45 +753,15 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnContinuar
+            // btnSiguiente
             // 
-            this.btnContinuar.Location = new System.Drawing.Point(445, 273);
-            this.btnContinuar.Name = "btnContinuar";
-            this.btnContinuar.Size = new System.Drawing.Size(75, 23);
-            this.btnContinuar.TabIndex = 27;
-            this.btnContinuar.Text = "Continuar";
-            this.btnContinuar.UseVisualStyleBackColor = true;
-            this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);
-            // 
-            // lstvMenu
-            // 
-            this.lstvMenu.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.colPlatillo,
-            this.colPorciones,
-            this.colPU});
-            this.lstvMenu.GridLines = true;
-            this.lstvMenu.Location = new System.Drawing.Point(3, 3);
-            this.lstvMenu.Name = "lstvMenu";
-            this.lstvMenu.Size = new System.Drawing.Size(188, 141);
-            this.lstvMenu.TabIndex = 23;
-            this.lstvMenu.UseCompatibleStateImageBehavior = false;
-            this.lstvMenu.View = System.Windows.Forms.View.Details;
-            // 
-            // colPlatillo
-            // 
-            this.colPlatillo.Text = "Platillo";
-            this.colPlatillo.Width = 109;
-            // 
-            // colPorciones
-            // 
-            this.colPorciones.Text = "Porciones";
-            this.colPorciones.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.colPorciones.Width = 34;
-            // 
-            // colPU
-            // 
-            this.colPU.Text = "P/U";
-            this.colPU.Width = 41;
+            this.btnSiguiente.Location = new System.Drawing.Point(445, 273);
+            this.btnSiguiente.Name = "btnSiguiente";
+            this.btnSiguiente.Size = new System.Drawing.Size(75, 23);
+            this.btnSiguiente.TabIndex = 27;
+            this.btnSiguiente.Text = "Siguiente";
+            this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnContinuar_Click);
             // 
             // Menu
             // 
@@ -769,7 +769,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(536, 306);
-            this.Controls.Add(this.btnContinuar);
+            this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlTuMenu);
@@ -847,7 +847,7 @@
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnContinuar;
+        private System.Windows.Forms.Button btnSiguiente;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;

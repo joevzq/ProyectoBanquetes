@@ -31,5 +31,26 @@ namespace Banquetes
             myBrush.Dispose();
             formGraphics.Dispose();
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Inicio inicio = new Inicio();
+            inicio.Show();
+            this.Hide();
+        }
+
+        private void btnAnterior_Click(object sender, EventArgs e)
+        {
+            Invitados invitados = new Invitados();
+            invitados.Show();
+            this.Hide();
+        }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            Recibo recibo = new Recibo();
+            recibo.Show();
+            this.Hide();
+        }
     }
 }

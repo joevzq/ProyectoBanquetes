@@ -13,8 +13,6 @@ namespace Banquetes
 {
     public partial class Invitados : Form
     {
-        Cliente cli = new Cliente();
-        Evento ev = new Evento();
         public Invitados()
         {
             InitializeComponent();
@@ -102,13 +100,22 @@ namespace Banquetes
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
-            cli.Show();
+            Cliente cliente = new Cliente();
+            cliente.Show();
             this.Hide();
         }
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            ev.Show();
+            Evento evento = new Evento();
+            evento.Show();
+            this.Hide();
+        }
+
+        private void Cancelar_Click(object sender, EventArgs e)
+        {
+            Inicio inicio = new Inicio();
+            inicio.Show();
             this.Hide();
         }
     }

@@ -46,6 +46,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblInfo = new System.Windows.Forms.Label();
             this.lstInvitados = new System.Windows.Forms.ListBox();
+            this.Cancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtEmail
@@ -125,7 +126,7 @@
             this.btnAnterior.BackColor = System.Drawing.Color.Transparent;
             this.btnAnterior.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnterior.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAnterior.Location = new System.Drawing.Point(15, 234);
+            this.btnAnterior.Location = new System.Drawing.Point(279, 234);
             this.btnAnterior.Name = "btnAnterior";
             this.btnAnterior.Size = new System.Drawing.Size(75, 25);
             this.btnAnterior.TabIndex = 4;
@@ -211,12 +212,26 @@
             this.lstInvitados.Size = new System.Drawing.Size(176, 160);
             this.lstInvitados.TabIndex = 14;
             // 
+            // Cancelar
+            // 
+            this.Cancelar.BackColor = System.Drawing.Color.Transparent;
+            this.Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cancelar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Cancelar.Location = new System.Drawing.Point(12, 234);
+            this.Cancelar.Name = "Cancelar";
+            this.Cancelar.Size = new System.Drawing.Size(75, 25);
+            this.Cancelar.TabIndex = 15;
+            this.Cancelar.Text = "Cancelar";
+            this.Cancelar.UseVisualStyleBackColor = false;
+            this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click);
+            // 
             // Invitados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(471, 269);
+            this.ClientSize = new System.Drawing.Size(471, 272);
+            this.Controls.Add(this.Cancelar);
             this.Controls.Add(this.lstInvitados);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.lblListaInvitados);
@@ -259,5 +274,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.ListBox lstInvitados;
+        private System.Windows.Forms.Button Cancelar;
     }
 }

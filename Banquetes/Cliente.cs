@@ -27,17 +27,30 @@ namespace Banquetes
             System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(System.Drawing.ColorTranslator.FromHtml("#D85846"));
             System.Drawing.Graphics formGraphics;
             formGraphics = this.CreateGraphics();
-            formGraphics.FillRectangle(myBrush, new Rectangle(5, 9, 248, 22));
+            formGraphics.FillRectangle(myBrush, new Rectangle(5, 9, 283, 22));
             myBrush.Dispose();
             formGraphics.Dispose();
         }
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
+            Menu menu = new Menu();
+            menu.Show();
+            this.Hide();
         }
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
+            Invitados inv = new Invitados();
+            inv.Show();
+            this.Hide();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Inicio inicio = new Inicio();
+            inicio.Show();
+            this.Hide();
         }
 
       
