@@ -9,45 +9,48 @@ namespace Banquetes.Class
     public class Evento
     {
         #region variables
-        private enum status { por_realizar, realizado, cancelado };
+        private enum status {
+            por_realizar, 
+            realizado, 
+            cancelado 
+        };
 
         private int folioEvento;
-
         public int FolioEvento
         {
             get { return folioEvento; }
             set { folioEvento = value; }
         }
-        private string nombreEvento;
 
+        private string nombreEvento;
         public string NombreEvento
         {
             get { return nombreEvento; }
             set { nombreEvento = value; }
         }
-        private DateTime fechaEvento;
 
+        private DateTime fechaEvento;
         public DateTime FechaEvento
         {
             get { return fechaEvento; }
             set { fechaEvento = value; }
         }
-        private string horaEvento;
 
+        private string horaEvento;
         public string HoraEvento
         {
             get { return horaEvento; }
             set { horaEvento = value; }
         }
-        private Direccion_Evento direccion;
 
+        private Direccion_Evento direccion;
         internal Direccion_Evento Direccion
         {
             get { return direccion; }
             set { direccion = value; }
         }
-        private string comentario;
 
+        private string comentario;
         public string Comentario
         {
             get { return comentario; }

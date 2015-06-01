@@ -28,144 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Gbfill = new System.Windows.Forms.GroupBox();
-            this.lblPass = new System.Windows.Forms.Label();
-            this.lblUser = new System.Windows.Forms.Label();
-            this.txtPass = new System.Windows.Forms.TextBox();
-            this.txtUser = new System.Windows.Forms.TextBox();
-            this.GbCommands = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.btnLogin = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.Gbfill.SuspendLayout();
-            this.GbCommands.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblContra = new System.Windows.Forms.Label();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtContra = new System.Windows.Forms.TextBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnIngresar = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // Gbfill
-            // 
-            this.Gbfill.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Gbfill.Controls.Add(this.lblPass);
-            this.Gbfill.Controls.Add(this.lblUser);
-            this.Gbfill.Controls.Add(this.txtPass);
-            this.Gbfill.Controls.Add(this.txtUser);
-            this.Gbfill.Location = new System.Drawing.Point(44, 51);
-            this.Gbfill.Name = "Gbfill";
-            this.Gbfill.Size = new System.Drawing.Size(269, 108);
-            this.Gbfill.TabIndex = 0;
-            this.Gbfill.TabStop = false;
-            // 
-            // lblPass
-            // 
-            this.lblPass.AutoSize = true;
-            this.lblPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPass.Location = new System.Drawing.Point(55, 71);
-            this.lblPass.Name = "lblPass";
-            this.lblPass.Size = new System.Drawing.Size(69, 17);
-            this.lblPass.TabIndex = 4;
-            this.lblPass.Text = "Password";
-            // 
-            // lblUser
-            // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.Location = new System.Drawing.Point(61, 27);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(57, 17);
-            this.lblUser.TabIndex = 3;
-            this.lblUser.Text = "Usuario";
-            // 
-            // txtPass
-            // 
-            this.txtPass.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.ForeColor = System.Drawing.Color.White;
-            this.txtPass.Location = new System.Drawing.Point(124, 65);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(130, 27);
-            this.txtPass.TabIndex = 1;
-            // 
-            // txtUser
-            // 
-            this.txtUser.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.ForeColor = System.Drawing.Color.White;
-            this.txtUser.Location = new System.Drawing.Point(124, 19);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(130, 27);
-            this.txtUser.TabIndex = 0;
-            // 
-            // GbCommands
-            // 
-            this.GbCommands.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.GbCommands.Controls.Add(this.label1);
-            this.GbCommands.Controls.Add(this.radioButton2);
-            this.GbCommands.Controls.Add(this.radioButton1);
-            this.GbCommands.Controls.Add(this.btnLogin);
-            this.GbCommands.Location = new System.Drawing.Point(44, 174);
-            this.GbCommands.Name = "GbCommands";
-            this.GbCommands.Size = new System.Drawing.Size(269, 141);
-            this.GbCommands.TabIndex = 1;
-            this.GbCommands.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 89);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "LOGO HERE";
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(88)))), ((int)(((byte)(70)))));
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioButton2.Location = new System.Drawing.Point(15, 19);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(69, 21);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Cliente";
-            this.radioButton2.UseVisualStyleBackColor = false;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(88)))), ((int)(((byte)(70)))));
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.Color.White;
-            this.radioButton1.Location = new System.Drawing.Point(137, 17);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(113, 21);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Administrador";
-            this.radioButton1.UseVisualStyleBackColor = false;
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(88)))), ((int)(((byte)(70)))));
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(161, 76);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(89, 39);
-            this.btnLogin.TabIndex = 0;
-            this.btnLogin.Text = "Sign in";
-            this.btnLogin.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(12, 7);
+            this.panel1.Location = new System.Drawing.Point(94, 59);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(340, 37);
+            this.panel1.Size = new System.Drawing.Size(14, 10);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -175,48 +53,98 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(88)))), ((int)(((byte)(70)))));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(29, 12);
+            this.label2.Location = new System.Drawing.Point(12, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 18);
+            this.label2.Size = new System.Drawing.Size(180, 18);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Bienvenido a ";
+            this.label2.Text = "Login de administrador";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(12, 52);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(43, 13);
+            this.lblUsuario.TabIndex = 4;
+            this.lblUsuario.Text = "Usuario";
+            // 
+            // lblContra
+            // 
+            this.lblContra.AutoSize = true;
+            this.lblContra.Location = new System.Drawing.Point(12, 78);
+            this.lblContra.Name = "lblContra";
+            this.lblContra.Size = new System.Drawing.Size(61, 13);
+            this.lblContra.TabIndex = 5;
+            this.lblContra.Text = "Contraseña";
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(114, 49);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txtUsuario.TabIndex = 6;
+            // 
+            // txtContra
+            // 
+            this.txtContra.Location = new System.Drawing.Point(114, 75);
+            this.txtContra.Name = "txtContra";
+            this.txtContra.PasswordChar = 'Δ';
+            this.txtContra.Size = new System.Drawing.Size(100, 20);
+            this.txtContra.TabIndex = 7;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(15, 121);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 0;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnIngresar
+            // 
+            this.btnIngresar.Location = new System.Drawing.Point(139, 121);
+            this.btnIngresar.Name = "btnIngresar";
+            this.btnIngresar.Size = new System.Drawing.Size(75, 23);
+            this.btnIngresar.TabIndex = 8;
+            this.btnIngresar.Text = "Ingresar";
+            this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(364, 327);
+            this.ClientSize = new System.Drawing.Size(230, 159);
+            this.Controls.Add(this.btnIngresar);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.txtContra);
+            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.lblContra);
+            this.Controls.Add(this.lblUsuario);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.GbCommands);
-            this.Controls.Add(this.Gbfill);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Gbfill.ResumeLayout(false);
-            this.Gbfill.PerformLayout();
-            this.GbCommands.ResumeLayout(false);
-            this.GbCommands.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox Gbfill;
-        private System.Windows.Forms.Label lblPass;
-        private System.Windows.Forms.Label lblUser;
-        private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.TextBox txtUser;
-        private System.Windows.Forms.GroupBox GbCommands;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Label lblContra;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtContra;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnIngresar;
     }
 }
 

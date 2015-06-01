@@ -10,15 +10,21 @@ namespace Banquetes.Class
    {
 
        #region variable
-       private int total;
+       private int subtotal;
+       public int Subtotal
+       {
+           get { return subtotal; }
+           set { subtotal = value; }
+       }
 
+       private int total;
        public int Total
        {
            get { return total; }
            set { total = value; }
        }
-       private int iva;
 
+       private int iva;
        public int Iva
        {
            get { return iva; }

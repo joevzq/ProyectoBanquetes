@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             this.lstPorRealizar = new System.Windows.Forms.ListBox();
-            this.lblBienvenido = new System.Windows.Forms.Label();
             this.lblPorRealizar = new System.Windows.Forms.Label();
             this.lblRealizados = new System.Windows.Forms.Label();
             this.lstRealizados = new System.Windows.Forms.ListBox();
@@ -41,33 +40,25 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.grpFecha = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnAnalizar = new System.Windows.Forms.Button();
             this.grpFecha.SuspendLayout();
             this.SuspendLayout();
             // 
             // lstPorRealizar
             // 
             this.lstPorRealizar.FormattingEnabled = true;
-            this.lstPorRealizar.Location = new System.Drawing.Point(29, 78);
+            this.lstPorRealizar.Location = new System.Drawing.Point(19, 53);
             this.lstPorRealizar.Name = "lstPorRealizar";
             this.lstPorRealizar.Size = new System.Drawing.Size(159, 238);
             this.lstPorRealizar.TabIndex = 0;
             // 
-            // lblBienvenido
-            // 
-            this.lblBienvenido.AutoSize = true;
-            this.lblBienvenido.Location = new System.Drawing.Point(12, 9);
-            this.lblBienvenido.Name = "lblBienvenido";
-            this.lblBienvenido.Size = new System.Drawing.Size(110, 13);
-            this.lblBienvenido.TabIndex = 1;
-            this.lblBienvenido.Text = "Bienvenido, [nombre].";
-            // 
             // lblPorRealizar
             // 
             this.lblPorRealizar.AutoSize = true;
-            this.lblPorRealizar.Location = new System.Drawing.Point(29, 62);
+            this.lblPorRealizar.Location = new System.Drawing.Point(19, 37);
             this.lblPorRealizar.Name = "lblPorRealizar";
             this.lblPorRealizar.Size = new System.Drawing.Size(64, 13);
             this.lblPorRealizar.TabIndex = 2;
@@ -76,7 +67,7 @@
             // lblRealizados
             // 
             this.lblRealizados.AutoSize = true;
-            this.lblRealizados.Location = new System.Drawing.Point(191, 62);
+            this.lblRealizados.Location = new System.Drawing.Point(181, 37);
             this.lblRealizados.Name = "lblRealizados";
             this.lblRealizados.Size = new System.Drawing.Size(59, 13);
             this.lblRealizados.TabIndex = 3;
@@ -85,7 +76,7 @@
             // lstRealizados
             // 
             this.lstRealizados.FormattingEnabled = true;
-            this.lstRealizados.Location = new System.Drawing.Point(194, 78);
+            this.lstRealizados.Location = new System.Drawing.Point(184, 53);
             this.lstRealizados.Name = "lstRealizados";
             this.lstRealizados.Size = new System.Drawing.Size(159, 238);
             this.lstRealizados.TabIndex = 4;
@@ -93,7 +84,7 @@
             // lstCancelados
             // 
             this.lstCancelados.FormattingEnabled = true;
-            this.lstCancelados.Location = new System.Drawing.Point(359, 78);
+            this.lstCancelados.Location = new System.Drawing.Point(349, 53);
             this.lstCancelados.Name = "lstCancelados";
             this.lstCancelados.Size = new System.Drawing.Size(159, 238);
             this.lstCancelados.TabIndex = 6;
@@ -102,7 +93,7 @@
             // 
             this.lblCancelados.AutoSize = true;
             this.lblCancelados.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCancelados.Location = new System.Drawing.Point(356, 62);
+            this.lblCancelados.Location = new System.Drawing.Point(346, 37);
             this.lblCancelados.Name = "lblCancelados";
             this.lblCancelados.Size = new System.Drawing.Size(63, 13);
             this.lblCancelados.TabIndex = 5;
@@ -111,9 +102,9 @@
             // panel1
             // 
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.panel1.Location = new System.Drawing.Point(513, -5);
+            this.panel1.Location = new System.Drawing.Point(208, 305);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(56, 27);
+            this.panel1.Size = new System.Drawing.Size(10, 10);
             this.panel1.TabIndex = 7;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -123,7 +114,7 @@
             this.lblEventos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(88)))), ((int)(((byte)(70)))));
             this.lblEventos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEventos.ForeColor = System.Drawing.Color.White;
-            this.lblEventos.Location = new System.Drawing.Point(22, 37);
+            this.lblEventos.Location = new System.Drawing.Point(12, 12);
             this.lblEventos.Name = "lblEventos";
             this.lblEventos.Size = new System.Drawing.Size(69, 18);
             this.lblEventos.TabIndex = 0;
@@ -132,33 +123,46 @@
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancelar.Location = new System.Drawing.Point(29, 322);
+            this.btnCancelar.Location = new System.Drawing.Point(103, 341);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 35);
             this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar Evento";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(113, 322);
+            this.btnEditar.Location = new System.Drawing.Point(103, 297);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 35);
             this.btnEditar.TabIndex = 9;
             this.btnEditar.Text = "Editar Fecha de Evento";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // grpFecha
             // 
             this.grpFecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.grpFecha.Controls.Add(this.btnGuardar);
             this.grpFecha.Controls.Add(this.dateTimePicker1);
-            this.grpFecha.Location = new System.Drawing.Point(303, 322);
+            this.grpFecha.Location = new System.Drawing.Point(293, 297);
             this.grpFecha.Name = "grpFecha";
-            this.grpFecha.Size = new System.Drawing.Size(215, 83);
+            this.grpFecha.Size = new System.Drawing.Size(215, 78);
             this.grpFecha.TabIndex = 10;
             this.grpFecha.TabStop = false;
             this.grpFecha.Text = "Editar Fecha";
+            this.grpFecha.Visible = false;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(131, 45);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 25);
+            this.btnGuardar.TabIndex = 1;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // dateTimePicker1
             // 
@@ -169,30 +173,34 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 0;
             // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Location = new System.Drawing.Point(131, 45);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 25);
-            this.btnGuardar.TabIndex = 1;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(29, 382);
+            this.btnSalir.Location = new System.Drawing.Point(19, 341);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(75, 34);
             this.btnSalir.TabIndex = 11;
-            this.btnSalir.Text = "Salir";
+            this.btnSalir.Text = "Cerrar Sesión";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnAnalizar
+            // 
+            this.btnAnalizar.BackColor = System.Drawing.Color.Transparent;
+            this.btnAnalizar.Location = new System.Drawing.Point(19, 297);
+            this.btnAnalizar.Name = "btnAnalizar";
+            this.btnAnalizar.Size = new System.Drawing.Size(75, 35);
+            this.btnAnalizar.TabIndex = 12;
+            this.btnAnalizar.Text = "Analizar Evento";
+            this.btnAnalizar.UseVisualStyleBackColor = false;
+            this.btnAnalizar.Click += new System.EventHandler(this.btnAnalizar_Click);
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(549, 418);
+            this.ClientSize = new System.Drawing.Size(528, 392);
+            this.Controls.Add(this.btnAnalizar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.grpFecha);
             this.Controls.Add(this.btnEditar);
@@ -204,10 +212,10 @@
             this.Controls.Add(this.lstRealizados);
             this.Controls.Add(this.lblRealizados);
             this.Controls.Add(this.lblPorRealizar);
-            this.Controls.Add(this.lblBienvenido);
             this.Controls.Add(this.lstPorRealizar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Admin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Banquetes Haquers";
             this.grpFecha.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -218,7 +226,6 @@
         #endregion
 
         private System.Windows.Forms.ListBox lstPorRealizar;
-        private System.Windows.Forms.Label lblBienvenido;
         private System.Windows.Forms.Label lblPorRealizar;
         private System.Windows.Forms.Label lblRealizados;
         private System.Windows.Forms.ListBox lstRealizados;
@@ -232,5 +239,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnAnalizar;
     }
 }

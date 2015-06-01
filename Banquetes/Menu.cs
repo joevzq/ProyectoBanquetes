@@ -18,6 +18,10 @@ namespace Banquetes
         {
             InitializeComponent();
         }
+        public Menu(int folio)
+        {
+            InitializeComponent();
+        }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {

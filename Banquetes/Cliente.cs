@@ -12,9 +12,12 @@ namespace Banquetes
 {
     public partial class Cliente : Form
     {
-        Menu menu = new Menu();
-        Invitados inv = new Invitados();
         public Cliente()
+        {
+            InitializeComponent();
+        }
+
+        public Cliente(int folio)
         {
             InitializeComponent();
         }
@@ -24,21 +27,17 @@ namespace Banquetes
             System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(System.Drawing.ColorTranslator.FromHtml("#D85846"));
             System.Drawing.Graphics formGraphics;
             formGraphics = this.CreateGraphics();
-            formGraphics.FillRectangle(myBrush, new Rectangle(5, 9, 270, 22));
+            formGraphics.FillRectangle(myBrush, new Rectangle(5, 9, 248, 22));
             myBrush.Dispose();
             formGraphics.Dispose();
         }
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
-            menu.Show();
-            this.Hide();
         }
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            inv.Show();
-            this.Hide();
         }
 
       

@@ -12,9 +12,13 @@ namespace Banquetes
 {
     public partial class CancelarEvento : Form
     {
-        public CancelarEvento()
+        private char form;
+        private int folio;
+        public CancelarEvento(int fol, char comingFrom)
         {
             InitializeComponent();
+            form = comingFrom;
+            folio = fol;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -25,6 +29,40 @@ namespace Banquetes
             formGraphics.FillRectangle(myBrush, new Rectangle(5, 9, 300, 22));
             myBrush.Dispose();
             formGraphics.Dispose();
+        }
+
+        private void btnNo_Click(object sender, EventArgs e)
+        {
+            if (form == 'i')
+            {
+                Inicio inicio = new Inicio();
+                inicio.Show();
+                this.Hide();
+            }
+            else
+            {
+                Admin admin = new Admin();
+                admin.Show();
+                this.Hide();
+            }
+
+        }
+
+        private void btnSi_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Evento cancelado.");
+            if (form == 'i')
+            {
+                Inicio inicio = new Inicio();
+                inicio.Show();
+                this.Hide();
+            }
+            else
+            {
+                Admin admin = new Admin();
+                admin.Show();
+                this.Hide();
+            }
         }
     }
 }

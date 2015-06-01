@@ -79,10 +79,13 @@
             this.pnlTuMenu = new System.Windows.Forms.Panel();
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblSeparator = new System.Windows.Forms.Label();
-            this.lstTuMenu = new System.Windows.Forms.ListBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnContinuar = new System.Windows.Forms.Button();
+            this.lstvMenu = new System.Windows.Forms.ListView();
+            this.colPlatillo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colPorciones = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colPU = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabMenu.SuspendLayout();
             this.Entradas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -675,9 +678,9 @@
             // pnlTuMenu
             // 
             this.pnlTuMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlTuMenu.Controls.Add(this.lstvMenu);
             this.pnlTuMenu.Controls.Add(this.lblTotal);
             this.pnlTuMenu.Controls.Add(this.lblSeparator);
-            this.pnlTuMenu.Controls.Add(this.lstTuMenu);
             this.pnlTuMenu.Location = new System.Drawing.Point(324, 62);
             this.pnlTuMenu.Name = "pnlTuMenu";
             this.pnlTuMenu.Size = new System.Drawing.Size(196, 200);
@@ -701,21 +704,6 @@
             this.lblSeparator.Size = new System.Drawing.Size(191, 13);
             this.lblSeparator.TabIndex = 1;
             this.lblSeparator.Text = "**********************************************";
-            // 
-            // lstTuMenu
-            // 
-            this.lstTuMenu.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lstTuMenu.FormattingEnabled = true;
-            this.lstTuMenu.Items.AddRange(new object[] {
-            "[Nombre Entrada]\t[porcion]\t[precio]",
-            "[Nombre Entrada]\t[porcion]\t[precio]",
-            "[Nombre Entrada]\t[porcion]\t[precio]",
-            "[Nombre Entrada]\t[porcion]\t[precio]"});
-            this.lstTuMenu.Location = new System.Drawing.Point(3, 3);
-            this.lstTuMenu.Name = "lstTuMenu";
-            this.lstTuMenu.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.lstTuMenu.Size = new System.Drawing.Size(188, 143);
-            this.lstTuMenu.TabIndex = 0;
             // 
             // panel2
             // 
@@ -744,6 +732,36 @@
             this.btnContinuar.Text = "Continuar";
             this.btnContinuar.UseVisualStyleBackColor = true;
             this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);
+            // 
+            // lstvMenu
+            // 
+            this.lstvMenu.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colPlatillo,
+            this.colPorciones,
+            this.colPU});
+            this.lstvMenu.GridLines = true;
+            this.lstvMenu.Location = new System.Drawing.Point(3, 3);
+            this.lstvMenu.Name = "lstvMenu";
+            this.lstvMenu.Size = new System.Drawing.Size(188, 141);
+            this.lstvMenu.TabIndex = 23;
+            this.lstvMenu.UseCompatibleStateImageBehavior = false;
+            this.lstvMenu.View = System.Windows.Forms.View.Details;
+            // 
+            // colPlatillo
+            // 
+            this.colPlatillo.Text = "Platillo";
+            this.colPlatillo.Width = 109;
+            // 
+            // colPorciones
+            // 
+            this.colPorciones.Text = "Porciones";
+            this.colPorciones.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colPorciones.Width = 34;
+            // 
+            // colPU
+            // 
+            this.colPU.Text = "P/U";
+            this.colPU.Width = 41;
             // 
             // Menu
             // 
@@ -826,7 +844,6 @@
         private System.Windows.Forms.Label lblTuMenu;
         private System.Windows.Forms.Panel pnlTuMenu;
         private System.Windows.Forms.Label lblSeparator;
-        private System.Windows.Forms.ListBox lstTuMenu;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnCancelar;
@@ -846,5 +863,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.ListView lstvMenu;
+        private System.Windows.Forms.ColumnHeader colPlatillo;
+        private System.Windows.Forms.ColumnHeader colPorciones;
+        private System.Windows.Forms.ColumnHeader colPU;
     }
 }

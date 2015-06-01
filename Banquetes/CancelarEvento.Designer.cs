@@ -92,15 +92,17 @@
             this.btnSi.TabIndex = 4;
             this.btnSi.Text = "Si";
             this.btnSi.UseVisualStyleBackColor = true;
+            this.btnSi.Click += new System.EventHandler(this.btnSi_Click);
             // 
             // btnNo
             // 
-            this.btnNo.Location = new System.Drawing.Point(15, 194);
+            this.btnNo.Location = new System.Drawing.Point(142, 194);
             this.btnNo.Name = "btnNo";
             this.btnNo.Size = new System.Drawing.Size(75, 23);
             this.btnNo.TabIndex = 5;
             this.btnNo.Text = "No";
             this.btnNo.UseVisualStyleBackColor = true;
+            this.btnNo.Click += new System.EventHandler(this.btnNo_Click);
             // 
             // CancelarEvento
             // 

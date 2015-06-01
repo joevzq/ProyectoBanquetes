@@ -56,13 +56,13 @@
     <Compile Include="CancelarEvento.Designer.cs">
       <DependentUpon>CancelarEvento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class\Administrador.cs" />
-    <Compile Include="Class\Cliente.cs" />
-    <Compile Include="Class\Direccion_Evento.cs" />
-    <Compile Include="Class\Evento.cs" />
-    <Compile Include="Class\Invitado.cs" />
-    <Compile Include="Class\Menu.cs" />
-    <Compile Include="Class\Recibo.cs" />
+    <Compile Include="Clases\Administrador.cs" />
+    <Compile Include="Clases\Cliente.cs" />
+    <Compile Include="Clases\Direccion_Evento.cs" />
+    <Compile Include="Clases\Evento.cs" />
+    <Compile Include="Clases\Invitado.cs" />
+    <Compile Include="Clases\Menu.cs" />
+    <Compile Include="Clases\Recibo.cs" />
     <Compile Include="Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,13 +81,15 @@
     <Compile Include="Evento.Designer.cs">
       <DependentUpon>Evento.cs</DependentUpon>
     </Compile>
-    <Compile Include="InicioCliente.cs">
+    <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InicioCliente.Designer.cs">
-      <DependentUpon>InicioCliente.cs</DependentUpon>
+    <Compile Include="Inicio.Designer.cs">
+      <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
@@ -105,6 +107,15 @@
     <Compile Include="Invitados.Designer.cs">
       <DependentUpon>Invitados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Recibo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recibo.Designer.cs">
+      <DependentUpon>Recibo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaterMarkTextbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,8 +131,8 @@
     <EmbeddedResource Include="Evento.resx">
       <DependentUpon>Evento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InicioCliente.resx">
-      <DependentUpon>InicioCliente.cs</DependentUpon>
+    <EmbeddedResource Include="Inicio.resx">
+      <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Invitados.resx">
       <DependentUpon>Invitados.cs</DependentUpon>
@@ -142,6 +153,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Recibo.resx">
+      <DependentUpon>Recibo.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
