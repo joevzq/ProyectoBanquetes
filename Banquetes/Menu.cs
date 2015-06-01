@@ -56,8 +56,7 @@ namespace Banquetes
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-            Cliente cliente = new Cliente();
-            cliente.Show();
+            Banquetes.Inicio.cliente.Show();
             this.Hide();
         }
     }

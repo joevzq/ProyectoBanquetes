@@ -8,7 +8,8 @@ namespace Banquetes.Class
 {
     public class Evento
     {
-        #region variables
+        public static List<Evento> lstEventos;
+        #region Variables
         private enum status {
             por_realizar, 
             realizado, 
@@ -58,19 +59,31 @@ namespace Banquetes.Class
         }
         #endregion
 
-        #region metodos
+        #region Métodos
         //Crear evento
-        public void Crear() { }
+        public void Crear(Evento evento) { }
         //Actualizar status de evento
-        public void ActualizarStatus() { }
+        public void ActualizarStatus(int folioEvento) { }
         //Cancelar evento
-        public void Cancelar() { }
-        //Mostrar eventos en la ventana de admin, dividos dependiendo de su status
-        public void MostrarEventos() { }
+        public void Cancelar(int folioEvento) { }
+        //Llamar todos los eventos
+        public List<Evento> LlamarEventos() 
+        {
+            return lstEventos;
+        }
+        //Llamar un evento
+        public Evento LlamarEvento(int folioEvento)
+        {
+            Evento ev = new Evento();
+            return ev;
+        }
         //Actualizar fecha de un evento
-        public void ActualizarFecha() { }
+        public void ActualizarFecha(int folioEvento, DateTime nuevaFecha) { }
         //Verificar que el evento a modificar/cancelar se encuentra a más de tres de días de ser realizado
-        public bool VerificarFecha() { return true; }
+        public bool VerificarFecha(int folioEvento) 
+        { 
+            return true; 
+        }
         #endregion
     }
 }

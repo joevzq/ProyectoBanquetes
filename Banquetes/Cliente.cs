@@ -34,15 +34,13 @@ namespace Banquetes
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
-            Menu menu = new Menu();
-            menu.Show();
+            Banquetes.Inicio.menu.Show();
             this.Hide();
         }
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            Invitados inv = new Invitados();
-            inv.Show();
+            Banquetes.Inicio.invitados.Show();
             this.Hide();
         }
 

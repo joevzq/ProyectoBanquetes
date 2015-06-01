@@ -25,10 +25,13 @@ namespace Banquetes.Class
        }
 
        #endregion 
-       //Método para verificar existencia de credencial
-       public void Verificar() 
-       {
 
+       #region Métodos
+       //Método para verificar existencia de credencial
+       public bool Verificar(string usr, string pwd) 
+       {
+           return true;
        }
-    }
+       #endregion
+   }
 }

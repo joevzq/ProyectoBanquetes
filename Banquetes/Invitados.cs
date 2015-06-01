@@ -100,15 +100,13 @@ namespace Banquetes
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
-            Cliente cliente = new Cliente();
-            cliente.Show();
+            Banquetes.Inicio.cliente.Show();
             this.Hide();
         }
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            Evento evento = new Evento();
-            evento.Show();
+            Banquetes.Inicio.evento.Show();
             this.Hide();
         }
 

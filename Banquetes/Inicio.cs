@@ -16,6 +16,16 @@ namespace Banquetes
         {
             InitializeComponent();
         }
+        public static int folio;
+        public static Menu menuFolio = new Menu(folio);
+        public static Menu menu = new Menu();
+        public static Cliente clienteFolio = new Cliente(folio);
+        public static Cliente cliente = new Cliente();
+        public static Invitados invitadosFolio = new Invitados(folio);
+        public static Invitados invitados = new Invitados();
+        public static Evento eventoFolio = new Evento(folio);
+        public static Evento evento = new Evento();
+        
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -29,16 +39,14 @@ namespace Banquetes
 
         private void picCrear_Click(object sender, EventArgs e)
         {
-            Menu menu = new Menu();
             menu.Show();
             this.Hide();
         }
 
         private void picModificar_Click(object sender, EventArgs e)
         {
-            int folio = int.Parse(txtModificar.Text);
-            Menu menu = new Menu(folio);
-            menu.Show();
+            folio = int.Parse(txtModificar.Text);
+            menuFolio.Show();
             this.Hide();
         }
 

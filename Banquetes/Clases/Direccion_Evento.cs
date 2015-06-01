@@ -8,7 +8,7 @@ namespace Banquetes.Class
 {
     class Direccion_Evento
     {
-        #region variables
+        #region Variables
         private string calle;
 
         public string Calle

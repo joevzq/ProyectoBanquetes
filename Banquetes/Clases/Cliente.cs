@@ -9,14 +9,7 @@ namespace Banquetes.Class
     
    public class Cliente
    {
-       #region variables
-       private int folioEvento;
-
-       public int FolioEvento
-       {
-           get { return folioEvento; }
-           set { folioEvento = value; }
-       }
+       #region Variables
        private string nombre;
 
        public string Nombre
@@ -54,17 +47,18 @@ namespace Banquetes.Class
        }
 
        #endregion 
-       
 
+       #region Métodos
        //Método para crear Cliente
-       public void Crear() 
+       public void Crear(Cliente cliente, int folioEvento) 
        {
 
        }
        //Método para editar Cliente
-       public void Editar() 
+       public void Editar(int folioEvento) 
        {
 
        }
-    }
+       #endregion
+   }
 }

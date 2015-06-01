@@ -8,7 +8,9 @@ namespace Banquetes.Class
 {
     public class Invitado
     {
-        #region variables
+        public static List<Invitado> lstInvitados;
+
+        #region Variables
         private string nombre;
 
         public string Nombre
@@ -24,13 +26,14 @@ namespace Banquetes.Class
             set { email = value; }
         }
         #endregion
-        #region metodos
-        //Crear invitado
-        public void Crear() { }
-        //Borrar invitado
-        public void Eliminar() { }
-        //Borrar todos los invitados
-        public void EliminarTodos() { }
+        #region Métodos
+        //Llamar invitados
+        public List<Invitado> LlamarInvitados(int folioEvento)
+        {
+            return lstInvitados;
+        }
+        //Borrar todos los invitados de cierto folio en la base de datos y agregar la nueva lista de invitados
+        public void ActualizarInvitados(List<Invitado> lstInv, int folioEvento) { }
         #endregion
     }
 }

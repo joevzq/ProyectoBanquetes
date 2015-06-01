@@ -41,8 +41,7 @@ namespace Banquetes
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
-            Invitados invitados = new Invitados();
-            invitados.Show();
+            Banquetes.Inicio.invitados.Show();
             this.Hide();
         }
 
