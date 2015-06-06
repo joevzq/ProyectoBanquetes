@@ -47,6 +47,7 @@ namespace Banquetes
             folio = int.Parse(txtModificar.Text);
             menuFolio.Show();
             this.Hide();
+
         }
 
         private void picCancelar_Click(object sender, EventArgs e)
