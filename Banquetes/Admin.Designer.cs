@@ -200,7 +200,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(528, 392);
+            this.ClientSize = new System.Drawing.Size(548, 392);
             this.Controls.Add(this.btnAnalizar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.grpFecha);

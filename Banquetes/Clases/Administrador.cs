@@ -25,13 +25,29 @@ namespace Banquetes.Class
        }
 
        #endregion 
+       #region Constructor de la clase
+       public Administrador() 
+       {
+
+       }
+       public void Dispose() 
+       {
+           GC.Collect();
+
+       }
+       #endregion 
 
        #region Métodos
+
+
        //Método para verificar existencia de credencial
-       public bool Verificar(string usr, string pwd) 
+
+       public Administrador(string usr, string pwd) 
        {
-           return true;
+           usuario = usr;
+           password = pwd;
        }
+       
        #endregion
    }
 }

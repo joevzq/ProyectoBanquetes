@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BaseDatos;
+using Banquetes.Class;
+
 
 namespace Banquetes
 {
@@ -16,6 +19,9 @@ namespace Banquetes
         {
             InitializeComponent();
         }
+
+        
+       
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -36,9 +42,31 @@ namespace Banquetes
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+            string user = txtUsuario.Text;
+            string password = txtContra.Text;
+
+            try
+            {
+                Administrador objAdmin = new Administrador(user, password); /// crea nueva credencial
+                                                                            Estructura     
+
+
+
+            }
+            catch (Exception) 
+            {
+               
+                MessageBox.Show("Lo sentimos, algo ha salido mal");
+
+            }
+
+
+
+            ///concder ingreso
             Admin admin = new Admin();
             admin.Show();
             this.Hide();
+            ///acceder... 
         }
     }
 }
