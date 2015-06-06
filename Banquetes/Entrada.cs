@@ -27,7 +27,7 @@ namespace Banquetes
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void pnlNombre_Paint(object sender, PaintEventArgs e)
         {
             System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(System.Drawing.ColorTranslator.FromHtml("#D85846"));
             System.Drawing.Graphics formGraphics;

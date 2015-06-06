@@ -89,7 +89,7 @@
             this.pnlNombre.Name = "pnlNombre";
             this.pnlNombre.Size = new System.Drawing.Size(22, 17);
             this.pnlNombre.TabIndex = 17;
-            this.pnlNombre.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.pnlNombre.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlNombre_Paint);
             // 
             // lblNombreEntrada
             // 
