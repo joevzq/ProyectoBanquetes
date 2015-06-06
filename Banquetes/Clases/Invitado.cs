@@ -8,7 +8,7 @@ namespace Banquetes.Class
 {
     public class Invitado
     {
-        public static List<Invitado> lstInvitados;
+        public List<Invitado> lstInvitados;
 
         #region Variables
         private string nombre;

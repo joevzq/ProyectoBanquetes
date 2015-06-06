@@ -48,7 +48,7 @@ namespace Banquetes
             try
             {
                 Administrador objAdmin = new Administrador(user, password); /// crea nueva credencial
-                                                                            Estructura     
+   
 
 
 

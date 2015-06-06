@@ -1,4 +1,5 @@
 ﻿
+using Banquetes.Class;
 using Nivel_de_acceso.Clases;
 using System;
 using System.Collections.Generic;
@@ -78,32 +79,12 @@ namespace Banquetes
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            Estructura objElementos = new Estructura();
-            objElementos.Sentencia = "AddCliente";
 
-            objElementos.Parametros = new SqlParameter[]{
-                new SqlParameter("folio", SqlDbType.Int),
-                new SqlParameter("nombre", SqlDbType.NVarChar, 50),
-                new SqlParameter("apaterno", SqlDbType.NVarChar, 50),
-                new SqlParameter("amaterno", SqlDbType.NVarChar, 50),
-                new SqlParameter("telefono", SqlDbType.NVarChar, 10),
-                new SqlParameter("email", SqlDbType.NVarChar, 50),
-            };
-            objElementos.Valores = new List<object>() {5,"erick", "garcia", "sevilla", "234567891", "sfafer@sfesf.afe" };
-
-            Operaciones objOperaciones = new Operaciones();
-            objOperaciones.Elemento = objElementos;
-            if (objOperaciones.AgregarCredencial())
-                {
-                    MessageBox.Show("El empleado se agregó correctamente");
-                    Inicio inicio = new Inicio();
-                    inicio.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Algo salio mal:\n  -Verifique que todos los campos se hayan completado.");
-                }
+            ReciboClase recibo = new ReciboClase();
+            recibo.GuardarRecibo();
+            Inicio inicio = new Inicio();
+            inicio.Show();
+            this.Hide();
         }
 
         private void btnAnterior_Click(object sender, EventArgs e)
