@@ -41,9 +41,9 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.lblInfoInvitado = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlInfo = new System.Windows.Forms.Panel();
             this.lblListaInvitados = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlLista = new System.Windows.Forms.Panel();
             this.lblInfo = new System.Windows.Forms.Label();
             this.lstInvitados = new System.Windows.Forms.ListBox();
             this.Cancelar = new System.Windows.Forms.Button();
@@ -165,13 +165,13 @@
             this.lblInfoInvitado.TabIndex = 9;
             this.lblInfoInvitado.Text = "Información de invitado";
             // 
-            // panel1
+            // pnlInfo
             // 
-            this.panel1.Location = new System.Drawing.Point(153, 253);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(22, 17);
-            this.panel1.TabIndex = 10;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.pnlInfo.Location = new System.Drawing.Point(153, 253);
+            this.pnlInfo.Name = "pnlInfo";
+            this.pnlInfo.Size = new System.Drawing.Size(22, 17);
+            this.pnlInfo.TabIndex = 10;
+            this.pnlInfo.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblListaInvitados
             // 
@@ -185,13 +185,13 @@
             this.lblListaInvitados.TabIndex = 12;
             this.lblListaInvitados.Text = "Lista de Invitados";
             // 
-            // panel2
+            // pnlLista
             // 
-            this.panel2.Location = new System.Drawing.Point(196, 253);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(22, 17);
-            this.panel2.TabIndex = 11;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.pnlLista.Location = new System.Drawing.Point(196, 253);
+            this.pnlLista.Name = "pnlLista";
+            this.pnlLista.Size = new System.Drawing.Size(22, 17);
+            this.pnlLista.TabIndex = 11;
+            this.pnlLista.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // lblInfo
             // 
@@ -235,9 +235,9 @@
             this.Controls.Add(this.lstInvitados);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.lblListaInvitados);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnlLista);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlInfo);
             this.Controls.Add(this.btnEliminarTodo);
             this.Controls.Add(this.lblInfoInvitado);
             this.Controls.Add(this.btnAgregar);
@@ -269,9 +269,9 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblInfoInvitado;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlInfo;
         private System.Windows.Forms.Label lblListaInvitados;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlLista;
         private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.ListBox lstInvitados;
         private System.Windows.Forms.Button Cancelar;

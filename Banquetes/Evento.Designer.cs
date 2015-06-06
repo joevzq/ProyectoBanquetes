@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Evento));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlInfo = new System.Windows.Forms.Panel();
             this.lblInfoEvento = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
@@ -53,13 +53,13 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlInfo
             // 
-            this.panel1.Location = new System.Drawing.Point(181, 112);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 10);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.pnlInfo.Location = new System.Drawing.Point(181, 112);
+            this.pnlInfo.Name = "pnlInfo";
+            this.pnlInfo.Size = new System.Drawing.Size(10, 10);
+            this.pnlInfo.TabIndex = 0;
+            this.pnlInfo.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblInfoEvento
             // 
@@ -275,7 +275,7 @@
             this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblInfoEvento);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlInfo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Evento";
@@ -288,7 +288,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlInfo;
         private System.Windows.Forms.Label lblInfoEvento;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.DateTimePicker dtpFecha;

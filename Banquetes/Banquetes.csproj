@@ -65,7 +65,7 @@
     <Compile Include="Clases\Direccion_Evento.cs" />
     <Compile Include="Clases\Evento.cs" />
     <Compile Include="Clases\Invitado.cs" />
-    <Compile Include="Clases\Menu.cs" />
+    <Compile Include="Clases\MenuClase.cs" />
     <Compile Include="Clases\Recibo.cs" />
     <Compile Include="Cliente.cs">
       <SubType>Form</SubType>

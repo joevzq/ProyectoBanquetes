@@ -30,24 +30,24 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Recibo));
             this.lblInfoRecibo = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlRecibo = new System.Windows.Forms.Panel();
             this.lblNombreComp = new System.Windows.Forms.Label();
             this.lblFechaRecibo = new System.Windows.Forms.Label();
             this.lblFolioA = new System.Windows.Forms.Label();
             this.lblFolio = new System.Windows.Forms.Label();
             this.lblFechaReciboA = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlCliente = new System.Windows.Forms.Panel();
             this.lblCliente = new System.Windows.Forms.Label();
             this.lblNombreCliente = new System.Windows.Forms.Label();
             this.lblTelCliente = new System.Windows.Forms.Label();
             this.lblEmailCliente = new System.Windows.Forms.Label();
             this.lblEvento = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlEvento = new System.Windows.Forms.Panel();
             this.lblHoraEvento = new System.Windows.Forms.Label();
             this.lblFechaEvento = new System.Windows.Forms.Label();
             this.lblNombreEvento = new System.Windows.Forms.Label();
             this.lblDireccionEvento = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.pnlMenu = new System.Windows.Forms.Panel();
             this.lblMenu = new System.Windows.Forms.Label();
             this.lstvMenu = new System.Windows.Forms.ListView();
             this.colPlatillo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -78,13 +78,13 @@
             this.lblInfoRecibo.TabIndex = 2;
             this.lblInfoRecibo.Text = "Recibo";
             // 
-            // panel1
+            // pnlRecibo
             // 
-            this.panel1.Location = new System.Drawing.Point(16, 391);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 10);
-            this.panel1.TabIndex = 3;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.pnlRecibo.Location = new System.Drawing.Point(16, 391);
+            this.pnlRecibo.Name = "pnlRecibo";
+            this.pnlRecibo.Size = new System.Drawing.Size(10, 10);
+            this.pnlRecibo.TabIndex = 3;
+            this.pnlRecibo.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblNombreComp
             // 
@@ -150,13 +150,13 @@
             this.lblFechaReciboA.Text = "Fecha:";
             this.lblFechaReciboA.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // panel2
+            // pnlCliente
             // 
-            this.panel2.Location = new System.Drawing.Point(32, 391);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(43, 33);
-            this.panel2.TabIndex = 4;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.pnlCliente.Location = new System.Drawing.Point(32, 391);
+            this.pnlCliente.Name = "pnlCliente";
+            this.pnlCliente.Size = new System.Drawing.Size(43, 33);
+            this.pnlCliente.TabIndex = 4;
+            this.pnlCliente.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // lblCliente
             // 
@@ -209,13 +209,13 @@
             this.lblEvento.TabIndex = 16;
             this.lblEvento.Text = "Evento";
             // 
-            // panel3
+            // pnlEvento
             // 
-            this.panel3.Location = new System.Drawing.Point(81, 384);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(43, 33);
-            this.panel3.TabIndex = 5;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            this.pnlEvento.Location = new System.Drawing.Point(81, 384);
+            this.pnlEvento.Name = "pnlEvento";
+            this.pnlEvento.Size = new System.Drawing.Size(43, 33);
+            this.pnlEvento.TabIndex = 5;
+            this.pnlEvento.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // lblHoraEvento
             // 
@@ -253,13 +253,13 @@
             this.lblDireccionEvento.TabIndex = 20;
             this.lblDireccionEvento.Text = "[Dirección Evento]";
             // 
-            // panel4
+            // pnlMenu
             // 
-            this.panel4.Location = new System.Drawing.Point(130, 384);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(43, 33);
-            this.panel4.TabIndex = 6;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            this.pnlMenu.Location = new System.Drawing.Point(130, 384);
+            this.pnlMenu.Name = "pnlMenu";
+            this.pnlMenu.Size = new System.Drawing.Size(43, 33);
+            this.pnlMenu.TabIndex = 6;
+            this.pnlMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // lblMenu
             // 
@@ -425,24 +425,24 @@
             this.Controls.Add(this.lblSubtotal);
             this.Controls.Add(this.lstvMenu);
             this.Controls.Add(this.lblMenu);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.lblDireccionEvento);
             this.Controls.Add(this.lblHoraEvento);
             this.Controls.Add(this.lblFechaEvento);
             this.Controls.Add(this.lblNombreEvento);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.pnlEvento);
             this.Controls.Add(this.lblEvento);
             this.Controls.Add(this.lblEmailCliente);
             this.Controls.Add(this.lblTelCliente);
             this.Controls.Add(this.lblNombreCliente);
             this.Controls.Add(this.lblCliente);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnlCliente);
             this.Controls.Add(this.lblFechaReciboA);
             this.Controls.Add(this.lblFolio);
             this.Controls.Add(this.lblFolioA);
             this.Controls.Add(this.lblFechaRecibo);
             this.Controls.Add(this.lblNombreComp);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlRecibo);
             this.Controls.Add(this.lblInfoRecibo);
             this.Controls.Add(this.lblSeparador);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -457,24 +457,24 @@
         #endregion
 
         private System.Windows.Forms.Label lblInfoRecibo;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlRecibo;
         private System.Windows.Forms.Label lblNombreComp;
         private System.Windows.Forms.Label lblFechaRecibo;
         private System.Windows.Forms.Label lblFolioA;
         private System.Windows.Forms.Label lblFolio;
         private System.Windows.Forms.Label lblFechaReciboA;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlCliente;
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.Label lblNombreCliente;
         private System.Windows.Forms.Label lblTelCliente;
         private System.Windows.Forms.Label lblEmailCliente;
         private System.Windows.Forms.Label lblEvento;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnlEvento;
         private System.Windows.Forms.Label lblHoraEvento;
         private System.Windows.Forms.Label lblFechaEvento;
         private System.Windows.Forms.Label lblNombreEvento;
         private System.Windows.Forms.Label lblDireccionEvento;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Label lblMenu;
         private System.Windows.Forms.ListView lstvMenu;
         private System.Windows.Forms.ColumnHeader colPlatillo;

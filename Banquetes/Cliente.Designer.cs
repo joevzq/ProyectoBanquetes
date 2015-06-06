@@ -42,7 +42,7 @@
             this.lblPaterno = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlInfo = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnAnterior = new System.Windows.Forms.Button();
             this.btnSiguiente = new System.Windows.Forms.Button();
@@ -178,13 +178,13 @@
             this.label1.Size = new System.Drawing.Size(0, 18);
             this.label1.TabIndex = 0;
             // 
-            // panel1
+            // pnlInfo
             // 
-            this.panel1.Location = new System.Drawing.Point(103, 217);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(16, 16);
-            this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.pnlInfo.Location = new System.Drawing.Point(103, 217);
+            this.pnlInfo.Name = "pnlInfo";
+            this.pnlInfo.Size = new System.Drawing.Size(16, 16);
+            this.pnlInfo.TabIndex = 1;
+            this.pnlInfo.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblTitle
             // 
@@ -238,7 +238,7 @@
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.btnAnterior);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlInfo);
             this.Controls.Add(this.grbOne);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Cliente";
@@ -254,7 +254,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox grbOne;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlInfo;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label label1;

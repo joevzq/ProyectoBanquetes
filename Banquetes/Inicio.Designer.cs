@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlServicio = new System.Windows.Forms.Panel();
             this.lblInicioCliente = new System.Windows.Forms.Label();
             this.picCancelar = new System.Windows.Forms.PictureBox();
             this.picModificar = new System.Windows.Forms.PictureBox();
@@ -43,13 +43,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.picCrear)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlServicio
             // 
-            this.panel1.Location = new System.Drawing.Point(107, 359);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(18, 15);
-            this.panel1.TabIndex = 5;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.pnlServicio.Location = new System.Drawing.Point(122, 408);
+            this.pnlServicio.Name = "pnlServicio";
+            this.pnlServicio.Size = new System.Drawing.Size(18, 15);
+            this.pnlServicio.TabIndex = 5;
+            this.pnlServicio.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblInicioCliente
             // 
@@ -150,7 +150,7 @@
             this.Controls.Add(this.picModificar);
             this.Controls.Add(this.picCancelar);
             this.Controls.Add(this.lblInicioCliente);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlServicio);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -165,7 +165,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlServicio;
         private System.Windows.Forms.Label lblInicioCliente;
         private System.Windows.Forms.PictureBox picCancelar;
         private System.Windows.Forms.PictureBox picModificar;

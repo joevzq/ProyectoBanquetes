@@ -29,52 +29,72 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlSeleccion = new System.Windows.Forms.Panel();
             this.lblMenu = new System.Windows.Forms.Label();
             this.tabMenu = new System.Windows.Forms.TabControl();
             this.Entradas = new System.Windows.Forms.TabPage();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.numTEST1 = new System.Windows.Forms.NumericUpDown();
-            this.lblPrice1 = new System.Windows.Forms.Label();
-            this.lblIng1 = new System.Windows.Forms.Label();
-            this.checkTEST1 = new System.Windows.Forms.CheckBox();
-            this.picTEST1 = new System.Windows.Forms.PictureBox();
+            this.numEnt4 = new System.Windows.Forms.NumericUpDown();
+            this.lblPrecioEnt4 = new System.Windows.Forms.Label();
+            this.lblIngEnt4 = new System.Windows.Forms.Label();
+            this.checkEnt4 = new System.Windows.Forms.CheckBox();
+            this.imgEnt4 = new System.Windows.Forms.PictureBox();
+            this.numEnt3 = new System.Windows.Forms.NumericUpDown();
+            this.lblPrecioEnt3 = new System.Windows.Forms.Label();
+            this.lblIngEnt3 = new System.Windows.Forms.Label();
+            this.checkEnt3 = new System.Windows.Forms.CheckBox();
+            this.imgEnt3 = new System.Windows.Forms.PictureBox();
+            this.numEnt2 = new System.Windows.Forms.NumericUpDown();
+            this.lblPrecioEnt2 = new System.Windows.Forms.Label();
+            this.lblIngEnt2 = new System.Windows.Forms.Label();
+            this.checkEnt2 = new System.Windows.Forms.CheckBox();
+            this.imgEnt2 = new System.Windows.Forms.PictureBox();
+            this.numEnt1 = new System.Windows.Forms.NumericUpDown();
+            this.lblPrecioEnt1 = new System.Windows.Forms.Label();
+            this.lblIngEnt1 = new System.Windows.Forms.Label();
+            this.checkEnt1 = new System.Windows.Forms.CheckBox();
+            this.imgEnt1 = new System.Windows.Forms.PictureBox();
             this.PlatosFuertes = new System.Windows.Forms.TabPage();
+            this.numFue4 = new System.Windows.Forms.NumericUpDown();
+            this.lblPrecioFue4 = new System.Windows.Forms.Label();
+            this.lblIngFue4 = new System.Windows.Forms.Label();
+            this.checkFue4 = new System.Windows.Forms.CheckBox();
+            this.imgFue4 = new System.Windows.Forms.PictureBox();
+            this.numFue3 = new System.Windows.Forms.NumericUpDown();
+            this.lblPrecioFue3 = new System.Windows.Forms.Label();
+            this.lblIngFue3 = new System.Windows.Forms.Label();
+            this.checkFue3 = new System.Windows.Forms.CheckBox();
+            this.imgFue3 = new System.Windows.Forms.PictureBox();
+            this.numFue2 = new System.Windows.Forms.NumericUpDown();
+            this.lblPrecioFue2 = new System.Windows.Forms.Label();
+            this.lblIngFue2 = new System.Windows.Forms.Label();
+            this.checkFue2 = new System.Windows.Forms.CheckBox();
+            this.imgFue2 = new System.Windows.Forms.PictureBox();
+            this.numFue1 = new System.Windows.Forms.NumericUpDown();
+            this.lblPrecioFue1 = new System.Windows.Forms.Label();
+            this.lblIngFue1 = new System.Windows.Forms.Label();
+            this.checkFue1 = new System.Windows.Forms.CheckBox();
+            this.imgFue1 = new System.Windows.Forms.PictureBox();
             this.Postres = new System.Windows.Forms.TabPage();
-            this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.numericUpDown9 = new System.Windows.Forms.NumericUpDown();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.numericUpDown10 = new System.Windows.Forms.NumericUpDown();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.numericUpDown11 = new System.Windows.Forms.NumericUpDown();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.numPos4 = new System.Windows.Forms.NumericUpDown();
+            this.lblPrecioPos4 = new System.Windows.Forms.Label();
+            this.lblIngPos4 = new System.Windows.Forms.Label();
+            this.checkPos4 = new System.Windows.Forms.CheckBox();
+            this.imgPos4 = new System.Windows.Forms.PictureBox();
+            this.numPos3 = new System.Windows.Forms.NumericUpDown();
+            this.lblPrecioPos3 = new System.Windows.Forms.Label();
+            this.lblIngPos3 = new System.Windows.Forms.Label();
+            this.checkPos3 = new System.Windows.Forms.CheckBox();
+            this.imgPos3 = new System.Windows.Forms.PictureBox();
+            this.numPos2 = new System.Windows.Forms.NumericUpDown();
+            this.lblPrecioPos2 = new System.Windows.Forms.Label();
+            this.lblIngPos2 = new System.Windows.Forms.Label();
+            this.checkPos2 = new System.Windows.Forms.CheckBox();
+            this.imgPos2 = new System.Windows.Forms.PictureBox();
+            this.numPos1 = new System.Windows.Forms.NumericUpDown();
+            this.lblPrecioPos1 = new System.Windows.Forms.Label();
+            this.lblIngPos1 = new System.Windows.Forms.Label();
+            this.checkPos1 = new System.Windows.Forms.CheckBox();
+            this.imgPos1 = new System.Windows.Forms.PictureBox();
             this.lblTuMenu = new System.Windows.Forms.Label();
             this.pnlTuMenu = new System.Windows.Forms.Panel();
             this.lstvMenu = new System.Windows.Forms.ListView();
@@ -83,38 +103,47 @@
             this.colPU = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblSeparator = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnllRojoTuMenu = new System.Windows.Forms.Panel();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.tabMenu.SuspendLayout();
             this.Entradas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numTEST1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picTEST1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEnt4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgEnt4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEnt3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgEnt3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEnt2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgEnt2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEnt1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgEnt1)).BeginInit();
+            this.PlatosFuertes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numFue4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgFue4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numFue3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgFue3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numFue2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgFue2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numFue1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgFue1)).BeginInit();
             this.Postres.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPos4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPos4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPos3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPos3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPos2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPos2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPos1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPos1)).BeginInit();
             this.pnlTuMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlSeleccion
             // 
-            this.panel1.Location = new System.Drawing.Point(259, 284);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(37, 26);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.pnlSeleccion.Location = new System.Drawing.Point(259, 284);
+            this.pnlSeleccion.Name = "pnlSeleccion";
+            this.pnlSeleccion.Size = new System.Drawing.Size(37, 26);
+            this.pnlSeleccion.TabIndex = 0;
+            this.pnlSeleccion.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblMenu
             // 
@@ -142,26 +171,26 @@
             // Entradas
             // 
             this.Entradas.AutoScroll = true;
-            this.Entradas.Controls.Add(this.numericUpDown3);
-            this.Entradas.Controls.Add(this.label5);
-            this.Entradas.Controls.Add(this.label6);
-            this.Entradas.Controls.Add(this.checkBox3);
-            this.Entradas.Controls.Add(this.pictureBox3);
-            this.Entradas.Controls.Add(this.numericUpDown2);
-            this.Entradas.Controls.Add(this.label3);
-            this.Entradas.Controls.Add(this.label4);
-            this.Entradas.Controls.Add(this.checkBox2);
-            this.Entradas.Controls.Add(this.pictureBox2);
-            this.Entradas.Controls.Add(this.numericUpDown1);
-            this.Entradas.Controls.Add(this.label1);
-            this.Entradas.Controls.Add(this.label2);
-            this.Entradas.Controls.Add(this.checkBox1);
-            this.Entradas.Controls.Add(this.pictureBox1);
-            this.Entradas.Controls.Add(this.numTEST1);
-            this.Entradas.Controls.Add(this.lblPrice1);
-            this.Entradas.Controls.Add(this.lblIng1);
-            this.Entradas.Controls.Add(this.checkTEST1);
-            this.Entradas.Controls.Add(this.picTEST1);
+            this.Entradas.Controls.Add(this.numEnt4);
+            this.Entradas.Controls.Add(this.lblPrecioEnt4);
+            this.Entradas.Controls.Add(this.lblIngEnt4);
+            this.Entradas.Controls.Add(this.checkEnt4);
+            this.Entradas.Controls.Add(this.imgEnt4);
+            this.Entradas.Controls.Add(this.numEnt3);
+            this.Entradas.Controls.Add(this.lblPrecioEnt3);
+            this.Entradas.Controls.Add(this.lblIngEnt3);
+            this.Entradas.Controls.Add(this.checkEnt3);
+            this.Entradas.Controls.Add(this.imgEnt3);
+            this.Entradas.Controls.Add(this.numEnt2);
+            this.Entradas.Controls.Add(this.lblPrecioEnt2);
+            this.Entradas.Controls.Add(this.lblIngEnt2);
+            this.Entradas.Controls.Add(this.checkEnt2);
+            this.Entradas.Controls.Add(this.imgEnt2);
+            this.Entradas.Controls.Add(this.numEnt1);
+            this.Entradas.Controls.Add(this.lblPrecioEnt1);
+            this.Entradas.Controls.Add(this.lblIngEnt1);
+            this.Entradas.Controls.Add(this.checkEnt1);
+            this.Entradas.Controls.Add(this.imgEnt1);
             this.Entradas.Location = new System.Drawing.Point(4, 22);
             this.Entradas.Name = "Entradas";
             this.Entradas.Padding = new System.Windows.Forms.Padding(3);
@@ -170,258 +199,284 @@
             this.Entradas.Text = "Entradas";
             this.Entradas.UseVisualStyleBackColor = true;
             // 
-            // numericUpDown3
+            // numEnt4
             // 
-            this.numericUpDown3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDown3.Location = new System.Drawing.Point(216, 159);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
-            10,
+            this.numEnt4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numEnt4.Location = new System.Drawing.Point(216, 159);
+            this.numEnt4.Maximum = new decimal(new int[] {
+            9,
             0,
             0,
             0});
-            this.numericUpDown3.Minimum = new decimal(new int[] {
+            this.numEnt4.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(28, 20);
-            this.numericUpDown3.TabIndex = 20;
-            this.numericUpDown3.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(214, 145);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(20, 12);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "$45";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(52, 168);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 13);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "[Ingredientes]";
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(52, 150);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(109, 17);
-            this.checkBox3.TabIndex = 17;
-            this.checkBox3.Text = "[Nombre Entrada]";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(6, 144);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 16;
-            this.pictureBox3.TabStop = false;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDown2.Location = new System.Drawing.Point(216, 113);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDown2.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(28, 20);
-            this.numericUpDown2.TabIndex = 15;
-            this.numericUpDown2.Value = new decimal(new int[] {
+            this.numEnt4.Name = "numEnt4";
+            this.numEnt4.Size = new System.Drawing.Size(28, 20);
+            this.numEnt4.TabIndex = 20;
+            this.numEnt4.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // label3
+            // lblPrecioEnt4
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(214, 99);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(20, 12);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "$45";
+            this.lblPrecioEnt4.AutoSize = true;
+            this.lblPrecioEnt4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecioEnt4.Location = new System.Drawing.Point(214, 145);
+            this.lblPrecioEnt4.Name = "lblPrecioEnt4";
+            this.lblPrecioEnt4.Size = new System.Drawing.Size(20, 12);
+            this.lblPrecioEnt4.TabIndex = 19;
+            this.lblPrecioEnt4.Text = "$45";
             // 
-            // label4
+            // lblIngEnt4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(52, 122);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 13);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "[Ingredientes]";
+            this.lblIngEnt4.AutoSize = true;
+            this.lblIngEnt4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngEnt4.Location = new System.Drawing.Point(52, 168);
+            this.lblIngEnt4.Name = "lblIngEnt4";
+            this.lblIngEnt4.Size = new System.Drawing.Size(62, 12);
+            this.lblIngEnt4.TabIndex = 18;
+            this.lblIngEnt4.Text = "[Ingredientes]";
             // 
-            // checkBox2
+            // checkEnt4
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(52, 104);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(109, 17);
-            this.checkBox2.TabIndex = 12;
-            this.checkBox2.Text = "[Nombre Entrada]";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkEnt4.AutoSize = true;
+            this.checkEnt4.Location = new System.Drawing.Point(52, 150);
+            this.checkEnt4.Name = "checkEnt4";
+            this.checkEnt4.Size = new System.Drawing.Size(109, 17);
+            this.checkEnt4.TabIndex = 17;
+            this.checkEnt4.Text = "[Nombre Entrada]";
+            this.checkEnt4.UseVisualStyleBackColor = true;
             // 
-            // pictureBox2
+            // imgEnt4
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(6, 98);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
+            this.imgEnt4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgEnt4.Location = new System.Drawing.Point(6, 144);
+            this.imgEnt4.Name = "imgEnt4";
+            this.imgEnt4.Size = new System.Drawing.Size(40, 40);
+            this.imgEnt4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgEnt4.TabIndex = 16;
+            this.imgEnt4.TabStop = false;
+            this.imgEnt4.Click += new System.EventHandler(this.img_Click);
             // 
-            // numericUpDown1
+            // numEnt3
             // 
-            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDown1.Location = new System.Drawing.Point(216, 67);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            10,
+            this.numEnt3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numEnt3.Location = new System.Drawing.Point(216, 113);
+            this.numEnt3.Maximum = new decimal(new int[] {
+            9,
             0,
             0,
             0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.numEnt3.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(28, 20);
-            this.numericUpDown1.TabIndex = 10;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(214, 53);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 12);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "$45";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(52, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "[Ingredientes]";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(52, 58);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(109, 17);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "[Nombre Entrada]";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 52);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
-            // numTEST1
-            // 
-            this.numTEST1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numTEST1.Location = new System.Drawing.Point(216, 21);
-            this.numTEST1.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numTEST1.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numTEST1.Name = "numTEST1";
-            this.numTEST1.Size = new System.Drawing.Size(28, 20);
-            this.numTEST1.TabIndex = 5;
-            this.numTEST1.Value = new decimal(new int[] {
+            this.numEnt3.Name = "numEnt3";
+            this.numEnt3.Size = new System.Drawing.Size(28, 20);
+            this.numEnt3.TabIndex = 15;
+            this.numEnt3.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // lblPrice1
+            // lblPrecioEnt3
             // 
-            this.lblPrice1.AutoSize = true;
-            this.lblPrice1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice1.Location = new System.Drawing.Point(214, 7);
-            this.lblPrice1.Name = "lblPrice1";
-            this.lblPrice1.Size = new System.Drawing.Size(20, 12);
-            this.lblPrice1.TabIndex = 4;
-            this.lblPrice1.Text = "$45";
+            this.lblPrecioEnt3.AutoSize = true;
+            this.lblPrecioEnt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecioEnt3.Location = new System.Drawing.Point(214, 99);
+            this.lblPrecioEnt3.Name = "lblPrecioEnt3";
+            this.lblPrecioEnt3.Size = new System.Drawing.Size(20, 12);
+            this.lblPrecioEnt3.TabIndex = 14;
+            this.lblPrecioEnt3.Text = "$45";
             // 
-            // lblIng1
+            // lblIngEnt3
             // 
-            this.lblIng1.AutoSize = true;
-            this.lblIng1.Location = new System.Drawing.Point(52, 30);
-            this.lblIng1.Name = "lblIng1";
-            this.lblIng1.Size = new System.Drawing.Size(71, 13);
-            this.lblIng1.TabIndex = 3;
-            this.lblIng1.Text = "[Ingredientes]";
+            this.lblIngEnt3.AutoSize = true;
+            this.lblIngEnt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngEnt3.Location = new System.Drawing.Point(52, 122);
+            this.lblIngEnt3.Name = "lblIngEnt3";
+            this.lblIngEnt3.Size = new System.Drawing.Size(62, 12);
+            this.lblIngEnt3.TabIndex = 13;
+            this.lblIngEnt3.Text = "[Ingredientes]";
             // 
-            // checkTEST1
+            // checkEnt3
             // 
-            this.checkTEST1.AutoSize = true;
-            this.checkTEST1.Location = new System.Drawing.Point(52, 12);
-            this.checkTEST1.Name = "checkTEST1";
-            this.checkTEST1.Size = new System.Drawing.Size(109, 17);
-            this.checkTEST1.TabIndex = 2;
-            this.checkTEST1.Text = "[Nombre Entrada]";
-            this.checkTEST1.UseVisualStyleBackColor = true;
+            this.checkEnt3.AutoSize = true;
+            this.checkEnt3.Location = new System.Drawing.Point(52, 104);
+            this.checkEnt3.Name = "checkEnt3";
+            this.checkEnt3.Size = new System.Drawing.Size(109, 17);
+            this.checkEnt3.TabIndex = 12;
+            this.checkEnt3.Text = "[Nombre Entrada]";
+            this.checkEnt3.UseVisualStyleBackColor = true;
             // 
-            // picTEST1
+            // imgEnt3
             // 
-            this.picTEST1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picTEST1.Image = ((System.Drawing.Image)(resources.GetObject("picTEST1.Image")));
-            this.picTEST1.Location = new System.Drawing.Point(6, 6);
-            this.picTEST1.Name = "picTEST1";
-            this.picTEST1.Size = new System.Drawing.Size(40, 40);
-            this.picTEST1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picTEST1.TabIndex = 1;
-            this.picTEST1.TabStop = false;
-            this.picTEST1.Click += new System.EventHandler(this.picTEST1_Click);
+            this.imgEnt3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgEnt3.Location = new System.Drawing.Point(6, 98);
+            this.imgEnt3.Name = "imgEnt3";
+            this.imgEnt3.Size = new System.Drawing.Size(40, 40);
+            this.imgEnt3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgEnt3.TabIndex = 11;
+            this.imgEnt3.TabStop = false;
+            this.imgEnt3.Click += new System.EventHandler(this.img_Click);
+            // 
+            // numEnt2
+            // 
+            this.numEnt2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numEnt2.Location = new System.Drawing.Point(216, 67);
+            this.numEnt2.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            this.numEnt2.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numEnt2.Name = "numEnt2";
+            this.numEnt2.Size = new System.Drawing.Size(28, 20);
+            this.numEnt2.TabIndex = 10;
+            this.numEnt2.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // lblPrecioEnt2
+            // 
+            this.lblPrecioEnt2.AutoSize = true;
+            this.lblPrecioEnt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecioEnt2.Location = new System.Drawing.Point(214, 53);
+            this.lblPrecioEnt2.Name = "lblPrecioEnt2";
+            this.lblPrecioEnt2.Size = new System.Drawing.Size(20, 12);
+            this.lblPrecioEnt2.TabIndex = 9;
+            this.lblPrecioEnt2.Text = "$45";
+            // 
+            // lblIngEnt2
+            // 
+            this.lblIngEnt2.AutoSize = true;
+            this.lblIngEnt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngEnt2.Location = new System.Drawing.Point(52, 76);
+            this.lblIngEnt2.Name = "lblIngEnt2";
+            this.lblIngEnt2.Size = new System.Drawing.Size(62, 12);
+            this.lblIngEnt2.TabIndex = 8;
+            this.lblIngEnt2.Text = "[Ingredientes]";
+            // 
+            // checkEnt2
+            // 
+            this.checkEnt2.AutoSize = true;
+            this.checkEnt2.Location = new System.Drawing.Point(52, 58);
+            this.checkEnt2.Name = "checkEnt2";
+            this.checkEnt2.Size = new System.Drawing.Size(109, 17);
+            this.checkEnt2.TabIndex = 7;
+            this.checkEnt2.Text = "[Nombre Entrada]";
+            this.checkEnt2.UseVisualStyleBackColor = true;
+            // 
+            // imgEnt2
+            // 
+            this.imgEnt2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgEnt2.Location = new System.Drawing.Point(6, 52);
+            this.imgEnt2.Name = "imgEnt2";
+            this.imgEnt2.Size = new System.Drawing.Size(40, 40);
+            this.imgEnt2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgEnt2.TabIndex = 6;
+            this.imgEnt2.TabStop = false;
+            this.imgEnt2.Click += new System.EventHandler(this.img_Click);
+            // 
+            // numEnt1
+            // 
+            this.numEnt1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numEnt1.Location = new System.Drawing.Point(216, 21);
+            this.numEnt1.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            this.numEnt1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numEnt1.Name = "numEnt1";
+            this.numEnt1.Size = new System.Drawing.Size(28, 20);
+            this.numEnt1.TabIndex = 5;
+            this.numEnt1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // lblPrecioEnt1
+            // 
+            this.lblPrecioEnt1.AutoSize = true;
+            this.lblPrecioEnt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecioEnt1.Location = new System.Drawing.Point(214, 7);
+            this.lblPrecioEnt1.Name = "lblPrecioEnt1";
+            this.lblPrecioEnt1.Size = new System.Drawing.Size(20, 12);
+            this.lblPrecioEnt1.TabIndex = 4;
+            this.lblPrecioEnt1.Text = "$45";
+            // 
+            // lblIngEnt1
+            // 
+            this.lblIngEnt1.AutoSize = true;
+            this.lblIngEnt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngEnt1.Location = new System.Drawing.Point(52, 30);
+            this.lblIngEnt1.Name = "lblIngEnt1";
+            this.lblIngEnt1.Size = new System.Drawing.Size(62, 12);
+            this.lblIngEnt1.TabIndex = 3;
+            this.lblIngEnt1.Text = "[Ingredientes]";
+            // 
+            // checkEnt1
+            // 
+            this.checkEnt1.AutoSize = true;
+            this.checkEnt1.Location = new System.Drawing.Point(52, 12);
+            this.checkEnt1.Name = "checkEnt1";
+            this.checkEnt1.Size = new System.Drawing.Size(109, 17);
+            this.checkEnt1.TabIndex = 2;
+            this.checkEnt1.Text = "[Nombre Entrada]";
+            this.checkEnt1.UseVisualStyleBackColor = true;
+            // 
+            // imgEnt1
+            // 
+            this.imgEnt1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgEnt1.Location = new System.Drawing.Point(6, 6);
+            this.imgEnt1.Name = "imgEnt1";
+            this.imgEnt1.Size = new System.Drawing.Size(40, 40);
+            this.imgEnt1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgEnt1.TabIndex = 1;
+            this.imgEnt1.TabStop = false;
+            this.imgEnt1.Click += new System.EventHandler(this.img_Click);
             // 
             // PlatosFuertes
             // 
+            this.PlatosFuertes.Controls.Add(this.numFue4);
+            this.PlatosFuertes.Controls.Add(this.lblPrecioFue4);
+            this.PlatosFuertes.Controls.Add(this.lblIngFue4);
+            this.PlatosFuertes.Controls.Add(this.checkFue4);
+            this.PlatosFuertes.Controls.Add(this.imgFue4);
+            this.PlatosFuertes.Controls.Add(this.numFue3);
+            this.PlatosFuertes.Controls.Add(this.lblPrecioFue3);
+            this.PlatosFuertes.Controls.Add(this.lblIngFue3);
+            this.PlatosFuertes.Controls.Add(this.checkFue3);
+            this.PlatosFuertes.Controls.Add(this.imgFue3);
+            this.PlatosFuertes.Controls.Add(this.numFue2);
+            this.PlatosFuertes.Controls.Add(this.lblPrecioFue2);
+            this.PlatosFuertes.Controls.Add(this.lblIngFue2);
+            this.PlatosFuertes.Controls.Add(this.checkFue2);
+            this.PlatosFuertes.Controls.Add(this.imgFue2);
+            this.PlatosFuertes.Controls.Add(this.numFue1);
+            this.PlatosFuertes.Controls.Add(this.lblPrecioFue1);
+            this.PlatosFuertes.Controls.Add(this.lblIngFue1);
+            this.PlatosFuertes.Controls.Add(this.checkFue1);
+            this.PlatosFuertes.Controls.Add(this.imgFue1);
             this.PlatosFuertes.Location = new System.Drawing.Point(4, 22);
             this.PlatosFuertes.Name = "PlatosFuertes";
             this.PlatosFuertes.Padding = new System.Windows.Forms.Padding(3);
@@ -430,28 +485,284 @@
             this.PlatosFuertes.Text = "Platos Fuertes";
             this.PlatosFuertes.UseVisualStyleBackColor = true;
             // 
+            // numFue4
+            // 
+            this.numFue4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numFue4.Location = new System.Drawing.Point(216, 159);
+            this.numFue4.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            this.numFue4.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numFue4.Name = "numFue4";
+            this.numFue4.Size = new System.Drawing.Size(28, 20);
+            this.numFue4.TabIndex = 40;
+            this.numFue4.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // lblPrecioFue4
+            // 
+            this.lblPrecioFue4.AutoSize = true;
+            this.lblPrecioFue4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecioFue4.Location = new System.Drawing.Point(214, 145);
+            this.lblPrecioFue4.Name = "lblPrecioFue4";
+            this.lblPrecioFue4.Size = new System.Drawing.Size(20, 12);
+            this.lblPrecioFue4.TabIndex = 39;
+            this.lblPrecioFue4.Text = "$45";
+            // 
+            // lblIngFue4
+            // 
+            this.lblIngFue4.AutoSize = true;
+            this.lblIngFue4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngFue4.Location = new System.Drawing.Point(52, 168);
+            this.lblIngFue4.Name = "lblIngFue4";
+            this.lblIngFue4.Size = new System.Drawing.Size(62, 12);
+            this.lblIngFue4.TabIndex = 38;
+            this.lblIngFue4.Text = "[Ingredientes]";
+            // 
+            // checkFue4
+            // 
+            this.checkFue4.AutoSize = true;
+            this.checkFue4.Location = new System.Drawing.Point(52, 150);
+            this.checkFue4.Name = "checkFue4";
+            this.checkFue4.Size = new System.Drawing.Size(109, 17);
+            this.checkFue4.TabIndex = 37;
+            this.checkFue4.Text = "[Nombre Entrada]";
+            this.checkFue4.UseVisualStyleBackColor = true;
+            // 
+            // imgFue4
+            // 
+            this.imgFue4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgFue4.Location = new System.Drawing.Point(6, 144);
+            this.imgFue4.Name = "imgFue4";
+            this.imgFue4.Size = new System.Drawing.Size(40, 40);
+            this.imgFue4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgFue4.TabIndex = 36;
+            this.imgFue4.TabStop = false;
+            this.imgFue4.Click += new System.EventHandler(this.img_Click);
+            // 
+            // numFue3
+            // 
+            this.numFue3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numFue3.Location = new System.Drawing.Point(216, 113);
+            this.numFue3.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            this.numFue3.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numFue3.Name = "numFue3";
+            this.numFue3.Size = new System.Drawing.Size(28, 20);
+            this.numFue3.TabIndex = 35;
+            this.numFue3.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // lblPrecioFue3
+            // 
+            this.lblPrecioFue3.AutoSize = true;
+            this.lblPrecioFue3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecioFue3.Location = new System.Drawing.Point(214, 99);
+            this.lblPrecioFue3.Name = "lblPrecioFue3";
+            this.lblPrecioFue3.Size = new System.Drawing.Size(20, 12);
+            this.lblPrecioFue3.TabIndex = 34;
+            this.lblPrecioFue3.Text = "$45";
+            // 
+            // lblIngFue3
+            // 
+            this.lblIngFue3.AutoSize = true;
+            this.lblIngFue3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngFue3.Location = new System.Drawing.Point(52, 122);
+            this.lblIngFue3.Name = "lblIngFue3";
+            this.lblIngFue3.Size = new System.Drawing.Size(62, 12);
+            this.lblIngFue3.TabIndex = 33;
+            this.lblIngFue3.Text = "[Ingredientes]";
+            // 
+            // checkFue3
+            // 
+            this.checkFue3.AutoSize = true;
+            this.checkFue3.Location = new System.Drawing.Point(52, 104);
+            this.checkFue3.Name = "checkFue3";
+            this.checkFue3.Size = new System.Drawing.Size(109, 17);
+            this.checkFue3.TabIndex = 32;
+            this.checkFue3.Text = "[Nombre Entrada]";
+            this.checkFue3.UseVisualStyleBackColor = true;
+            // 
+            // imgFue3
+            // 
+            this.imgFue3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgFue3.Location = new System.Drawing.Point(6, 98);
+            this.imgFue3.Name = "imgFue3";
+            this.imgFue3.Size = new System.Drawing.Size(40, 40);
+            this.imgFue3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgFue3.TabIndex = 31;
+            this.imgFue3.TabStop = false;
+            this.imgFue3.Click += new System.EventHandler(this.img_Click);
+            // 
+            // numFue2
+            // 
+            this.numFue2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numFue2.Location = new System.Drawing.Point(216, 67);
+            this.numFue2.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            this.numFue2.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numFue2.Name = "numFue2";
+            this.numFue2.Size = new System.Drawing.Size(28, 20);
+            this.numFue2.TabIndex = 30;
+            this.numFue2.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // lblPrecioFue2
+            // 
+            this.lblPrecioFue2.AutoSize = true;
+            this.lblPrecioFue2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecioFue2.Location = new System.Drawing.Point(214, 53);
+            this.lblPrecioFue2.Name = "lblPrecioFue2";
+            this.lblPrecioFue2.Size = new System.Drawing.Size(20, 12);
+            this.lblPrecioFue2.TabIndex = 29;
+            this.lblPrecioFue2.Text = "$45";
+            // 
+            // lblIngFue2
+            // 
+            this.lblIngFue2.AutoSize = true;
+            this.lblIngFue2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngFue2.Location = new System.Drawing.Point(52, 76);
+            this.lblIngFue2.Name = "lblIngFue2";
+            this.lblIngFue2.Size = new System.Drawing.Size(62, 12);
+            this.lblIngFue2.TabIndex = 28;
+            this.lblIngFue2.Text = "[Ingredientes]";
+            // 
+            // checkFue2
+            // 
+            this.checkFue2.AutoSize = true;
+            this.checkFue2.Location = new System.Drawing.Point(52, 58);
+            this.checkFue2.Name = "checkFue2";
+            this.checkFue2.Size = new System.Drawing.Size(109, 17);
+            this.checkFue2.TabIndex = 27;
+            this.checkFue2.Text = "[Nombre Entrada]";
+            this.checkFue2.UseVisualStyleBackColor = true;
+            // 
+            // imgFue2
+            // 
+            this.imgFue2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgFue2.Location = new System.Drawing.Point(6, 52);
+            this.imgFue2.Name = "imgFue2";
+            this.imgFue2.Size = new System.Drawing.Size(40, 40);
+            this.imgFue2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgFue2.TabIndex = 26;
+            this.imgFue2.TabStop = false;
+            this.imgFue2.Click += new System.EventHandler(this.img_Click);
+            // 
+            // numFue1
+            // 
+            this.numFue1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numFue1.Location = new System.Drawing.Point(216, 21);
+            this.numFue1.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            this.numFue1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numFue1.Name = "numFue1";
+            this.numFue1.Size = new System.Drawing.Size(28, 20);
+            this.numFue1.TabIndex = 25;
+            this.numFue1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // lblPrecioFue1
+            // 
+            this.lblPrecioFue1.AutoSize = true;
+            this.lblPrecioFue1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecioFue1.Location = new System.Drawing.Point(214, 7);
+            this.lblPrecioFue1.Name = "lblPrecioFue1";
+            this.lblPrecioFue1.Size = new System.Drawing.Size(20, 12);
+            this.lblPrecioFue1.TabIndex = 24;
+            this.lblPrecioFue1.Text = "$45";
+            // 
+            // lblIngFue1
+            // 
+            this.lblIngFue1.AutoSize = true;
+            this.lblIngFue1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngFue1.Location = new System.Drawing.Point(52, 30);
+            this.lblIngFue1.Name = "lblIngFue1";
+            this.lblIngFue1.Size = new System.Drawing.Size(62, 12);
+            this.lblIngFue1.TabIndex = 23;
+            this.lblIngFue1.Text = "[Ingredientes]";
+            // 
+            // checkFue1
+            // 
+            this.checkFue1.AutoSize = true;
+            this.checkFue1.Location = new System.Drawing.Point(52, 12);
+            this.checkFue1.Name = "checkFue1";
+            this.checkFue1.Size = new System.Drawing.Size(109, 17);
+            this.checkFue1.TabIndex = 22;
+            this.checkFue1.Text = "[Nombre Entrada]";
+            this.checkFue1.UseVisualStyleBackColor = true;
+            // 
+            // imgFue1
+            // 
+            this.imgFue1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgFue1.Location = new System.Drawing.Point(6, 6);
+            this.imgFue1.Name = "imgFue1";
+            this.imgFue1.Size = new System.Drawing.Size(40, 40);
+            this.imgFue1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgFue1.TabIndex = 21;
+            this.imgFue1.TabStop = false;
+            this.imgFue1.Click += new System.EventHandler(this.img_Click);
+            // 
             // Postres
             // 
-            this.Postres.Controls.Add(this.numericUpDown8);
-            this.Postres.Controls.Add(this.label15);
-            this.Postres.Controls.Add(this.label16);
-            this.Postres.Controls.Add(this.checkBox8);
-            this.Postres.Controls.Add(this.pictureBox8);
-            this.Postres.Controls.Add(this.numericUpDown9);
-            this.Postres.Controls.Add(this.label17);
-            this.Postres.Controls.Add(this.label18);
-            this.Postres.Controls.Add(this.checkBox9);
-            this.Postres.Controls.Add(this.pictureBox9);
-            this.Postres.Controls.Add(this.numericUpDown10);
-            this.Postres.Controls.Add(this.label19);
-            this.Postres.Controls.Add(this.label20);
-            this.Postres.Controls.Add(this.checkBox10);
-            this.Postres.Controls.Add(this.pictureBox10);
-            this.Postres.Controls.Add(this.numericUpDown11);
-            this.Postres.Controls.Add(this.label21);
-            this.Postres.Controls.Add(this.label22);
-            this.Postres.Controls.Add(this.checkBox11);
-            this.Postres.Controls.Add(this.pictureBox11);
+            this.Postres.Controls.Add(this.numPos4);
+            this.Postres.Controls.Add(this.lblPrecioPos4);
+            this.Postres.Controls.Add(this.lblIngPos4);
+            this.Postres.Controls.Add(this.checkPos4);
+            this.Postres.Controls.Add(this.imgPos4);
+            this.Postres.Controls.Add(this.numPos3);
+            this.Postres.Controls.Add(this.lblPrecioPos3);
+            this.Postres.Controls.Add(this.lblIngPos3);
+            this.Postres.Controls.Add(this.checkPos3);
+            this.Postres.Controls.Add(this.imgPos3);
+            this.Postres.Controls.Add(this.numPos2);
+            this.Postres.Controls.Add(this.lblPrecioPos2);
+            this.Postres.Controls.Add(this.lblIngPos2);
+            this.Postres.Controls.Add(this.checkPos2);
+            this.Postres.Controls.Add(this.imgPos2);
+            this.Postres.Controls.Add(this.numPos1);
+            this.Postres.Controls.Add(this.lblPrecioPos1);
+            this.Postres.Controls.Add(this.lblIngPos1);
+            this.Postres.Controls.Add(this.checkPos1);
+            this.Postres.Controls.Add(this.imgPos1);
             this.Postres.Location = new System.Drawing.Point(4, 22);
             this.Postres.Name = "Postres";
             this.Postres.Size = new System.Drawing.Size(273, 194);
@@ -459,209 +770,261 @@
             this.Postres.Text = "Postres";
             this.Postres.UseVisualStyleBackColor = true;
             // 
-            // numericUpDown8
+            // numPos4
             // 
-            this.numericUpDown8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDown8.Location = new System.Drawing.Point(211, 155);
-            this.numericUpDown8.Name = "numericUpDown8";
-            this.numericUpDown8.Size = new System.Drawing.Size(33, 20);
-            this.numericUpDown8.TabIndex = 40;
-            this.numericUpDown8.Value = new decimal(new int[] {
+            this.numPos4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numPos4.Location = new System.Drawing.Point(216, 159);
+            this.numPos4.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            this.numPos4.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numPos4.Name = "numPos4";
+            this.numPos4.Size = new System.Drawing.Size(28, 20);
+            this.numPos4.TabIndex = 40;
+            this.numPos4.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // label15
+            // lblPrecioPos4
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(170, 150);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(25, 13);
-            this.label15.TabIndex = 39;
-            this.label15.Text = "$45";
+            this.lblPrecioPos4.AutoSize = true;
+            this.lblPrecioPos4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecioPos4.Location = new System.Drawing.Point(214, 145);
+            this.lblPrecioPos4.Name = "lblPrecioPos4";
+            this.lblPrecioPos4.Size = new System.Drawing.Size(20, 12);
+            this.lblPrecioPos4.TabIndex = 39;
+            this.lblPrecioPos4.Text = "$45";
             // 
-            // label16
+            // lblIngPos4
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(52, 168);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(66, 13);
-            this.label16.TabIndex = 38;
-            this.label16.Text = "pato, francia";
+            this.lblIngPos4.AutoSize = true;
+            this.lblIngPos4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngPos4.Location = new System.Drawing.Point(52, 168);
+            this.lblIngPos4.Name = "lblIngPos4";
+            this.lblIngPos4.Size = new System.Drawing.Size(62, 12);
+            this.lblIngPos4.TabIndex = 38;
+            this.lblIngPos4.Text = "[Ingredientes]";
             // 
-            // checkBox8
+            // checkPos4
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(52, 150);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(89, 17);
-            this.checkBox8.TabIndex = 37;
-            this.checkBox8.Text = "Pato Frances";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.checkPos4.AutoSize = true;
+            this.checkPos4.Location = new System.Drawing.Point(52, 150);
+            this.checkPos4.Name = "checkPos4";
+            this.checkPos4.Size = new System.Drawing.Size(109, 17);
+            this.checkPos4.TabIndex = 37;
+            this.checkPos4.Text = "[Nombre Entrada]";
+            this.checkPos4.UseVisualStyleBackColor = true;
             // 
-            // pictureBox8
+            // imgPos4
             // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(6, 144);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 36;
-            this.pictureBox8.TabStop = false;
+            this.imgPos4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgPos4.Location = new System.Drawing.Point(6, 144);
+            this.imgPos4.Name = "imgPos4";
+            this.imgPos4.Size = new System.Drawing.Size(40, 40);
+            this.imgPos4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgPos4.TabIndex = 36;
+            this.imgPos4.TabStop = false;
+            this.imgPos4.Click += new System.EventHandler(this.img_Click);
             // 
-            // numericUpDown9
+            // numPos3
             // 
-            this.numericUpDown9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDown9.Location = new System.Drawing.Point(211, 109);
-            this.numericUpDown9.Name = "numericUpDown9";
-            this.numericUpDown9.Size = new System.Drawing.Size(33, 20);
-            this.numericUpDown9.TabIndex = 35;
-            this.numericUpDown9.Value = new decimal(new int[] {
+            this.numPos3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numPos3.Location = new System.Drawing.Point(216, 113);
+            this.numPos3.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            this.numPos3.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numPos3.Name = "numPos3";
+            this.numPos3.Size = new System.Drawing.Size(28, 20);
+            this.numPos3.TabIndex = 35;
+            this.numPos3.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // label17
+            // lblPrecioPos3
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(170, 104);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(25, 13);
-            this.label17.TabIndex = 34;
-            this.label17.Text = "$45";
+            this.lblPrecioPos3.AutoSize = true;
+            this.lblPrecioPos3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecioPos3.Location = new System.Drawing.Point(214, 99);
+            this.lblPrecioPos3.Name = "lblPrecioPos3";
+            this.lblPrecioPos3.Size = new System.Drawing.Size(20, 12);
+            this.lblPrecioPos3.TabIndex = 34;
+            this.lblPrecioPos3.Text = "$45";
             // 
-            // label18
+            // lblIngPos3
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(52, 122);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(66, 13);
-            this.label18.TabIndex = 33;
-            this.label18.Text = "pato, francia";
+            this.lblIngPos3.AutoSize = true;
+            this.lblIngPos3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngPos3.Location = new System.Drawing.Point(52, 122);
+            this.lblIngPos3.Name = "lblIngPos3";
+            this.lblIngPos3.Size = new System.Drawing.Size(62, 12);
+            this.lblIngPos3.TabIndex = 33;
+            this.lblIngPos3.Text = "[Ingredientes]";
             // 
-            // checkBox9
+            // checkPos3
             // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(52, 104);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(89, 17);
-            this.checkBox9.TabIndex = 32;
-            this.checkBox9.Text = "Pato Frances";
-            this.checkBox9.UseVisualStyleBackColor = true;
+            this.checkPos3.AutoSize = true;
+            this.checkPos3.Location = new System.Drawing.Point(52, 104);
+            this.checkPos3.Name = "checkPos3";
+            this.checkPos3.Size = new System.Drawing.Size(109, 17);
+            this.checkPos3.TabIndex = 32;
+            this.checkPos3.Text = "[Nombre Entrada]";
+            this.checkPos3.UseVisualStyleBackColor = true;
             // 
-            // pictureBox9
+            // imgPos3
             // 
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(6, 98);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 31;
-            this.pictureBox9.TabStop = false;
+            this.imgPos3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgPos3.Location = new System.Drawing.Point(6, 98);
+            this.imgPos3.Name = "imgPos3";
+            this.imgPos3.Size = new System.Drawing.Size(40, 40);
+            this.imgPos3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgPos3.TabIndex = 31;
+            this.imgPos3.TabStop = false;
+            this.imgPos3.Click += new System.EventHandler(this.img_Click);
             // 
-            // numericUpDown10
+            // numPos2
             // 
-            this.numericUpDown10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDown10.Location = new System.Drawing.Point(211, 63);
-            this.numericUpDown10.Name = "numericUpDown10";
-            this.numericUpDown10.Size = new System.Drawing.Size(33, 20);
-            this.numericUpDown10.TabIndex = 30;
-            this.numericUpDown10.Value = new decimal(new int[] {
+            this.numPos2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numPos2.Location = new System.Drawing.Point(216, 67);
+            this.numPos2.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            this.numPos2.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numPos2.Name = "numPos2";
+            this.numPos2.Size = new System.Drawing.Size(28, 20);
+            this.numPos2.TabIndex = 30;
+            this.numPos2.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // label19
+            // lblPrecioPos2
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(170, 58);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(25, 13);
-            this.label19.TabIndex = 29;
-            this.label19.Text = "$45";
+            this.lblPrecioPos2.AutoSize = true;
+            this.lblPrecioPos2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecioPos2.Location = new System.Drawing.Point(214, 53);
+            this.lblPrecioPos2.Name = "lblPrecioPos2";
+            this.lblPrecioPos2.Size = new System.Drawing.Size(20, 12);
+            this.lblPrecioPos2.TabIndex = 29;
+            this.lblPrecioPos2.Text = "$45";
             // 
-            // label20
+            // lblIngPos2
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(52, 76);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(66, 13);
-            this.label20.TabIndex = 28;
-            this.label20.Text = "pato, francia";
+            this.lblIngPos2.AutoSize = true;
+            this.lblIngPos2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngPos2.Location = new System.Drawing.Point(52, 76);
+            this.lblIngPos2.Name = "lblIngPos2";
+            this.lblIngPos2.Size = new System.Drawing.Size(62, 12);
+            this.lblIngPos2.TabIndex = 28;
+            this.lblIngPos2.Text = "[Ingredientes]";
             // 
-            // checkBox10
+            // checkPos2
             // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(52, 58);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(89, 17);
-            this.checkBox10.TabIndex = 27;
-            this.checkBox10.Text = "Pato Frances";
-            this.checkBox10.UseVisualStyleBackColor = true;
+            this.checkPos2.AutoSize = true;
+            this.checkPos2.Location = new System.Drawing.Point(52, 58);
+            this.checkPos2.Name = "checkPos2";
+            this.checkPos2.Size = new System.Drawing.Size(109, 17);
+            this.checkPos2.TabIndex = 27;
+            this.checkPos2.Text = "[Nombre Entrada]";
+            this.checkPos2.UseVisualStyleBackColor = true;
             // 
-            // pictureBox10
+            // imgPos2
             // 
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(6, 52);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 26;
-            this.pictureBox10.TabStop = false;
+            this.imgPos2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgPos2.Location = new System.Drawing.Point(6, 52);
+            this.imgPos2.Name = "imgPos2";
+            this.imgPos2.Size = new System.Drawing.Size(40, 40);
+            this.imgPos2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgPos2.TabIndex = 26;
+            this.imgPos2.TabStop = false;
+            this.imgPos2.Click += new System.EventHandler(this.img_Click);
             // 
-            // numericUpDown11
+            // numPos1
             // 
-            this.numericUpDown11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDown11.Location = new System.Drawing.Point(211, 17);
-            this.numericUpDown11.Name = "numericUpDown11";
-            this.numericUpDown11.Size = new System.Drawing.Size(33, 20);
-            this.numericUpDown11.TabIndex = 25;
-            this.numericUpDown11.Value = new decimal(new int[] {
+            this.numPos1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numPos1.Location = new System.Drawing.Point(216, 21);
+            this.numPos1.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            this.numPos1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numPos1.Name = "numPos1";
+            this.numPos1.Size = new System.Drawing.Size(28, 20);
+            this.numPos1.TabIndex = 25;
+            this.numPos1.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // label21
+            // lblPrecioPos1
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(170, 12);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(25, 13);
-            this.label21.TabIndex = 24;
-            this.label21.Text = "$45";
+            this.lblPrecioPos1.AutoSize = true;
+            this.lblPrecioPos1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecioPos1.Location = new System.Drawing.Point(214, 7);
+            this.lblPrecioPos1.Name = "lblPrecioPos1";
+            this.lblPrecioPos1.Size = new System.Drawing.Size(20, 12);
+            this.lblPrecioPos1.TabIndex = 24;
+            this.lblPrecioPos1.Text = "$45";
             // 
-            // label22
+            // lblIngPos1
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(52, 30);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(66, 13);
-            this.label22.TabIndex = 23;
-            this.label22.Text = "pato, francia";
+            this.lblIngPos1.AutoSize = true;
+            this.lblIngPos1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngPos1.Location = new System.Drawing.Point(52, 30);
+            this.lblIngPos1.Name = "lblIngPos1";
+            this.lblIngPos1.Size = new System.Drawing.Size(62, 12);
+            this.lblIngPos1.TabIndex = 23;
+            this.lblIngPos1.Text = "[Ingredientes]";
             // 
-            // checkBox11
+            // checkPos1
             // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Location = new System.Drawing.Point(52, 12);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(89, 17);
-            this.checkBox11.TabIndex = 22;
-            this.checkBox11.Text = "Pato Frances";
-            this.checkBox11.UseVisualStyleBackColor = true;
+            this.checkPos1.AutoSize = true;
+            this.checkPos1.Location = new System.Drawing.Point(52, 12);
+            this.checkPos1.Name = "checkPos1";
+            this.checkPos1.Size = new System.Drawing.Size(109, 17);
+            this.checkPos1.TabIndex = 22;
+            this.checkPos1.Text = "[Nombre Entrada]";
+            this.checkPos1.UseVisualStyleBackColor = true;
             // 
-            // pictureBox11
+            // imgPos1
             // 
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(6, 6);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 21;
-            this.pictureBox11.TabStop = false;
+            this.imgPos1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgPos1.Location = new System.Drawing.Point(6, 6);
+            this.imgPos1.Name = "imgPos1";
+            this.imgPos1.Size = new System.Drawing.Size(40, 40);
+            this.imgPos1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgPos1.TabIndex = 21;
+            this.imgPos1.TabStop = false;
+            this.imgPos1.Click += new System.EventHandler(this.img_Click);
             // 
             // lblTuMenu
             // 
@@ -735,13 +1098,13 @@
             this.lblSeparator.TabIndex = 1;
             this.lblSeparator.Text = "**********************************************";
             // 
-            // panel2
+            // pnllRojoTuMenu
             // 
-            this.panel2.Location = new System.Drawing.Point(192, 284);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(50, 30);
-            this.panel2.TabIndex = 26;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.pnllRojoTuMenu.Location = new System.Drawing.Point(186, 273);
+            this.pnllRojoTuMenu.Name = "pnllRojoTuMenu";
+            this.pnllRojoTuMenu.Size = new System.Drawing.Size(50, 30);
+            this.pnllRojoTuMenu.TabIndex = 26;
+            this.pnllRojoTuMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // btnCancelar
             // 
@@ -771,37 +1134,48 @@
             this.ClientSize = new System.Drawing.Size(536, 306);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnllRojoTuMenu);
             this.Controls.Add(this.pnlTuMenu);
             this.Controls.Add(this.lblTuMenu);
             this.Controls.Add(this.tabMenu);
             this.Controls.Add(this.lblMenu);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlSeleccion);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.Menu_Load);
             this.tabMenu.ResumeLayout(false);
             this.Entradas.ResumeLayout(false);
             this.Entradas.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numTEST1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picTEST1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEnt4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgEnt4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEnt3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgEnt3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEnt2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgEnt2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEnt1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgEnt1)).EndInit();
+            this.PlatosFuertes.ResumeLayout(false);
+            this.PlatosFuertes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numFue4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgFue4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numFue3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgFue3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numFue2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgFue2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numFue1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgFue1)).EndInit();
             this.Postres.ResumeLayout(false);
             this.Postres.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPos4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPos4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPos3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPos3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPos2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPos2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPos1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPos1)).EndInit();
             this.pnlTuMenu.ResumeLayout(false);
             this.pnlTuMenu.PerformLayout();
             this.ResumeLayout(false);
@@ -810,62 +1184,82 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlSeleccion;
         private System.Windows.Forms.Label lblMenu;
         private System.Windows.Forms.TabControl tabMenu;
         private System.Windows.Forms.TabPage Entradas;
         private System.Windows.Forms.TabPage PlatosFuertes;
         private System.Windows.Forms.TabPage Postres;
-        private System.Windows.Forms.PictureBox picTEST1;
-        private System.Windows.Forms.Label lblPrice1;
-        private System.Windows.Forms.Label lblIng1;
-        private System.Windows.Forms.CheckBox checkTEST1;
-        private System.Windows.Forms.NumericUpDown numTEST1;
-        private System.Windows.Forms.NumericUpDown numericUpDown8;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.NumericUpDown numericUpDown9;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.NumericUpDown numericUpDown10;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.NumericUpDown numericUpDown11;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.CheckBox checkBox11;
-        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox imgEnt1;
+        private System.Windows.Forms.Label lblPrecioEnt1;
+        private System.Windows.Forms.Label lblIngEnt1;
+        private System.Windows.Forms.CheckBox checkEnt1;
+        private System.Windows.Forms.NumericUpDown numEnt1;
         private System.Windows.Forms.Label lblTuMenu;
         private System.Windows.Forms.Panel pnlTuMenu;
         private System.Windows.Forms.Label lblSeparator;
         private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnllRojoTuMenu;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSiguiente;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.NumericUpDown numEnt3;
+        private System.Windows.Forms.Label lblPrecioEnt3;
+        private System.Windows.Forms.Label lblIngEnt3;
+        private System.Windows.Forms.CheckBox checkEnt3;
+        private System.Windows.Forms.PictureBox imgEnt3;
+        private System.Windows.Forms.NumericUpDown numEnt2;
+        private System.Windows.Forms.Label lblPrecioEnt2;
+        private System.Windows.Forms.Label lblIngEnt2;
+        private System.Windows.Forms.CheckBox checkEnt2;
+        private System.Windows.Forms.PictureBox imgEnt2;
+        private System.Windows.Forms.NumericUpDown numEnt4;
+        private System.Windows.Forms.Label lblPrecioEnt4;
+        private System.Windows.Forms.Label lblIngEnt4;
+        private System.Windows.Forms.CheckBox checkEnt4;
+        private System.Windows.Forms.PictureBox imgEnt4;
         private System.Windows.Forms.ListView lstvMenu;
         private System.Windows.Forms.ColumnHeader colPlatillo;
         private System.Windows.Forms.ColumnHeader colPorciones;
         private System.Windows.Forms.ColumnHeader colPU;
+        private System.Windows.Forms.NumericUpDown numFue4;
+        private System.Windows.Forms.Label lblPrecioFue4;
+        private System.Windows.Forms.Label lblIngFue4;
+        private System.Windows.Forms.CheckBox checkFue4;
+        private System.Windows.Forms.PictureBox imgFue4;
+        private System.Windows.Forms.NumericUpDown numFue3;
+        private System.Windows.Forms.Label lblPrecioFue3;
+        private System.Windows.Forms.Label lblIngFue3;
+        private System.Windows.Forms.CheckBox checkFue3;
+        private System.Windows.Forms.PictureBox imgFue3;
+        private System.Windows.Forms.NumericUpDown numFue2;
+        private System.Windows.Forms.Label lblPrecioFue2;
+        private System.Windows.Forms.Label lblIngFue2;
+        private System.Windows.Forms.CheckBox checkFue2;
+        private System.Windows.Forms.PictureBox imgFue2;
+        private System.Windows.Forms.NumericUpDown numFue1;
+        private System.Windows.Forms.Label lblPrecioFue1;
+        private System.Windows.Forms.Label lblIngFue1;
+        private System.Windows.Forms.CheckBox checkFue1;
+        private System.Windows.Forms.PictureBox imgFue1;
+        private System.Windows.Forms.NumericUpDown numPos4;
+        private System.Windows.Forms.Label lblPrecioPos4;
+        private System.Windows.Forms.Label lblIngPos4;
+        private System.Windows.Forms.CheckBox checkPos4;
+        private System.Windows.Forms.PictureBox imgPos4;
+        private System.Windows.Forms.NumericUpDown numPos3;
+        private System.Windows.Forms.Label lblPrecioPos3;
+        private System.Windows.Forms.Label lblIngPos3;
+        private System.Windows.Forms.CheckBox checkPos3;
+        private System.Windows.Forms.PictureBox imgPos3;
+        private System.Windows.Forms.NumericUpDown numPos2;
+        private System.Windows.Forms.Label lblPrecioPos2;
+        private System.Windows.Forms.Label lblIngPos2;
+        private System.Windows.Forms.CheckBox checkPos2;
+        private System.Windows.Forms.PictureBox imgPos2;
+        private System.Windows.Forms.NumericUpDown numPos1;
+        private System.Windows.Forms.Label lblPrecioPos1;
+        private System.Windows.Forms.Label lblIngPos1;
+        private System.Windows.Forms.CheckBox checkPos1;
+        private System.Windows.Forms.PictureBox imgPos1;
     }
 }
