@@ -35,7 +35,7 @@ namespace Practica2_1.Clases
                 objDatos = new Ejecucion(cadena);
             }
         }
-        public bool AgregarCredencial()
+        public bool AgregarInfo()
         {
             bool valido = false;
             int n = objDatos.EjecutaComando(elemento.Parametros, elemento.Valores, elemento.Sentencia, CommandType.StoredProcedure);
@@ -49,10 +49,10 @@ namespace Practica2_1.Clases
             int n = objDatos.EjecutaScalar(elemento.Parametros, elemento.Valores, elemento.Sentencia, CommandType.Text);
             return n;
         }
-        public DataTable ObtenerCredenciales()
+        public DataTable ObtenerDataTable(string tabla)
         {
             DataTable datos = new DataTable();
-            datos = objDatos.SeleccionaDatosDesconectado(elemento.Parametros, elemento.Valores, elemento.Sentencia, CommandType.Text, "tbl_Credencial");
+            datos = objDatos.SeleccionaDatosDesconectado(elemento.Parametros, elemento.Valores, elemento.Sentencia, CommandType.StoredProcedure, tabla);
             return datos;
         }
     }

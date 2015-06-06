@@ -35,7 +35,7 @@
             this.lstRealizados = new System.Windows.Forms.ListBox();
             this.lstCancelados = new System.Windows.Forms.ListBox();
             this.lblCancelados = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlEventos = new System.Windows.Forms.Panel();
             this.lblEventos = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -99,14 +99,14 @@
             this.lblCancelados.TabIndex = 5;
             this.lblCancelados.Text = "Cancelados";
             // 
-            // panel1
+            // pnlEventos
             // 
-            this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.panel1.Location = new System.Drawing.Point(208, 305);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 10);
-            this.panel1.TabIndex = 7;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.pnlEventos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pnlEventos.Location = new System.Drawing.Point(208, 305);
+            this.pnlEventos.Name = "pnlEventos";
+            this.pnlEventos.Size = new System.Drawing.Size(10, 10);
+            this.pnlEventos.TabIndex = 7;
+            this.pnlEventos.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblEventos
             // 
@@ -207,7 +207,7 @@
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lblEventos);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlEventos);
             this.Controls.Add(this.lstCancelados);
             this.Controls.Add(this.lblCancelados);
             this.Controls.Add(this.lstRealizados);
@@ -232,7 +232,7 @@
         private System.Windows.Forms.ListBox lstRealizados;
         private System.Windows.Forms.ListBox lstCancelados;
         private System.Windows.Forms.Label lblCancelados;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlEventos;
         private System.Windows.Forms.Label lblEventos;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEditar;

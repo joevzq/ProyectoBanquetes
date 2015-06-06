@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Banquetes.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,15 +13,33 @@ namespace Banquetes
 {
     public partial class Menu : Form
     {
+        private controls[] arrControles = new controls[12];
+        public class controls
+        {
+            public PictureBox picture { get; set; }
+            public CheckBox checkbox { get; set; }
+            public Label ingredientes { get; set; }
+            public Label precio { get; set; }
+            public NumericUpDown num { get; set; }
+        }
         public Menu()
         {
             InitializeComponent();
+            MenuClase menuCl = new MenuClase();
+            menuCl.MostrarMenu();
+            crearArray();
+            llenarControles();
+            
+        }
+        public ICollection<controls> ArrControles
+        {
+            get { return arrControles; }
         }
         public Menu(int folio)
         {
             InitializeComponent();
         }
-
+        
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(System.Drawing.ColorTranslator.FromHtml("#D85846"));
@@ -41,12 +60,6 @@ namespace Banquetes
             formGraphics.Dispose();
         }
 
-        private void picTEST1_Click(object sender, EventArgs e)
-        {
-            Entrada ent = new Entrada();
-            ent.ShowDialog();
-        }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Inicio inicio = new Inicio();
@@ -58,6 +71,136 @@ namespace Banquetes
         {
             Banquetes.Inicio.cliente.Show();
             this.Hide();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void crearArray()
+        {
+            controls Ent1 = new controls();
+            Ent1.checkbox = checkEnt1;
+            Ent1.picture = imgEnt1;
+            Ent1.precio = lblPrecioEnt1;
+            Ent1.ingredientes = lblIngEnt1;
+            Ent1.num = numEnt1;
+            arrControles[0] = Ent1;
+
+            controls Fue1 = new controls();
+            Fue1.checkbox = checkFue1;
+            Fue1.picture = imgFue1;
+            Fue1.precio = lblPrecioFue1;
+            Fue1.ingredientes = lblIngFue1;
+            Fue1.num = numFue1;
+            arrControles[1] = Fue1;
+
+            controls Pos1 = new controls();
+            Pos1.checkbox = checkPos1;
+            Pos1.picture = imgPos1;
+            Pos1.precio = lblPrecioPos1;
+            Pos1.ingredientes = lblIngPos1;
+            Pos1.num = numPos1;
+            arrControles[2] = Pos1;
+
+            controls Fue2 = new controls();
+            Fue2.checkbox = checkFue2;
+            Fue2.picture = imgFue2;
+            Fue2.precio = lblPrecioFue2;
+            Fue2.ingredientes = lblIngFue2;
+            Fue2.num = numFue2;
+            arrControles[3] = Fue2;
+
+            controls Pos2 = new controls();
+            Pos2.checkbox = checkPos2;
+            Pos2.picture = imgPos2;
+            Pos2.precio = lblPrecioPos2;
+            Pos2.ingredientes = lblIngPos2;
+            Pos2.num = numPos2;
+            arrControles[4] = Pos2;
+
+            controls Ent2 = new controls();
+            Ent2.checkbox = checkEnt2;
+            Ent2.picture = imgEnt2;
+            Ent2.precio = lblPrecioEnt2;
+            Ent2.ingredientes = lblIngEnt2;
+            Ent2.num = numEnt2;
+            arrControles[5] = Ent2;
+
+            controls Fue3 = new controls();
+            Fue3.checkbox = checkFue3;
+            Fue3.picture = imgFue3;
+            Fue3.precio = lblPrecioFue3;
+            Fue3.ingredientes = lblIngFue3;
+            Fue3.num = numFue3;
+            arrControles[6] = Fue3;
+
+            controls Pos3 = new controls();
+            Pos3.checkbox = checkPos3;
+            Pos3.picture = imgPos3;
+            Pos3.precio = lblPrecioPos3;
+            Pos3.ingredientes = lblIngPos3;
+            Pos3.num = numPos3;
+            arrControles[7] = Pos3;
+
+            controls Fue4 = new controls();
+            Fue4.checkbox = checkFue4;
+            Fue4.picture = imgFue4;
+            Fue4.precio = lblPrecioFue4;
+            Fue4.ingredientes = lblIngFue4;
+            Fue4.num = numFue4;
+            arrControles[8] = Fue4;
+
+            controls Pos4 = new controls();
+            Pos4.checkbox = checkPos4;
+            Pos4.picture = imgPos4;
+            Pos4.precio = lblPrecioPos4;
+            Pos4.ingredientes = lblIngPos4;
+            Pos4.num = numPos4;
+            arrControles[9] = Pos4;
+
+            controls Ent3 = new controls();
+            Ent3.checkbox = checkEnt3;
+            Ent3.picture = imgEnt3;
+            Ent3.precio = lblPrecioEnt3;
+            Ent3.ingredientes = lblIngEnt3;
+            Ent3.num = numEnt3;
+            arrControles[10] = Ent3;
+
+            controls Ent4 = new controls();
+            Ent4.checkbox = checkEnt4;
+            Ent4.picture = imgEnt4;
+            Ent4.precio = lblPrecioEnt4;
+            Ent4.ingredientes = lblIngEnt4;
+            Ent4.num = numEnt4;
+            arrControles[11] = Ent4;
+            
+        }
+
+        private void llenarControles()
+        {
+            for (int i = 0; i < 12; i++)
+            {
+                arrControles[i].checkbox.Text = MenuClase.lstEntradas[i].nombre;
+                arrControles[i].picture.ImageLocation = MenuClase.lstEntradas[i].imagen;
+                arrControles[i].ingredientes.Text = MenuClase.lstEntradas[i].ingredientes[0] + ", " + MenuClase.lstEntradas[i].ingredientes[1];
+                arrControles[i].precio.Text = "$" + MenuClase.lstEntradas[i].precioUnit.ToString() + ".00";
+            }
+        }
+
+        private void img_Click(object sender, EventArgs e)
+        {
+            int i = 0;
+            while (i < 12)
+            {
+                if (arrControles[i].picture.Name == ((PictureBox)sender).Name)
+                {
+                    Entrada entrada = new Entrada(i);
+                    entrada.ShowDialog();
+                }
+                i++;
+            }
         }
     }
 }

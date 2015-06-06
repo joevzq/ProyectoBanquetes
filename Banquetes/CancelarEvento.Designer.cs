@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CancelarEvento));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlCancelar = new System.Windows.Forms.Panel();
             this.lblCancelar = new System.Windows.Forms.Label();
             this.lblSeguro = new System.Windows.Forms.Label();
             this.lblComentario = new System.Windows.Forms.Label();
@@ -38,13 +38,13 @@
             this.btnNo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlCancelar
             // 
-            this.panel1.Location = new System.Drawing.Point(272, 40);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(44, 28);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.pnlCancelar.Location = new System.Drawing.Point(272, 40);
+            this.pnlCancelar.Name = "pnlCancelar";
+            this.pnlCancelar.Size = new System.Drawing.Size(44, 28);
+            this.pnlCancelar.TabIndex = 0;
+            this.pnlCancelar.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblCancelar
             // 
@@ -117,7 +117,7 @@
             this.Controls.Add(this.lblComentario);
             this.Controls.Add(this.lblSeguro);
             this.Controls.Add(this.lblCancelar);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlCancelar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CancelarEvento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -129,7 +129,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlCancelar;
         private System.Windows.Forms.Label lblCancelar;
         private System.Windows.Forms.Label lblSeguro;
         private System.Windows.Forms.Label lblComentario;

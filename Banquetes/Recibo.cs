@@ -1,5 +1,4 @@
 ﻿
-using Nivel_de_acceso.Clases;
 using Practica2_1.Clases;
 using System;
 using System.Collections.Generic;
@@ -94,7 +93,7 @@ namespace Banquetes
 
             Operaciones objOperaciones = new Operaciones();
             objOperaciones.Elemento = objElementos;
-            if (objOperaciones.AgregarCredencial())
+            if (objOperaciones.AgregarInfo())
                 {
                     MessageBox.Show("El empleado se agregó correctamente");
                     Inicio inicio = new Inicio();

@@ -32,7 +32,7 @@
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lstIngredientes = new System.Windows.Forms.ListBox();
             this.picEntrada = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlNombre = new System.Windows.Forms.Panel();
             this.lblNombreEntrada = new System.Windows.Forms.Label();
             this.lblIngredientes = new System.Windows.Forms.Label();
             this.lblPrecio = new System.Windows.Forms.Label();
@@ -67,10 +67,10 @@
             "[Ingrediente 6]",
             "[Ingrediente 7]",
             "[Ingrediente 8]"});
-            this.lstIngredientes.Location = new System.Drawing.Point(6, 112);
+            this.lstIngredientes.Location = new System.Drawing.Point(22, 112);
             this.lstIngredientes.Name = "lstIngredientes";
             this.lstIngredientes.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.lstIngredientes.Size = new System.Drawing.Size(183, 117);
+            this.lstIngredientes.Size = new System.Drawing.Size(167, 117);
             this.lstIngredientes.TabIndex = 19;
             // 
             // picEntrada
@@ -83,13 +83,13 @@
             this.picEntrada.TabIndex = 18;
             this.picEntrada.TabStop = false;
             // 
-            // panel1
+            // pnlNombre
             // 
-            this.panel1.Location = new System.Drawing.Point(502, 109);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(22, 17);
-            this.panel1.TabIndex = 17;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.pnlNombre.Location = new System.Drawing.Point(422, 343);
+            this.pnlNombre.Name = "pnlNombre";
+            this.pnlNombre.Size = new System.Drawing.Size(22, 17);
+            this.pnlNombre.TabIndex = 17;
+            this.pnlNombre.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlNombre_Paint);
             // 
             // lblNombreEntrada
             // 
@@ -106,9 +106,10 @@
             // lblIngredientes
             // 
             this.lblIngredientes.AutoSize = true;
+            this.lblIngredientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIngredientes.Location = new System.Drawing.Point(7, 96);
             this.lblIngredientes.Name = "lblIngredientes";
-            this.lblIngredientes.Size = new System.Drawing.Size(68, 13);
+            this.lblIngredientes.Size = new System.Drawing.Size(91, 15);
             this.lblIngredientes.TabIndex = 21;
             this.lblIngredientes.Text = "Ingredientes:";
             // 
@@ -166,7 +167,7 @@
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.picEntrada);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlNombre);
             this.Controls.Add(this.lblNombreEntrada);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Entrada";
@@ -185,7 +186,7 @@
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.ListBox lstIngredientes;
         private System.Windows.Forms.PictureBox picEntrada;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlNombre;
         private System.Windows.Forms.Label lblNombreEntrada;
         private System.Windows.Forms.Label lblIngredientes;
         private System.Windows.Forms.Label lblPrecio;

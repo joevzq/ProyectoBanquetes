@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Banquetes.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +13,21 @@ namespace Banquetes
 {
     public partial class Entrada : Form
     {
-        public Entrada()
+        public Entrada(int id)
         {
             InitializeComponent();
+            lblNombreEntrada.Text = MenuClase.lstEntradas[id].nombre;
+            picEntrada.ImageLocation = MenuClase.lstEntradas[id].imagen;
+            lblDescripcion.Text = MenuClase.lstEntradas[id].descripcion;
+            lblPrecio.Text = "$" + MenuClase.lstEntradas[id].precioUnit.ToString();
+            lstIngredientes.Items.Clear();
+            foreach (string ing in MenuClase.lstEntradas[id].ingredientes)
+            {
+                lstIngredientes.Items.Add(ing);
+            }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void pnlNombre_Paint(object sender, PaintEventArgs e)
         {
             System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(System.Drawing.ColorTranslator.FromHtml("#D85846"));
             System.Drawing.Graphics formGraphics;
