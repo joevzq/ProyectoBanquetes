@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BaseDatos;
 using Banquetes.Class;
+using Practica2_1.Clases;
 
 
 namespace Banquetes
@@ -48,7 +49,9 @@ namespace Banquetes
             try
             {
                 Administrador objAdmin = new Administrador(user, password); /// crea nueva credencial
-                                                                            Estructura     
+                Estructura objElementos = new Estructura();///nueva estructura
+                objElementos.Sentencia = "";
+                
 
 
 

@@ -1,5 +1,6 @@
 ﻿
 using Nivel_de_acceso.Clases;
+using Practica2_1.Clases;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

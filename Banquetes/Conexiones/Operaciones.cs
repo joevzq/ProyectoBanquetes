@@ -38,7 +38,7 @@ namespace Practica2_1.Clases
         public bool AgregarCredencial()
         {
             bool valido = false;
-            int n = objDatos.EjecutaComando(elemento.Parametros, elemento.Valores, elemento.Sentencia, CommandType.Text);
+            int n = objDatos.EjecutaComando(elemento.Parametros, elemento.Valores, elemento.Sentencia, CommandType.StoredProcedure);
             if (n > 0)
                 valido = true;
 

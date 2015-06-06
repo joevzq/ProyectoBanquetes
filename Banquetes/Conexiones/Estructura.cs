@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Practica2_1.Clases
 {
-    class Estructura
+   public class Estructura
     {
         SqlParameter[] parametros;
         public SqlParameter[] Parametros
