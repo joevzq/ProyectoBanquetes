@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Nivel_de_acceso.Clases
 {
-    class Estructura
+   public class Estructura
     {
         SqlParameter[] parametros;
 

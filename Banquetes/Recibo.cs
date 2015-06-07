@@ -82,10 +82,10 @@ namespace Banquetes
 
             ReciboClase recibo = new ReciboClase();
             recibo.GuardarRecibo();
-            Inicio inicio = new Inicio();
-            inicio.Show();
-            this.Hide();
-        }
+                    Inicio inicio = new Inicio();
+                    inicio.Show();
+                    this.Hide();
+                }
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {

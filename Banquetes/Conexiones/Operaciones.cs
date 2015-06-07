@@ -23,7 +23,7 @@ namespace Nivel_de_acceso.Clases
 
         private Ejecucion objDatos;
 
-        public dynamic ObjDatos
+        public Ejecucion ObjDatos
         {
             get { return objDatos; }
             set { objDatos = value; }
@@ -38,12 +38,13 @@ namespace Nivel_de_acceso.Clases
                 objDatos = new Ejecucion(cadena);
             }
         }
-
-        public bool AgregarCredencial()
+        public bool AgregarInfo()
         {
-            bool valido = true;
-            int n = objDatos.EjecutaComando(elemento.Parametros,
-                elemento.Valores, elemento.Sentencia, CommandType.StoredProcedure);
+            bool valido = false;
+            int n = objDatos.EjecutaComando(elemento.Parametros, elemento.Valores, elemento.Sentencia, CommandType.StoredProcedure);
+            if (n > 0)
+                valido = true;
+
             return valido;
         }
         public int ObtenerScalar()
@@ -54,13 +55,10 @@ namespace Nivel_de_acceso.Clases
 
             return n;
         }
-
-        public DataTable ObtenerCredenciales()
+        public DataTable ObtenerDataTable(string tabla)
         {
             DataTable datos = new DataTable();
-            datos = objDatos.SeleccionaDatosDesconectado
-                (elemento.Parametros, elemento.Valores, elemento.Sentencia,
-            CommandType.StoredProcedure, "");
+            datos = objDatos.SeleccionaDatosDesconectado(elemento.Parametros, elemento.Valores, elemento.Sentencia, CommandType.StoredProcedure, tabla);
             return datos;
         }
     }
