@@ -35,9 +35,9 @@
             this.picModificar = new System.Windows.Forms.PictureBox();
             this.picCrear = new System.Windows.Forms.PictureBox();
             this.btnAdmin = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.txtCancelar = new Practica1_Calculadora.WaterMarkTextBox();
             this.txtModificar = new Practica1_Calculadora.WaterMarkTextBox();
-            this.btnSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picCancelar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picModificar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCrear)).BeginInit();
@@ -106,6 +106,16 @@
             this.btnAdmin.UseVisualStyleBackColor = true;
             this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(36, 400);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(48, 23);
+            this.btnSalir.TabIndex = 30;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // txtCancelar
             // 
             this.txtCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -125,16 +135,6 @@
             this.txtModificar.TabIndex = 27;
             this.txtModificar.WaterMarkColor = System.Drawing.Color.Gray;
             this.txtModificar.WaterMarkText = "Folio de evento a modificar";
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(36, 400);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(48, 23);
-            this.btnSalir.TabIndex = 30;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // Inicio
             // 

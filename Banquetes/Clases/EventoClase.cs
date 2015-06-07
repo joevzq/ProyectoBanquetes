@@ -61,7 +61,9 @@ namespace Banquetes.Class
 
         #region Métodos
         //Crear evento
-        public void Crear(Evento evento) { }
+        public void Crear(Evento evento) { 
+
+        }
         //Actualizar status de evento
         public void ActualizarStatus(int folioEvento) { }
         //Cancelar evento

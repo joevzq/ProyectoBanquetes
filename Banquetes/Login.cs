@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BaseDatos;
 using Banquetes.Class;
+using Nivel_de_acceso.Clases;
+
 
 
 namespace Banquetes
@@ -42,6 +43,19 @@ namespace Banquetes
             string user = txtUsuario.Text;
             string password = txtContra.Text;
 
+            try
+            {
+                Administrador objAdmin = new Administrador(user, password); /// crea nueva credencial
+                Estructura objElementos = new Estructura();///nueva estructura
+                objElementos.Sentencia = "";
+            }
+            catch (Exception) 
+            {
+               
+                MessageBox.Show("Lo sentimos, algo ha salido mal");
+
+            }
+            
             ///concder ingreso
             Admin admin = new Admin();
             admin.Show();

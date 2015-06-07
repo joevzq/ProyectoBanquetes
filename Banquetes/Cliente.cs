@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,7 +15,10 @@ namespace Banquetes
     {
         public Cliente()
         {
+            
+            List<Cliente> lista = new List<Cliente>();
             InitializeComponent();
+           
         }
 
         public Cliente(int folio)
@@ -40,8 +44,73 @@ namespace Banquetes
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Cliente cli = new Cliente();
+                string name = txtNombre.Text;
+                string Apaterno = txtPaterno.Text;
+                string Amaterno = txtMaterno.Text;
+                string telefono = txtTel.Text;
+                string mail = new MailAddress(txtMail.Text).ToString();
+
+                if (String.IsNullOrWhiteSpace(name) || String.IsNullOrWhiteSpace(Apaterno) ||
+                  String.IsNullOrWhiteSpace(Amaterno) ||
+                  String.IsNullOrWhiteSpace(telefono) ||
+                  String.IsNullOrWhiteSpace(mail))
+                    MessageBox.Show("Lo sentimos, no se han completado todos los campos", "Información incompleta");
+                else 
+                {
+                    bool phonenumber = telLengt(telefono);
+                     //verificar que se ha ingresado correctamente
+                    if (!phonenumber)
+                        MessageBox.Show("numero de télefono incompleto.");
+                    else 
+                    {
+                        cli.crearEmpleado(name, Apaterno, Amaterno, telefono, mail);
+                        
+                    }
+                    
+
+                }
+
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Lo sentimos, ha ocurrido un error.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+            ///continuar con el siguiete formulario
             Banquetes.Inicio.invitados.Show();
             this.Hide();
+        }
+
+        private void crearEmpleado(string name, string Apaterno, string Amaterno, string telefono, string mail)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void crearEmpleado()
+        {
+            throw new NotImplementedException();
+        }
+
+     
+        //método para validar número de teléfono 
+        public bool telLengt(string numeros) 
+        {
+            char[] num = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+            bool flag;
+            int count = 0;
+            for (int i = 0; i < numeros.Length; i++)
+                for (int j = 0; j < num.Length; j++)
+                    if (numeros[i] == num[j])
+                        count++;
+            if (count < 10)
+                flag = false;
+            else
+                flag = true;
+            return flag;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -50,7 +119,5 @@ namespace Banquetes
             inicio.Show();
             this.Hide();
         }
-
-      
     }
 }

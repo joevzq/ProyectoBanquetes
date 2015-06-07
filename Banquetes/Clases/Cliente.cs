@@ -31,13 +31,14 @@ namespace Banquetes.Class
            get { return apMaterno; }
            set { apMaterno = value; }
        }
-       private int telefono;
+       private string telefono;
 
-       public int Telefono
+       public string Telefono
        {
            get { return telefono; }
            set { telefono = value; }
        }
+
        private string email;
 
        public string Email
@@ -49,11 +50,30 @@ namespace Banquetes.Class
        #endregion 
 
        #region Métodos
-       //Método para crear Cliente
-       public void Crear(Cliente cliente, int folioEvento) 
-       {
+       public static List<Cliente> lstCli = new List<Cliente>();
+  
 
+
+       
+       //Método para crear Cliente
+       public void crearEmpleado(string nombre, string Apaterno, string Amaterno, string telefono, string email)
+       {
+           bool exist = false;
+           Cliente newCli = new Cliente();
+           newCli.nombre = nombre;
+           newCli.apPaterno = Apaterno;
+           newCli.apMaterno = Amaterno;
+           newCli.telefono = telefono;
+           newCli.email = email;
+
+           //for (int i = 0; i < lstCli.Count; i++)
+           //{
+           //    if (newCli.nombre == lstCli[i].nombre && newCli.apPaterno == lstCli[i].apPaterno && newCli.ApMaterno == lstCli[i].apMaterno && newCli.telefono == lstCli[i].telefono && newCli.email == lstCli[i].email)
+           //        exist = true;
+           //}
+         
        }
+          
        //Método para editar Cliente
        public void Editar(int folioEvento) 
        {

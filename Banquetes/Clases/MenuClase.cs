@@ -64,8 +64,8 @@ namespace Banquetes.Class
                 }
             }
             if (!exists)
-            {
-               
+        {
+
                 MenuClase entrada = new MenuClase();
                 entrada.idEntrada = id;
                 entrada.Porciones = (int)Menu.arrControles[id-1].num.Value;
@@ -89,7 +89,7 @@ namespace Banquetes.Class
             for (int i = 0; i < lstMenuCliente.Count; i++)
             {
                 for (int j = 0; j < lstEntradas.Count; j++)
-                {
+        {
                     if (lstMenuCliente[i].idEntrada == lstEntradas[j].idEntrada)
                         total += lstMenuCliente[i].Porciones * lstEntradas[j].precioUnit;
                 }
@@ -130,7 +130,7 @@ namespace Banquetes.Class
                 objElements.Parametros = new SqlParameter[] {
                     new SqlParameter("id", SqlDbType.Int)
                 };
-                objElements.Valores = new List<object>() { i+1 };
+                objElements.Valores = new List<object>() { i + 1 };
                 objOperaciones.Elemento = objElements;
                 data = objOperaciones.ObtenerDataTable(tabla);
                 lstEntradas[i].ingredientes = new List<string>(); 

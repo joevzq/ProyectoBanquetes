@@ -1,4 +1,5 @@
-﻿using BaseDatos.ConexionBD;
+﻿
+using BaseDatos.ConexionBD;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -6,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Practica2_1.Clases
+
+
+namespace Nivel_de_acceso.Clases
 {
     class Operaciones
     {
@@ -30,15 +33,15 @@ namespace Practica2_1.Clases
         {
             if (objDatos == null)
             {
-                string cadena = System.Configuration.ConfigurationManager.ConnectionStrings["CadenaSqlSrv"].ConnectionString;
-
+                string cadena =
+                System.Configuration.ConfigurationManager.ConnectionStrings["CadenaSqlSrv"].ConnectionString;
                 objDatos = new Ejecucion(cadena);
             }
         }
         public bool AgregarInfo()
         {
             bool valido = false;
-            int n = objDatos.EjecutaComando(elemento.Parametros, elemento.Valores, elemento.Sentencia, CommandType.Text);
+            int n = objDatos.EjecutaComando(elemento.Parametros, elemento.Valores, elemento.Sentencia, CommandType.StoredProcedure);
             if (n > 0)
                 valido = true;
 
@@ -46,7 +49,10 @@ namespace Practica2_1.Clases
         }
         public int ObtenerScalar()
         {
-            int n = objDatos.EjecutaScalar(elemento.Parametros, elemento.Valores, elemento.Sentencia, CommandType.Text);
+
+            int n = objDatos.EjecutaScalar(elemento.Parametros,
+                elemento.Valores, elemento.Sentencia, CommandType.StoredProcedure);
+
             return n;
         }
         public DataTable ObtenerDataTable(string tabla)
