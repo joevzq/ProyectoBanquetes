@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Banquetes.Class
 {
-    public class Evento
+    public class EventoClase
     {
-        public static List<Evento> lstEventos;
+        public static List<EventoClase> lstEventos;
         #region Variables
         private enum status {
             por_realizar, 
@@ -45,7 +45,7 @@ namespace Banquetes.Class
         }
 
         private Direccion_Evento direccion;
-        internal Direccion_Evento Direccion
+        public Direccion_Evento Direccion
         {
             get { return direccion; }
             set { direccion = value; }
@@ -67,7 +67,7 @@ namespace Banquetes.Class
         //Cancelar evento
         public void Cancelar(int folioEvento) { }
         //Llamar todos los eventos
-        public List<Evento> LlamarEventos() 
+        public List<EventoClase> LlamarEventos() 
         {
             return lstEventos;
         }

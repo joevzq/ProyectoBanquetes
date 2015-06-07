@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Banquetes.Class
 {
-    class Direccion_Evento
+    public class Direccion_Evento
     {
         #region Variables
         private string calle;

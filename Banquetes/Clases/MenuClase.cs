@@ -22,8 +22,16 @@ namespace Banquetes.Class
             public List<string> ingredientes { set; get; }
 
         }
-        public static List<Entrada> lstEntradas = new List<Entrada>();
-        public static List<Entrada> lstMenuCliente = new List<Entrada>();
+        private static List<Entrada> lstEntradas = new List<Entrada>();
+        private static List<MenuClase> lstMenuCliente = new List<MenuClase>();
+        public static List<MenuClase> llamarMenuCliente()
+        {
+            return lstMenuCliente;
+        }
+        public static List<Entrada> llamarEntradas()
+        {
+            return lstEntradas;
+        }
 
         #region Variables
         private int idEntrada;
@@ -43,9 +51,26 @@ namespace Banquetes.Class
 
         #region Métodos
         //Método para Actualizar lista
-        public void ActualizarLista() 
+        public void ActualizarLista(int id) 
         {
-
+            id += 1;
+            bool exists = false;
+            for (int i = 0; i < lstMenuCliente.Count; i++)
+            {
+                if (lstMenuCliente[i].idEntrada == id)
+                {
+                    lstMenuCliente.RemoveAt(i);
+                    exists = true;
+                }
+            }
+            if (!exists)
+            {
+               
+                MenuClase entrada = new MenuClase();
+                entrada.idEntrada = id;
+                entrada.Porciones = (int)Menu.arrControles[id-1].num.Value;
+                lstMenuCliente.Add(entrada);
+            }
         }
         //Método para Actualizar Menú
         public void ActualizarMenu() 
@@ -58,9 +83,18 @@ namespace Banquetes.Class
 
         }
         //Método para Calcular el Precio de los elementos del menú
-        public void CalcularPrecioMenu() 
+        public int CalcularPrecioMenu() 
         {
-
+            int total = 0;
+            for (int i = 0; i < lstMenuCliente.Count; i++)
+            {
+                for (int j = 0; j < lstEntradas.Count; j++)
+                {
+                    if (lstMenuCliente[i].idEntrada == lstEntradas[j].idEntrada)
+                        total += lstMenuCliente[i].Porciones * lstEntradas[j].precioUnit;
+                }
+            }
+            return total;
         }
         //Método para mostrar elementos del menú
         public void MostrarMenu() 

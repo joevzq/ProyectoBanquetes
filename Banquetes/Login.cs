@@ -20,9 +20,6 @@ namespace Banquetes
             InitializeComponent();
         }
 
-        
-       
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(System.Drawing.ColorTranslator.FromHtml("#D85846"));
@@ -44,23 +41,6 @@ namespace Banquetes
         {
             string user = txtUsuario.Text;
             string password = txtContra.Text;
-
-            try
-            {
-                Administrador objAdmin = new Administrador(user, password); /// crea nueva credencial
-                                                                            Estructura     
-
-
-
-            }
-            catch (Exception) 
-            {
-               
-                MessageBox.Show("Lo sentimos, algo ha salido mal");
-
-            }
-
-
 
             ///concder ingreso
             Admin admin = new Admin();

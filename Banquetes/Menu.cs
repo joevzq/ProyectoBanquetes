@@ -13,7 +13,11 @@ namespace Banquetes
 {
     public partial class Menu : Form
     {
-        private controls[] arrControles = new controls[12];
+        public static controls[] arrControles = new controls[12];
+        List<MenuClase.Entrada> entradas = MenuClase.llamarEntradas();
+        List<MenuClase> menuCliente = MenuClase.llamarMenuCliente();
+        MenuClase menuCl = new MenuClase();
+
         public class controls
         {
             public PictureBox picture { get; set; }
@@ -22,19 +26,21 @@ namespace Banquetes
             public Label precio { get; set; }
             public NumericUpDown num { get; set; }
         }
+        
         public Menu()
         {
             InitializeComponent();
-            MenuClase menuCl = new MenuClase();
             menuCl.MostrarMenu();
             crearArray();
             llenarControles();
             
         }
+        
         public ICollection<controls> ArrControles
         {
             get { return arrControles; }
         }
+        
         public Menu(int folio)
         {
             InitializeComponent();
@@ -72,12 +78,7 @@ namespace Banquetes
             Banquetes.Inicio.cliente.Show();
             this.Hide();
         }
-
-        private void Menu_Load(object sender, EventArgs e)
-        {
-            
-        }
-
+        
         private void crearArray()
         {
             controls Ent1 = new controls();
@@ -182,10 +183,10 @@ namespace Banquetes
         {
             for (int i = 0; i < 12; i++)
             {
-                arrControles[i].checkbox.Text = MenuClase.lstEntradas[i].nombre;
-                arrControles[i].picture.ImageLocation = MenuClase.lstEntradas[i].imagen;
-                arrControles[i].ingredientes.Text = MenuClase.lstEntradas[i].ingredientes[0] + ", " + MenuClase.lstEntradas[i].ingredientes[1];
-                arrControles[i].precio.Text = "$" + MenuClase.lstEntradas[i].precioUnit.ToString() + ".00";
+                arrControles[i].checkbox.Text = entradas[i].nombre;
+                arrControles[i].picture.ImageLocation = entradas[i].imagen;
+                arrControles[i].ingredientes.Text = entradas[i].ingredientes[0] + ", " + entradas[i].ingredientes[1];
+                arrControles[i].precio.Text = "$" + entradas[i].precioUnit.ToString() + ".00";
             }
         }
 
@@ -198,9 +199,56 @@ namespace Banquetes
                 {
                     Entrada entrada = new Entrada(i);
                     entrada.ShowDialog();
+                    break;
                 }
                 i++;
             }
+        }
+
+        private void check_Changed(object sender, EventArgs e)
+        {
+            int i = 0;
+            while (i < 12)
+            {
+                if (arrControles[i].checkbox.Name == ((CheckBox)sender).Name)
+                {
+                    menuCl.ActualizarLista(i);
+                    actualizarListView();
+                    break;
+                }
+                i++;
+            }
+        }
+
+        private void num_Changed(object sender, EventArgs e)
+        {
+            int i = 0;
+            while (i < 12)
+            {
+                if (arrControles[i].num.Name == ((NumericUpDown)sender).Name)
+                {
+                    for (int j = 0; j < menuCliente.Count; j++)
+                    {
+                        if (menuCliente[j].IdEntrada == entradas[i].idEntrada)
+                        {
+                            menuCliente[j].Porciones = (int)arrControles[i].num.Value;
+                            actualizarListView();
+                        }
+                    }
+                }
+                i++;
+            }
+        }
+        
+        private void actualizarListView()
+        {
+            lstvMenu.Items.Clear();
+            foreach (MenuClase item in menuCliente)
+            {
+                string[] row = { (item.Porciones.ToString()), "$" + ((int)entradas[item.IdEntrada - 1].precioUnit * item.Porciones).ToString() };
+                lstvMenu.Items.Add(entradas[item.IdEntrada - 1].nombre).SubItems.AddRange(row);
+            }
+            lblTotal.Text = "Total x invitado: $" + menuCl.CalcularPrecioMenu();
         }
     }
 }

@@ -13,15 +13,16 @@ namespace Banquetes
 {
     public partial class Entrada : Form
     {
+        List<MenuClase.Entrada> entradas = MenuClase.llamarEntradas();
         public Entrada(int id)
         {
             InitializeComponent();
-            lblNombreEntrada.Text = MenuClase.lstEntradas[id].nombre;
-            picEntrada.ImageLocation = MenuClase.lstEntradas[id].imagen;
-            lblDescripcion.Text = MenuClase.lstEntradas[id].descripcion;
-            lblPrecio.Text = "$" + MenuClase.lstEntradas[id].precioUnit.ToString();
+            lblNombreEntrada.Text = entradas[id].nombre;
+            picEntrada.ImageLocation = entradas[id].imagen;
+            lblDescripcion.Text = entradas[id].descripcion;
+            lblPrecio.Text = "$" + entradas[id].precioUnit.ToString();
             lstIngredientes.Items.Clear();
-            foreach (string ing in MenuClase.lstEntradas[id].ingredientes)
+            foreach (string ing in entradas[id].ingredientes)
             {
                 lstIngredientes.Items.Add(ing);
             }
