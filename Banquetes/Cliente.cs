@@ -15,10 +15,10 @@ namespace Banquetes
     {
         public Cliente()
         {
-
-
+            
+            List<Cliente> lista = new List<Cliente>();
             InitializeComponent();
-
+           
         }
 
         public Cliente(int folio)
@@ -58,24 +58,25 @@ namespace Banquetes
                   String.IsNullOrWhiteSpace(telefono) ||
                   String.IsNullOrWhiteSpace(mail))
                     MessageBox.Show("Lo sentimos, no se han completado todos los campos", "Información incompleta");
-                else
+                else 
                 {
                     bool phonenumber = telLengt(telefono);
-                    //verificar que se ha ingresado correctamente
+                     //verificar que se ha ingresado correctamente
                     if (!phonenumber)
                         MessageBox.Show("numero de télefono incompleto.");
-                    else
+                    else 
                     {
                         cli.crearEmpleado(name, Apaterno, Amaterno, telefono, mail);
-
+                        
                     }
-
+                    
 
                 }
 
             }
-            catch (Exception ex)
+            catch(Exception)
             {
+                MessageBox.Show("Lo sentimos, ha ocurrido un error.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
 
@@ -94,9 +95,9 @@ namespace Banquetes
             throw new NotImplementedException();
         }
 
-
+     
         //método para validar número de teléfono 
-        public bool telLengt(string numeros)
+        public bool telLengt(string numeros) 
         {
             char[] num = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
             bool flag;
