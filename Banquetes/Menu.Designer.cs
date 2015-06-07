@@ -221,6 +221,7 @@
             0,
             0,
             0});
+            this.numEnt4.ValueChanged += new System.EventHandler(this.num_Changed);
             // 
             // lblPrecioEnt4
             // 
@@ -251,6 +252,7 @@
             this.checkEnt4.TabIndex = 17;
             this.checkEnt4.Text = "[Nombre Entrada]";
             this.checkEnt4.UseVisualStyleBackColor = true;
+            this.checkEnt4.CheckedChanged += new System.EventHandler(this.check_Changed);
             // 
             // imgEnt4
             // 
@@ -285,6 +287,7 @@
             0,
             0,
             0});
+            this.numEnt3.ValueChanged += new System.EventHandler(this.num_Changed);
             // 
             // lblPrecioEnt3
             // 
@@ -315,6 +318,7 @@
             this.checkEnt3.TabIndex = 12;
             this.checkEnt3.Text = "[Nombre Entrada]";
             this.checkEnt3.UseVisualStyleBackColor = true;
+            this.checkEnt3.CheckedChanged += new System.EventHandler(this.check_Changed);
             // 
             // imgEnt3
             // 
@@ -349,6 +353,7 @@
             0,
             0,
             0});
+            this.numEnt2.ValueChanged += new System.EventHandler(this.num_Changed);
             // 
             // lblPrecioEnt2
             // 
@@ -379,6 +384,7 @@
             this.checkEnt2.TabIndex = 7;
             this.checkEnt2.Text = "[Nombre Entrada]";
             this.checkEnt2.UseVisualStyleBackColor = true;
+            this.checkEnt2.CheckedChanged += new System.EventHandler(this.check_Changed);
             // 
             // imgEnt2
             // 
@@ -413,6 +419,7 @@
             0,
             0,
             0});
+            this.numEnt1.ValueChanged += new System.EventHandler(this.num_Changed);
             // 
             // lblPrecioEnt1
             // 
@@ -443,6 +450,7 @@
             this.checkEnt1.TabIndex = 2;
             this.checkEnt1.Text = "[Nombre Entrada]";
             this.checkEnt1.UseVisualStyleBackColor = true;
+            this.checkEnt1.CheckedChanged += new System.EventHandler(this.check_Changed);
             // 
             // imgEnt1
             // 
@@ -507,6 +515,7 @@
             0,
             0,
             0});
+            this.numFue4.ValueChanged += new System.EventHandler(this.num_Changed);
             // 
             // lblPrecioFue4
             // 
@@ -537,6 +546,7 @@
             this.checkFue4.TabIndex = 37;
             this.checkFue4.Text = "[Nombre Entrada]";
             this.checkFue4.UseVisualStyleBackColor = true;
+            this.checkFue4.CheckedChanged += new System.EventHandler(this.check_Changed);
             // 
             // imgFue4
             // 
@@ -571,6 +581,7 @@
             0,
             0,
             0});
+            this.numFue3.ValueChanged += new System.EventHandler(this.num_Changed);
             // 
             // lblPrecioFue3
             // 
@@ -601,6 +612,7 @@
             this.checkFue3.TabIndex = 32;
             this.checkFue3.Text = "[Nombre Entrada]";
             this.checkFue3.UseVisualStyleBackColor = true;
+            this.checkFue3.CheckedChanged += new System.EventHandler(this.check_Changed);
             // 
             // imgFue3
             // 
@@ -635,6 +647,7 @@
             0,
             0,
             0});
+            this.numFue2.ValueChanged += new System.EventHandler(this.num_Changed);
             // 
             // lblPrecioFue2
             // 
@@ -665,6 +678,7 @@
             this.checkFue2.TabIndex = 27;
             this.checkFue2.Text = "[Nombre Entrada]";
             this.checkFue2.UseVisualStyleBackColor = true;
+            this.checkFue2.CheckedChanged += new System.EventHandler(this.check_Changed);
             // 
             // imgFue2
             // 
@@ -699,6 +713,7 @@
             0,
             0,
             0});
+            this.numFue1.ValueChanged += new System.EventHandler(this.num_Changed);
             // 
             // lblPrecioFue1
             // 
@@ -729,6 +744,7 @@
             this.checkFue1.TabIndex = 22;
             this.checkFue1.Text = "[Nombre Entrada]";
             this.checkFue1.UseVisualStyleBackColor = true;
+            this.checkFue1.CheckedChanged += new System.EventHandler(this.check_Changed);
             // 
             // imgFue1
             // 
@@ -792,6 +808,7 @@
             0,
             0,
             0});
+            this.numPos4.ValueChanged += new System.EventHandler(this.num_Changed);
             // 
             // lblPrecioPos4
             // 
@@ -822,6 +839,7 @@
             this.checkPos4.TabIndex = 37;
             this.checkPos4.Text = "[Nombre Entrada]";
             this.checkPos4.UseVisualStyleBackColor = true;
+            this.checkPos4.CheckedChanged += new System.EventHandler(this.check_Changed);
             // 
             // imgPos4
             // 
@@ -856,6 +874,7 @@
             0,
             0,
             0});
+            this.numPos3.ValueChanged += new System.EventHandler(this.num_Changed);
             // 
             // lblPrecioPos3
             // 
@@ -886,6 +905,7 @@
             this.checkPos3.TabIndex = 32;
             this.checkPos3.Text = "[Nombre Entrada]";
             this.checkPos3.UseVisualStyleBackColor = true;
+            this.checkPos3.CheckedChanged += new System.EventHandler(this.check_Changed);
             // 
             // imgPos3
             // 
@@ -920,6 +940,7 @@
             0,
             0,
             0});
+            this.numPos2.ValueChanged += new System.EventHandler(this.num_Changed);
             // 
             // lblPrecioPos2
             // 
@@ -950,6 +971,7 @@
             this.checkPos2.TabIndex = 27;
             this.checkPos2.Text = "[Nombre Entrada]";
             this.checkPos2.UseVisualStyleBackColor = true;
+            this.checkPos2.CheckedChanged += new System.EventHandler(this.check_Changed);
             // 
             // imgPos2
             // 
@@ -984,6 +1006,7 @@
             0,
             0,
             0});
+            this.numPos1.ValueChanged += new System.EventHandler(this.num_Changed);
             // 
             // lblPrecioPos1
             // 
@@ -1014,6 +1037,7 @@
             this.checkPos1.TabIndex = 22;
             this.checkPos1.Text = "[Nombre Entrada]";
             this.checkPos1.UseVisualStyleBackColor = true;
+            this.checkPos1.CheckedChanged += new System.EventHandler(this.check_Changed);
             // 
             // imgPos1
             // 
@@ -1076,7 +1100,7 @@
             // 
             // colPU
             // 
-            this.colPU.Text = "P/U";
+            this.colPU.Text = "Precio";
             this.colPU.Width = 41;
             // 
             // lblTotal
@@ -1145,7 +1169,6 @@
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
-            this.Load += new System.EventHandler(this.Menu_Load);
             this.tabMenu.ResumeLayout(false);
             this.Entradas.ResumeLayout(false);
             this.Entradas.PerformLayout();
@@ -1218,7 +1241,6 @@
         private System.Windows.Forms.Label lblIngEnt4;
         private System.Windows.Forms.CheckBox checkEnt4;
         private System.Windows.Forms.PictureBox imgEnt4;
-        private System.Windows.Forms.ListView lstvMenu;
         private System.Windows.Forms.ColumnHeader colPlatillo;
         private System.Windows.Forms.ColumnHeader colPorciones;
         private System.Windows.Forms.ColumnHeader colPU;
@@ -1262,5 +1284,6 @@
         private System.Windows.Forms.Label lblIngPos1;
         private System.Windows.Forms.CheckBox checkPos1;
         private System.Windows.Forms.PictureBox imgPos1;
+        public System.Windows.Forms.ListView lstvMenu;
     }
 }
