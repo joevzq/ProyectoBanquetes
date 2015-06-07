@@ -1,4 +1,5 @@
 ﻿
+using Banquetes.Clases;
 using Banquetes.Class;
 using Nivel_de_acceso.Clases;
 using System;
@@ -81,7 +82,7 @@ namespace Banquetes
         {
 
             ReciboClase recibo = new ReciboClase();
-            recibo.GuardarRecibo();
+            //recibo.GuardarRecibo();
                     Inicio inicio = new Inicio();
                     inicio.Show();
                     this.Hide();

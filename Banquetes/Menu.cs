@@ -17,6 +17,7 @@ namespace Banquetes
         List<MenuClase.Entrada> entradas = MenuClase.llamarEntradas();
         List<MenuClase> menuCliente = MenuClase.llamarMenuCliente();
         MenuClase menuCl = new MenuClase();
+        public bool evitarActualizacion = false;
 
         public class controls
         {
@@ -33,6 +34,8 @@ namespace Banquetes
             menuCl.MostrarMenu();
             crearArray();
             llenarControles();
+            actualizarListView();
+            actualizarControles();
             
         }
         
@@ -44,6 +47,12 @@ namespace Banquetes
         public Menu(int folio)
         {
             InitializeComponent();
+            menuCl.MostrarMenu();
+            crearArray();
+            llenarControles();
+            menuCl.ActualizarMenu(folio);
+            actualizarListView();
+            actualizarControles();
         }
         
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -68,6 +77,7 @@ namespace Banquetes
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            menuCliente.Clear();
             Inicio inicio = new Inicio();
             inicio.Show();
             this.Hide();
@@ -207,36 +217,42 @@ namespace Banquetes
 
         private void check_Changed(object sender, EventArgs e)
         {
-            int i = 0;
-            while (i < 12)
+            if (!evitarActualizacion)
             {
-                if (arrControles[i].checkbox.Name == ((CheckBox)sender).Name)
+                int i = 0;
+                while (i < 12)
                 {
-                    menuCl.ActualizarLista(i);
-                    actualizarListView();
-                    break;
+                    if (arrControles[i].checkbox.Name == ((CheckBox)sender).Name)
+                    {
+                        menuCl.ActualizarLista(i);
+                        actualizarListView();
+                        break;
+                    }
+                    i++;
                 }
-                i++;
             }
         }
 
         private void num_Changed(object sender, EventArgs e)
         {
-            int i = 0;
-            while (i < 12)
+            if (!evitarActualizacion)
             {
-                if (arrControles[i].num.Name == ((NumericUpDown)sender).Name)
+                int i = 0;
+                while (i < 12)
                 {
-                    for (int j = 0; j < menuCliente.Count; j++)
+                    if (arrControles[i].num.Name == ((NumericUpDown)sender).Name)
                     {
-                        if (menuCliente[j].IdEntrada == entradas[i].idEntrada)
+                        for (int j = 0; j < menuCliente.Count; j++)
                         {
-                            menuCliente[j].Porciones = (int)arrControles[i].num.Value;
-                            actualizarListView();
+                            if (menuCliente[j].IdEntrada == entradas[i].idEntrada)
+                            {
+                                menuCliente[j].Porciones = (int)arrControles[i].num.Value;
+                                actualizarListView();
+                            }
                         }
                     }
+                    i++;
                 }
-                i++;
             }
         }
         
@@ -249,6 +265,24 @@ namespace Banquetes
                 lstvMenu.Items.Add(entradas[item.IdEntrada - 1].nombre).SubItems.AddRange(row);
             }
             lblTotal.Text = "Total x invitado: $" + menuCl.CalcularPrecioMenu();
+        }
+
+        private void actualizarControles()
+        {
+            evitarActualizacion = true;
+            for (int i = 0; i < menuCliente.Count; i++)
+            {
+                for (int j = 0; j < entradas.Count; j++)
+                {
+                    if (menuCliente[i].IdEntrada == entradas[j].idEntrada)
+                    {
+                        arrControles[j].num.Value = menuCliente[i].Porciones;
+                        arrControles[j].checkbox.Checked = true;
+                        break;
+                    }
+                }
+            }
+            evitarActualizacion = false;
         }
     }
 }

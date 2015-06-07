@@ -1,4 +1,4 @@
-﻿using Practica2_1.Clases;
+﻿using Nivel_de_acceso.Clases;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -22,6 +22,7 @@ namespace Banquetes.Class
             public List<string> ingredientes { set; get; }
 
         }
+
         private static List<Entrada> lstEntradas = new List<Entrada>();
         private static List<MenuClase> lstMenuCliente = new List<MenuClase>();
         public static List<MenuClase> llamarMenuCliente()
@@ -50,7 +51,7 @@ namespace Banquetes.Class
         #endregion 
 
         #region Métodos
-        //Método para Actualizar lista
+        /*Método para Actualizar lista de menú en tiempo real*/
         public void ActualizarLista(int id) 
         {
             id += 1;
@@ -72,17 +73,37 @@ namespace Banquetes.Class
                 lstMenuCliente.Add(entrada);
             }
         }
-        //Método para Actualizar Menú
-        public void ActualizarMenu() 
+        /*Método para Actualizar Menú*/
+        public void ActualizarMenu(int folio) 
         {
-
+            string tabla = "Menu";
+            Estructura objElements = new Estructura();
+            objElements.Sentencia = "proc_getMenu";
+            objElements.Parametros = new SqlParameter[]{
+                new SqlParameter("id", SqlDbType.Int)
+            };
+            objElements.Valores = new List<object>(){ folio };
+            Operaciones objOperaciones = new Operaciones();
+            objOperaciones.Elemento = objElements;
+            DataTable data = objOperaciones.ObtenerDataTable(tabla);
+            lstMenuCliente.Clear();
+            if (data.Rows.Count > 0)
+            {
+                for (int i = 0; i < data.Rows.Count; i++)
+                {
+                    MenuClase entrada = new MenuClase();
+                    entrada.idEntrada = Convert.ToInt32(data.Rows[i]["idEntrada"]);
+                    entrada.porciones = Convert.ToInt32(data.Rows[i]["porciones"]);
+                    lstMenuCliente.Add(entrada);
+                }
+            }
         }
-        //Método para Crear Menú 
+        /*Método para Crear Menú */
         public void CrearMenu() 
         {
 
         }
-        //Método para Calcular el Precio de los elementos del menú
+        /*Método para Calcular el Precio de los elementos del menú*/
         public int CalcularPrecioMenu() 
         {
             int total = 0;
@@ -96,12 +117,12 @@ namespace Banquetes.Class
             }
             return total;
         }
-        //Método para mostrar elementos del menú
+        /*Método para mostrar elementos del menú*/
         public void MostrarMenu() 
         {
             string tabla = "Entradas";
             Estructura objElements = new Estructura();
-            objElements.Sentencia = "proc_getMenu";
+            objElements.Sentencia = "proc_getEntradas";
             objElements.Parametros = new SqlParameter[] { };
             objElements.Valores = new List<object>() { };
             Operaciones objOperaciones = new Operaciones();
@@ -113,7 +134,7 @@ namespace Banquetes.Class
             {
                 for (int i = 0; i < data.Rows.Count; i++)
                 {
-                    MenuClase.Entrada ent = new MenuClase.Entrada();
+                    Entrada ent = new Entrada();
                     ent.idEntrada = Convert.ToInt32(data.Rows[i]["idEntrada"]);
                     ent.nombre = data.Rows[i]["nombre"].ToString();
                     ent.precioUnit = Convert.ToInt32(data.Rows[i]["precioUnit"]);
@@ -123,6 +144,7 @@ namespace Banquetes.Class
                     lstEntradas.Add(ent);
                 }
             }
+
             for (int i = 0; i < lstEntradas.Count; i++)
             {
                 tabla = "Ingredientes";
@@ -141,7 +163,7 @@ namespace Banquetes.Class
                 }
             }
         }
-        //Métosdo para Mostar más información del platillo
+        /*Métosdo para Mostar más información del platillo*/
         public void MostrarPlatillo() 
         {
 

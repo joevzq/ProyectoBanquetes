@@ -10,28 +10,27 @@ namespace Banquetes.Class
     {
         #region Variables
         private string calle;
-
         public string Calle
         {
             get { return calle; }
             set { calle = value; }
         }
-        private string colonia;
 
+        private string colonia;
         public string Colonia
         {
             get { return colonia; }
             set { colonia = value; }
         }
-        private string numero;
 
+        private string numero;
         public string Numero
         {
             get { return numero; }
             set { numero = value; }
         }
-        private int cp;
 
+        private int cp;
         public int Cp
         {
             get { return cp; }

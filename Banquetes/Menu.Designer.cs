@@ -1108,9 +1108,9 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.Location = new System.Drawing.Point(75, 174);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(106, 13);
+            this.lblTotal.Size = new System.Drawing.Size(100, 13);
             this.lblTotal.TabIndex = 2;
-            this.lblTotal.Text = "Total x invitado : $$$";
+            this.lblTotal.Text = "Total x invitado : $0";
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // lblSeparator
