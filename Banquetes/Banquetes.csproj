@@ -63,10 +63,10 @@
       <DependentUpon>CancelarEvento.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\Administrador.cs" />
-    <Compile Include="Clases\Cliente.cs" />
+    <Compile Include="Clases\ClienteClase.cs" />
     <Compile Include="Clases\Direccion_Evento.cs" />
     <Compile Include="Clases\EventoClase.cs" />
-    <Compile Include="Clases\Invitado.cs" />
+    <Compile Include="Clases\InvitadoClase.cs" />
     <Compile Include="Clases\MenuClase.cs" />
     <Compile Include="Clases\ReciboClase.cs" />
     <Compile Include="Cliente.cs">

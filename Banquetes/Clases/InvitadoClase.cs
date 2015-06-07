@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Banquetes.Class
 {
-    public class Invitado
+    public class InvitadoClase
     {
-        public List<Invitado> lstInvitados;
+        public List<InvitadoClase> lstInvitados;
 
         #region Variables
         private string nombre;
@@ -28,12 +28,12 @@ namespace Banquetes.Class
         #endregion
         #region Métodos
         //Llamar invitados
-        public List<Invitado> LlamarInvitados(int folioEvento)
+        public List<InvitadoClase> LlamarInvitados(int folioEvento)
         {
             return lstInvitados;
         }
         //Borrar todos los invitados de cierto folio en la base de datos y agregar la nueva lista de invitados
-        public void ActualizarInvitados(List<Invitado> lstInv, int folioEvento) { }
+        public void ActualizarInvitados(List<InvitadoClase> lstInv, int folioEvento) { }
         #endregion
     }
 }

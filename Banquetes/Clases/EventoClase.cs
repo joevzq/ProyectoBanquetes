@@ -11,12 +11,12 @@ namespace Banquetes.Class
     {
         public static List<Evento> lstEventos;
         #region Variables
-        private enum status {
-            por_realizar, 
-            realizado, 
-            cancelado 
-        };
-
+        private int status;
+        public int Status
+        {
+            get { return status; }
+            set { status = value; }
+        }
         private int folioEvento;
         public int FolioEvento
         {

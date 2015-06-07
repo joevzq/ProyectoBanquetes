@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Banquetes.Class
 {
     
-   public class Cliente
+   public class ClienteClase
    {
        #region Variables
        private string nombre;
@@ -59,7 +59,7 @@ namespace Banquetes.Class
        public void crearEmpleado(string nombre, string Apaterno, string Amaterno, string telefono, string email)
        {
            bool exist = false;
-           Cliente newCli = new Cliente();
+           ClienteClase newCli = new ClienteClase();
            newCli.nombre = nombre;
            newCli.apPaterno = Apaterno;
            newCli.apMaterno = Amaterno;
