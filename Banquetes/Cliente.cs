@@ -15,8 +15,8 @@ namespace Banquetes
     {
         public Cliente()
         {
-            
 
+            List<Cliente> lista = new List<Cliente>();
             InitializeComponent();
            
         }
@@ -73,8 +73,9 @@ namespace Banquetes
                 }
 
             }
-            catch(Exception ez)
+            catch(Exception)
             {
+                MessageBox.Show("Lo sentimos, ha ocurrido un error.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
 
@@ -120,6 +121,6 @@ namespace Banquetes
 
 
 
-        public bool crearEmpleado { get; set; }
+       
     }
 }

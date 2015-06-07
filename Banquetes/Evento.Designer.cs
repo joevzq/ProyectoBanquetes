@@ -47,7 +47,7 @@
             this.lblColonia = new System.Windows.Forms.Label();
             this.lblCP = new System.Windows.Forms.Label();
             this.lblComentario = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtComent = new System.Windows.Forms.TextBox();
             this.btnAnterior = new System.Windows.Forms.Button();
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -210,13 +210,13 @@
             this.lblComentario.TabIndex = 17;
             this.lblComentario.Text = "Comentario:";
             // 
-            // textBox1
+            // txtComent
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 185);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(359, 94);
-            this.textBox1.TabIndex = 18;
+            this.txtComent.Location = new System.Drawing.Point(15, 185);
+            this.txtComent.Multiline = true;
+            this.txtComent.Name = "txtComent";
+            this.txtComent.Size = new System.Drawing.Size(359, 94);
+            this.txtComent.TabIndex = 18;
             // 
             // btnAnterior
             // 
@@ -258,7 +258,7 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.btnAnterior);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtComent);
             this.Controls.Add(this.lblComentario);
             this.Controls.Add(this.lblCP);
             this.Controls.Add(this.lblColonia);
@@ -307,7 +307,7 @@
         private System.Windows.Forms.Label lblColonia;
         private System.Windows.Forms.Label lblCP;
         private System.Windows.Forms.Label lblComentario;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtComent;
         private System.Windows.Forms.Button btnAnterior;
         private System.Windows.Forms.Button btnSiguiente;
         private System.Windows.Forms.Button btnCancelar;
