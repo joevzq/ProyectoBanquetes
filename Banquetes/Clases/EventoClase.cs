@@ -44,11 +44,32 @@ namespace Banquetes.Class
             set { horaEvento = value; }
         }
 
-        private Direccion_Evento direccion;
-        public Direccion_Evento Direccion
+        private string calle;
+        public string Calle
         {
-            get { return direccion; }
-            set { direccion = value; }
+            get { return calle; }
+            set { calle = value; }
+        }
+
+        private string colonia;
+        public string Colonia
+        {
+            get { return colonia; }
+            set { colonia = value; }
+        }
+
+        private string numero;
+        public string Numero
+        {
+            get { return numero; }
+            set { numero = value; }
+        }
+
+        private int cp;
+        public int Cp
+        {
+            get { return cp; }
+            set { cp = value; }
         }
 
         private string comentario;
@@ -61,8 +82,16 @@ namespace Banquetes.Class
 
         #region Métodos
         //Crear evento
-        public void Crear(Evento evento) { 
-
+        public void Crear(string nombre,string calle,string colonia,int cp,string numero,string hora,string comentario,DateTime fecha) {
+            EventoClase ev = new EventoClase();
+            ev.NombreEvento = nombre;
+            ev.Calle = calle;
+            ev.Colonia = colonia;
+            ev.Cp = cp;
+            ev.Numero = numero;
+            ev.HoraEvento = hora;
+            ev.FechaEvento = fecha;
+            ev.Comentario = comentario;
         }
         //Actualizar status de evento
         public void ActualizarStatus(int folioEvento) { }
