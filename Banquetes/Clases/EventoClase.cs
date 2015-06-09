@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Nivel_de_acceso.Clases;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +11,7 @@ namespace Banquetes.Class
 {
     public class EventoClase
     {
-        public static List<EventoClase> lstEventos;
+        private static List<EventoClase> lstEventos = new List<EventoClase>();
         #region Variables
         private int status;
         public int Status
@@ -100,6 +103,35 @@ namespace Banquetes.Class
         //Llamar todos los eventos
         public List<EventoClase> LlamarEventos() 
         {
+
+            string tabla = "Eventos";
+            Estructura objElements = new Estructura();
+            objElements.Sentencia = "proc_getEventos";
+            objElements.Parametros = new SqlParameter[] { };
+            objElements.Valores = new List<object>() { };
+            Operaciones objOperaciones = new Operaciones();
+            objOperaciones.Elemento = objElements;
+            DataTable data = objOperaciones.ObtenerDataTable(tabla);
+            lstEventos.Clear();
+
+            if (data.Rows.Count > 0)
+            {
+                for (int i = 0; i < data.Rows.Count; i++)
+                {
+                    EventoClase ev = new EventoClase();
+                    ev.folioEvento = Convert.ToInt32(data.Rows[i]["folio"]);
+                    ev.nombreEvento = data.Rows[i]["nombre"].ToString();
+                    ev.fechaEvento = Convert.ToDateTime(data.Rows[i]["fechaEvento"]);
+                    ev.horaEvento = data.Rows[i]["hora"].ToString();
+                    ev.status = Convert.ToInt32(data.Rows[i]["status"]);
+                    ev.comentario = data.Rows[i]["comentario"].ToString();
+                    ev.calle = data.Rows[i]["calle"].ToString();
+                    ev.colonia = data.Rows[i]["colonia"].ToString();
+                    ev.numero = data.Rows[i]["numero"].ToString();
+                    ev.cp = Convert.ToInt32(data.Rows[i]["cp"]);
+                    lstEventos.Add(ev);
+                }
+            }
             return lstEventos;
         }
         //Llamar un evento
