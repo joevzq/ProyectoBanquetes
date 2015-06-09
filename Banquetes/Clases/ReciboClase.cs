@@ -18,7 +18,7 @@ namespace Banquetes.Clases
         #region Metodos
         public void GuardarRecibo()
         {
-            EventoClase evento = new EventoClase();
+            EventoClase evento = EventoClase.Evento;
             Estructura objElementos = new Estructura();
             objElementos.Sentencia = "AddEvento";
 
@@ -39,7 +39,7 @@ namespace Banquetes.Clases
             objOperaciones.AgregarInfo();
 
 
-            ClienteClase cliente = new ClienteClase();
+            ClienteClase cliente = ClienteClase.ObtenerCliente();
                 objElementos.Sentencia = "AddCliente";
 
                 objElementos.Parametros = new SqlParameter[]{
@@ -56,21 +56,21 @@ namespace Banquetes.Clases
                 objOperaciones.Elemento = objElementos;
                 objOperaciones.AgregarInfo();
 
-                InvitadoClase invitado = new InvitadoClase();
-                //for (int i = 0; i < invitado.lstInvitado.Count; i++)
-                //{
-                //    objElementos.Sentencia = "AddInvitado";
+                List<InvitadoClase> inv = InvitadoClase.ObtenerInvitados();
+                for (int i = 0; i < inv.Count; i++)
+                {
+                    objElementos.Sentencia = "AddInvitado";
 
-                //    objElementos.Parametros = new SqlParameter[]{
-                //    new SqlParameter("folio", SqlDbType.Int),
-                //    new SqlParameter("nombre", SqlDbType.NVarChar, 50),
-                //    new SqlParameter("email", SqlDbType.NVarChar, 50)
-                //    };
-                //    objElementos.Valores = new List<object>() { NumeroFolio, invitado.lstInvitado[i] };
+                    objElementos.Parametros = new SqlParameter[]{
+                new SqlParameter("folio", SqlDbType.Int),
+                new SqlParameter("nombre", SqlDbType.NVarChar, 50),
+                new SqlParameter("email", SqlDbType.NVarChar, 50)
+                };
+                    objElementos.Valores = new List<object>() { NumeroFolio, inv[i].Nombre, inv[i].Email };
 
-                //    objOperaciones.Elemento = objElementos;
-                //    objOperaciones.AgregarInfo();
-                //}
+                    objOperaciones.Elemento = objElementos;
+                    objOperaciones.AgregarInfo();
+                }
 
 
 
@@ -80,10 +80,17 @@ namespace Banquetes.Clases
         {
 
         }
-        public int GenerarRecibo()
-        {
+        public int ObtenerFolio() {
+            Estructura objElementos = new Estructura();
+            objElementos.Sentencia = "GetMaxFolio";
 
-            return NumeroFolio;
+            objElementos.Parametros = new SqlParameter[]{};
+            objElementos.Valores = new List<object>() { };
+            Operaciones objOperaciones = new Operaciones();
+            objOperaciones.Elemento = objElementos;
+            int folio = (objOperaciones.ObtenerScalar())+1;
+            EventoClase.Evento.FolioEvento = folio;
+            return folio;
         }
         #endregion
     }
