@@ -51,34 +51,21 @@ namespace Banquetes
         {
             try
             {
-                Direccion_Evento dir = new Direccion_Evento();
                 EventoClase evento = new EventoClase();
                 string nombre = txtNombre.Text;
                 string calle = txtCalle.Text;
                 string colonia = txtColonia.Text;
-                string Cp = txtCP.Text;
+                int Cp = int.Parse(txtCP.Text);
                 string numero = txtNumero.Text;
                 string hora = txtHora.Text;
                 string comentario = txtComent.Text;
                 DateTime fecha = dtpFecha.Value;
 
-                if (String.IsNullOrWhiteSpace(nombre) && String.IsNullOrWhiteSpace(calle) && String.IsNullOrWhiteSpace(colonia) && String.IsNullOrWhiteSpace(Cp) && String.IsNullOrWhiteSpace(numero) && String.IsNullOrWhiteSpace(hora) && fecha == null)
-                    MessageBox.Show("no todos los campos han sido comletados", "Información Incompleta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                else
-                {
-                    evento.NombreEvento = nombre;
-                    evento.Direccion.Calle = calle;
-                    evento.Direccion.Colonia = colonia;
-                    evento.Direccion.Cp = int.Parse(Cp);
-                    evento.Direccion.Numero = numero;
-                    evento.HoraEvento = hora;
-                    evento.FechaEvento = fecha;
-                    evento.Comentario = comentario;
-                    
-                }
 
-
-
+                //Crear un nuevo evento en la clase EventoClase
+                EventoClase ev = new EventoClase();
+                evento.Crear(nombre, calle, colonia, Cp, numero, hora, comentario, fecha, ev);
+                
             }
             catch (Exception) {
                 MessageBox.Show("Lo sentimos, algo ha salido mal ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
