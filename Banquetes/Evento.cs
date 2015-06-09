@@ -15,7 +15,6 @@ namespace Banquetes
     {
         public Evento()
         {
-            
             InitializeComponent();
         }
 
@@ -51,7 +50,6 @@ namespace Banquetes
         {
             try
             {
-                Direccion_Evento dir = new Direccion_Evento();
                 EventoClase evento = new EventoClase();
                 string nombre = txtNombre.Text;
                 string calle = txtCalle.Text;

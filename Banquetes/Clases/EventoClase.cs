@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Nivel_de_acceso.Clases;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +11,12 @@ namespace Banquetes.Class
 {
     public class EventoClase
     {
-        public static List<EventoClase> lstEventos;
+        private static List<EventoClase> lstEventos = new List<EventoClase>();
+
+        public static List<EventoClase> llamarlstEventos()
+        {
+            return lstEventos;
+        }
         #region Variables
         private int status;
         public int Status
@@ -69,9 +77,36 @@ namespace Banquetes.Class
         //Cancelar evento
         public void Cancelar(int folioEvento) { }
         //Llamar todos los eventos
-        public List<EventoClase> LlamarEventos() 
+        public void LlamarEventos() 
         {
-            return lstEventos;
+            string tabla = "Eventos";
+            Estructura objElements = new Estructura();
+            objElements.Sentencia = "proc_getEventos";
+            objElements.Parametros = new SqlParameter[]{};
+            objElements.Valores = new List<object>() {};
+            Operaciones objOperaciones = new Operaciones();
+            objOperaciones.Elemento = objElements;
+            DataTable data = objOperaciones.ObtenerDataTable(tabla);
+            lstEventos.Clear();
+            if (data.Rows.Count > 0)
+            {
+                for (int i = 0; i < data.Rows.Count; i++)
+                {
+                    EventoClase evento = new EventoClase();
+                    evento.folioEvento = Convert.ToInt32(data.Rows[i]["folio"]);
+                    evento.nombreEvento = data.Rows[i]["nombre"].ToString();
+                    evento.fechaEvento = Convert.ToDateTime(data.Rows[i]["fechaEvento"]);
+                    evento.horaEvento = data.Rows[i]["hora"].ToString();
+                    evento.status = Convert.ToInt32(data.Rows[i]["status"]);
+                    evento.comentario = data.Rows[i]["comentario"].ToString();
+                    evento.direccion.Calle = data.Rows[i]["calle"].ToString();
+                    evento.direccion.Colonia = data.Rows[i]["colonia"].ToString();
+                    evento.direccion.Numero = data.Rows[i]["numero"].ToString();
+                    evento.direccion.Cp = Convert.ToInt32(data.Rows[i]["cp"]);
+                    lstEventos.Add(evento);
+                }
+            }
+
         }
         //Llamar un evento
         public Evento LlamarEvento(int folioEvento)

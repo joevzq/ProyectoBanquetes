@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Banquetes.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,13 @@ namespace Banquetes
 {
     public partial class Admin : Form
     {
+        List<EventoClase> lstEventos = EventoClase.llamarlstEventos();
         public Admin()
         {
             InitializeComponent();
+            EventoClase ev = new EventoClase();
+            ev.LlamarEventos();
+            dividirEventos();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -54,6 +59,19 @@ namespace Banquetes
         private void btnAnalizar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dividirEventos()
+        {
+            foreach (EventoClase item in lstEventos)
+            {
+                if (item.Status == 1)
+                    lstPorRealizar.Items.Add(item.FolioEvento);
+                else if (item.Status == 2)
+                    lstRealizados.Items.Add(item.FolioEvento);
+                else
+                    lstCancelados.Items.Add(item.FolioEvento);
+            }
         }
     }
 }
