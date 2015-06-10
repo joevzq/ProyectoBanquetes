@@ -31,6 +31,23 @@ namespace Banquetes
             llenarReciboDB(folio);
 
         }
+        private void rellenarCampos() { 
+            ClienteClase cli = ClienteClase.ObtenerCliente();
+            lblTelCliente.Text = cli.Telefono;
+            lblNombreCliente.Text = cli.Nombre + " " + cli.ApPaterno + " " + cli.ApMaterno;
+            lblEmailCliente.Text = cli.Email;
+            EventoClase eve = EventoClase.Evento;
+            lblNombreEvento.Text = eve.NombreEvento;
+            lblFechaEvento.Text = eve.FechaEvento.ToShortDateString();
+            lblHoraEvento.Text = eve.HoraEvento.ToString();
+            ReciboClase rec = new ReciboClase();
+            lblFolio.Text = rec.ObtenerFolio().ToString();
+            lblDireccionEvento.Text = eve.Calle + " " + eve.Numero +" Colonia " + eve.Colonia+" Cp: "+ eve.Cp;
+            lblFechaRecibo.Text = DateTime.Now.ToShortDateString();
+
+            
+        }
+
         #region PaintPanels
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -141,6 +158,6 @@ namespace Banquetes
             lblDireccionEvento.Text = eve.Calle + " " + eve.Numero + " Colonia " + eve.Colonia + " Cp: " + eve.Cp;
             lblFechaRecibo.Text = DateTime.Now.ToShortDateString();
         }
-        #endregion
+#endregion
     }
 }
