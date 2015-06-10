@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Banquetes.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -59,7 +60,10 @@ namespace Banquetes
                 MessageBox.Show("Por favor ingrese el nombre y el Email del invitado para poder ser agregado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
+                InvitadoClase.AgregarInvitado(InvitadoNom, InvitadoEm);
+
                 string elemento = InvitadoNom + "  " + InvitadoEm;
+
                 for (int i = 0; i < lstInvitados.Items.Count; i++)
                 {
                     if (lstInvitados.Items[i].ToString() == elemento)
@@ -83,7 +87,11 @@ namespace Banquetes
             {
                 DialogResult result = MessageBox.Show("Esta seguro de eliminar al invitado " + lstInvitados.SelectedItem.ToString() + "?", "Atencion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+                    int index = lstInvitados.SelectedIndex;
                     lstInvitados.Items.RemoveAt(lstInvitados.SelectedIndex);
+                    InvitadoClase.EliminarInvitado(index);
+                }
             }
             else
             {
@@ -95,7 +103,10 @@ namespace Banquetes
         {
             DialogResult result = MessageBox.Show("¿Esta seguro de eliminar toda la lista de invitados?", "Atencion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == System.Windows.Forms.DialogResult.Yes)
+            {
                 lstInvitados.Items.Clear();
+                InvitadoClase.EliminarInvitados();
+            }
         }
 
         private void btnAnterior_Click(object sender, EventArgs e)

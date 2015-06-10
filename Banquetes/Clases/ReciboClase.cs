@@ -33,7 +33,7 @@ namespace Banquetes.Clases
                 new SqlParameter("status", SqlDbType.Int),
                 new SqlParameter("comentario", SqlDbType.Text)
             };
-            objElementos.Valores = new List<object>() { evento.NombreEvento, evento.FechaEvento, evento.HoraEvento, evento.Calle, evento.Numero, evento.Colonia, evento.Cp, evento.Status, evento.Comentario};
+            objElementos.Valores = new List<object>() { evento.NombreEvento, evento.FechaEvento.ToShortDateString(), evento.HoraEvento, evento.Calle, evento.Numero, evento.Colonia, evento.Cp, 1, evento.Comentario};
             Operaciones objOperaciones = new Operaciones();
             objOperaciones.Elemento = objElementos;
             objOperaciones.AgregarInfo();
@@ -50,7 +50,7 @@ namespace Banquetes.Clases
                 new SqlParameter("telefono", SqlDbType.NVarChar, 50),
                 new SqlParameter("email", SqlDbType.NVarChar, 50)
             };
-                objElementos.Valores = new List<object>() {NumeroFolio, cliente.Nombre, cliente.ApPaterno, cliente.ApMaterno, cliente.Telefono, cliente.Email };
+                objElementos.Valores = new List<object>() { EventoClase.Evento.FolioEvento, cliente.Nombre, cliente.ApPaterno, cliente.ApMaterno, cliente.Telefono, cliente.Email };
 
 
                 objOperaciones.Elemento = objElementos;
@@ -66,12 +66,26 @@ namespace Banquetes.Clases
                 new SqlParameter("nombre", SqlDbType.NVarChar, 50),
                 new SqlParameter("email", SqlDbType.NVarChar, 50)
                 };
-                    objElementos.Valores = new List<object>() { NumeroFolio, inv[i].Nombre, inv[i].Email };
+                    objElementos.Valores = new List<object>() { EventoClase.Evento.FolioEvento, inv[i].Nombre, inv[i].Email };
 
                     objOperaciones.Elemento = objElementos;
                     objOperaciones.AgregarInfo();
                 }
 
+                objElementos.Sentencia = "AddRecibo";
+
+                objElementos.Parametros = new SqlParameter[]{
+                new SqlParameter("folio", SqlDbType.Int),
+                new SqlParameter("fecha", SqlDbType.NVarChar, 50),
+                new SqlParameter("subtotal", SqlDbType.NVarChar, 50),
+                new SqlParameter("total", SqlDbType.NVarChar, 50),
+                new SqlParameter("iva", SqlDbType.NVarChar, 50)
+            };
+                objElementos.Valores = new List<object>() { EventoClase.Evento.FolioEvento, DateTime.Now.ToShortDateString() };
+
+
+                objOperaciones.Elemento = objElementos;
+                objOperaciones.AgregarInfo();
 
 
   
@@ -88,7 +102,7 @@ namespace Banquetes.Clases
             objElementos.Valores = new List<object>() { };
             Operaciones objOperaciones = new Operaciones();
             objOperaciones.Elemento = objElementos;
-            int folio = (objOperaciones.ObtenerScalar())+1;
+            int folio = (objOperaciones.ObtenerScalar());
             EventoClase.Evento.FolioEvento = folio;
             return folio;
         }

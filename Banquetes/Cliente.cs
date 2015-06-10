@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Banquetes.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -47,7 +48,7 @@ namespace Banquetes
         {
             try
             {
-                Cliente cli = new Cliente();
+                ClienteClase cli = new ClienteClase();
                 string name = txtNombre.Text;
                 string Apaterno = txtPaterno.Text;
                 string Amaterno = txtMaterno.Text;
@@ -67,7 +68,9 @@ namespace Banquetes
                         MessageBox.Show("numero de télefono incompleto.");
                     else 
                     {
+                        ClienteClase newCli = new ClienteClase();
                         cli.crearEmpleado(name, Apaterno, Amaterno, telefono, mail);
+
                         
                     }
                     

@@ -20,12 +20,32 @@ namespace Banquetes
         public Recibo()
         {
             InitializeComponent();
+            rellenarCampos();
         }
         public Recibo(int folio)
         {
             InitializeComponent();
+            rellenarCampos();
+
+        }
+        private void rellenarCampos() { 
+            ClienteClase cli = ClienteClase.ObtenerCliente();
+            lblTelCliente.Text = cli.Telefono;
+            lblNombreCliente.Text = cli.Nombre + " " + cli.ApPaterno + " " + cli.ApMaterno;
+            lblEmailCliente.Text = cli.Email;
+            EventoClase eve = EventoClase.ObtenerEvento();
+            lblNombreEvento.Text = eve.NombreEvento;
+            lblFechaEvento.Text = eve.FechaEvento.ToShortDateString();
+            lblHoraEvento.Text = eve.HoraEvento.ToString();
+            ReciboClase rec = new ReciboClase();
+            lblFolio.Text = rec.ObtenerFolio().ToString();
+            lblDireccionEvento.Text = eve.Calle + " " + eve.Numero +" Colonia " + eve.Colonia+" Cp: "+ eve.Cp;
+            lblFechaRecibo.Text = DateTime.Now.ToShortDateString();
+
+            
         }
 
+        #region PaintPanels
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(System.Drawing.ColorTranslator.FromHtml("#D85846"));
@@ -65,7 +85,8 @@ namespace Banquetes
             myBrush.Dispose();
             formGraphics.Dispose();
         }
-
+        #endregion
+        #region EventosClick
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Inicio inicio = new Inicio();
@@ -82,7 +103,7 @@ namespace Banquetes
         {
 
             ReciboClase recibo = new ReciboClase();
-            //recibo.GuardarRecibo();
+                    recibo.GuardarRecibo();
                     Inicio inicio = new Inicio();
                     inicio.Show();
                     this.Hide();
@@ -93,5 +114,6 @@ namespace Banquetes
             Banquetes.Inicio.evento.Show();
             this.Hide();
         }
+#endregion
     }
 }
