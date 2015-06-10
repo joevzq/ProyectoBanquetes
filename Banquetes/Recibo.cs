@@ -17,15 +17,18 @@ namespace Banquetes
 {
     public partial class Recibo : Form
     {
+        private bool deAdmin;
         public Recibo()
         {
             InitializeComponent();
-            rellenarCampos();
+            deAdmin = true;
+            llenarReciboDS();
         }
         public Recibo(int folio)
         {
+            deAdmin = false;
             InitializeComponent();
-            rellenarCampos();
+            llenarReciboDB(folio);
 
         }
         private void rellenarCampos() { 
@@ -86,12 +89,18 @@ namespace Banquetes
             formGraphics.Dispose();
         }
         #endregion
-        #region EventosClick
+
+        #region Eventos
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            if (deAdmin)
+            {
             Inicio inicio = new Inicio();
             inicio.Show();
-            this.Hide();
+                this.Dispose();
+        }
+            else
+                this.Dispose();
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
@@ -113,6 +122,41 @@ namespace Banquetes
         {
             Banquetes.Inicio.evento.Show();
             this.Hide();
+        }
+
+        private void llenarReciboDB(int folio)
+        {
+            ReciboClase recCl = new ReciboClase();
+            DataTable data = recCl.ConsultarRecibo(folio);
+            lblFolio.Text = folio.ToString();
+            lblFechaRecibo.Text = Convert.ToDateTime(data.Rows[0]["fechaRecibo"]).ToShortDateString();
+            lblNombreCliente.Text = data.Rows[0]["nombrecliente"].ToString();
+            lblTelCliente.Text = data.Rows[0]["telefono"].ToString();
+            lblEmailCliente.Text = data.Rows[0]["email"].ToString();
+            lblNombreEvento.Text = data.Rows[0]["nombre"].ToString();
+            lblFechaEvento.Text = Convert.ToDateTime(data.Rows[0]["fechaEvento"]).ToShortDateString();
+            lblHoraEvento.Text = data.Rows[0]["hora"].ToString();
+            lblDireccionEvento.Text = data.Rows[0]["calle"].ToString() + " " + data.Rows[0]["numero"].ToString() +
+                " " + data.Rows[0]["colonia"].ToString() + " " + data.Rows[0]["cp"].ToString();
+            lblSubtotal.Text = "$" + Convert.ToInt32(data.Rows[0]["subtotal"]).ToString();
+            lblIva.Text = "$" + Convert.ToInt32(data.Rows[0]["iva"]).ToString();
+            lblTotal.Text = "$" + Convert.ToInt32(data.Rows[0]["total"]).ToString();
+        }
+
+        private void llenarReciboDS()
+        {
+            ClienteClase cli = ClienteClase.ObtenerCliente();
+            lblTelCliente.Text = cli.Telefono;
+            lblNombreCliente.Text = cli.Nombre + " " + cli.ApPaterno + " " + cli.ApMaterno;
+            lblEmailCliente.Text = cli.Email;
+            EventoClase eve = EventoClase.ObtenerEvento();
+            lblNombreEvento.Text = eve.NombreEvento;
+            lblFechaEvento.Text = eve.FechaEvento.ToShortDateString();
+            lblHoraEvento.Text = eve.HoraEvento.ToString();
+            ReciboClase rec = new ReciboClase();
+            lblFolio.Text = rec.ObtenerFolio().ToString();
+            lblDireccionEvento.Text = eve.Calle + " " + eve.Numero + " Colonia " + eve.Colonia + " Cp: " + eve.Cp;
+            lblFechaRecibo.Text = DateTime.Now.ToShortDateString();
         }
 #endregion
     }

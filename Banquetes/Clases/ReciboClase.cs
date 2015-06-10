@@ -90,9 +90,19 @@ namespace Banquetes.Clases
 
   
         }
-        public void ConsultarRecibo()
+        public DataTable ConsultarRecibo(int folio)
         {
-
+            string tabla = "Eventos";
+            Estructura objElements = new Estructura();
+            objElements.Sentencia = "proc_getRecibo";
+            objElements.Parametros = new SqlParameter[] { 
+                new SqlParameter("folio", SqlDbType.Int)
+            };
+            objElements.Valores = new List<object>() { folio };
+            Operaciones objOperaciones = new Operaciones();
+            objOperaciones.Elemento = objElements;
+            DataTable data = objOperaciones.ObtenerDataTable(tabla);
+            return data;
         }
         public int ObtenerFolio() {
             Estructura objElementos = new Estructura();

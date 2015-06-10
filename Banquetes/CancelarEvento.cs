@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Banquetes.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,36 +34,24 @@ namespace Banquetes
 
         private void btnNo_Click(object sender, EventArgs e)
         {
-            if (form == 'i')
-            {
-                Inicio inicio = new Inicio();
-                inicio.Show();
-                this.Hide();
-            }
-            else
-            {
-                Admin admin = new Admin();
-                admin.Show();
-                this.Hide();
-            }
+            this.Dispose();
 
         }
 
         private void btnSi_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Evento cancelado.");
-            if (form == 'i')
-            {
-                Inicio inicio = new Inicio();
-                inicio.Show();
-                this.Hide();
-            }
+            bool existeComentario;
+            string comentario = txtComentario.Text;
+            EventoClase evCl = new EventoClase();
+            if (string.IsNullOrWhiteSpace(comentario))
+                existeComentario = false;
             else
-            {
-                Admin admin = new Admin();
-                admin.Show();
-                this.Hide();
-            }
+                existeComentario = true;
+
+            evCl.ActualizarStatus(folio, 3, existeComentario, comentario);
+            
+            MessageBox.Show("Evento cancelado.");
+            this.Dispose();
         }
     }
 }

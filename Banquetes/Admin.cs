@@ -13,12 +13,15 @@ namespace Banquetes
 {
     public partial class Admin : Form
     {
+        EventoClase evCl = new EventoClase();
+        List<EventoClase> lstEventos = new List<EventoClase>();
+
+        private int folio;
         private bool lstBool = true;
         public Admin()
         {
             InitializeComponent();
-            EventoClase evCl = new EventoClase();
-            List<EventoClase> lstEventos = new List<EventoClase>();
+            
             lstEventos = evCl.LlamarEventos();
             llenarListas(lstEventos);
         }
@@ -42,24 +45,38 @@ namespace Banquetes
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            CancelarEvento cancelar = new CancelarEvento(0, 'a');
-            cancelar.Show();
-            this.Hide();
+            CancelarEvento cancelar = new CancelarEvento(folio, 'a');
+            cancelar.ShowDialog();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            for (int i = 0; i < lstEventos.Count; i++)
+            {
+                if (lstEventos[i].FolioEvento == folio)
+                {
+                    dtpFechaEvento.Value = lstEventos[i].FechaEvento;
+                    break;
+                }
+            }
             grpFecha.Visible = true;
         }
 
+        /*TODO... Validaciones*/
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            DateTime fechaNueva = dtpFechaEvento.Value;
+            evCl.ActualizarFecha(folio, fechaNueva);
+            cleanLists();
+            lstEventos = evCl.LlamarEventos();
+            llenarListas(lstEventos);
             grpFecha.Visible = false;
         }
 
         private void btnAnalizar_Click(object sender, EventArgs e)
         {
-
+            Recibo recibo = new Recibo(folio);
+            recibo.ShowDialog();
         }
 
         private void llenarListas(List<EventoClase> lista)
@@ -79,6 +96,8 @@ namespace Banquetes
 
         private void lst_SelectedIndexChanged(object sender, EventArgs e)
         {
+            int index = ((ListBox)sender).SelectedIndex;
+            string evento;
             if (lstBool)
             {
                 lstBool = false;
@@ -86,19 +105,36 @@ namespace Banquetes
                 {
                     lstCancelados.ClearSelected();
                     lstRealizados.ClearSelected();
+                    evento = lstPorRealizar.Items[index].ToString();
                 }
                 else if (((ListBox)sender).Name == "lstRealizados")
                 {
                     lstCancelados.ClearSelected();
                     lstPorRealizar.ClearSelected();
+                    evento = lstRealizados.Items[index].ToString();
                 }
                 else
                 {
                     lstPorRealizar.ClearSelected();
                     lstRealizados.ClearSelected();
+                    evento = lstCancelados.Items[index].ToString();
                 }
+                getFolio(evento);
                 lstBool = true;
             }
+        }
+
+        private void getFolio(string evento)
+        {
+            evento = evento.Substring(0, 4);
+            folio = int.Parse(evento);
+        }
+
+        private void cleanLists()
+        {
+            lstCancelados.Items.Clear();
+            lstRealizados.Items.Clear();
+            lstPorRealizar.Items.Clear();
         }
     }
 }

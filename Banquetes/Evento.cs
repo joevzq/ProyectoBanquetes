@@ -64,7 +64,7 @@ namespace Banquetes
                 //Crear un nuevo evento en la clase EventoClase
                 evento.Crear(nombre, calle, colonia, Cp, numero, hora, comentario, fecha);
                 
-
+                
             
             Recibo recibo = new Recibo();
             recibo.Show();
