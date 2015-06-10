@@ -33,7 +33,7 @@
             this.lblCancelar = new System.Windows.Forms.Label();
             this.lblSeguro = new System.Windows.Forms.Label();
             this.lblComentario = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtComentario = new System.Windows.Forms.TextBox();
             this.btnSi = new System.Windows.Forms.Button();
             this.btnNo = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -76,13 +76,13 @@
             this.lblComentario.TabIndex = 2;
             this.lblComentario.Text = "Comentario:";
             // 
-            // textBox1
+            // txtComentario
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 74);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(286, 110);
-            this.textBox1.TabIndex = 3;
+            this.txtComentario.Location = new System.Drawing.Point(15, 74);
+            this.txtComentario.Multiline = true;
+            this.txtComentario.Name = "txtComentario";
+            this.txtComentario.Size = new System.Drawing.Size(286, 110);
+            this.txtComentario.TabIndex = 3;
             // 
             // btnSi
             // 
@@ -113,7 +113,7 @@
             this.ClientSize = new System.Drawing.Size(313, 231);
             this.Controls.Add(this.btnNo);
             this.Controls.Add(this.btnSi);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtComentario);
             this.Controls.Add(this.lblComentario);
             this.Controls.Add(this.lblSeguro);
             this.Controls.Add(this.lblCancelar);
@@ -133,7 +133,7 @@
         private System.Windows.Forms.Label lblCancelar;
         private System.Windows.Forms.Label lblSeguro;
         private System.Windows.Forms.Label lblComentario;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtComentario;
         private System.Windows.Forms.Button btnSi;
         private System.Windows.Forms.Button btnNo;
     }

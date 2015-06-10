@@ -64,7 +64,7 @@ namespace Banquetes
 
                 //Crear un nuevo evento en la clase EventoClase
                 EventoClase ev = new EventoClase();
-                evento.Crear(nombre, calle, colonia, Cp, numero, hora, comentario, fecha, ev);
+                //evento.Crear(nombre, calle, colonia, Cp, numero, hora, comentario, fecha, ev);
                 
             }
             catch (Exception) {

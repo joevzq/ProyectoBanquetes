@@ -17,13 +17,18 @@ namespace Banquetes
 {
     public partial class Recibo : Form
     {
+        private bool deAdmin;
         public Recibo()
         {
             InitializeComponent();
+            deAdmin = true;
         }
         public Recibo(int folio)
         {
+            deAdmin = false;
             InitializeComponent();
+            llenarRecibo(folio);
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -68,9 +73,14 @@ namespace Banquetes
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            Inicio inicio = new Inicio();
-            inicio.Show();
-            this.Hide();
+            if (deAdmin)
+            {
+                Inicio inicio = new Inicio();
+                inicio.Show();
+                this.Dispose();
+            }
+            else
+                this.Dispose();
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
@@ -92,6 +102,25 @@ namespace Banquetes
         {
             Banquetes.Inicio.evento.Show();
             this.Hide();
+        }
+
+        private void llenarRecibo(int folio)
+        {
+            ReciboClase recCl = new ReciboClase();
+            DataTable data = recCl.ConsultarRecibo(folio);
+            lblFolio.Text = folio.ToString();
+            lblFechaRecibo.Text = Convert.ToDateTime(data.Rows[0]["fechaRecibo"]).ToShortDateString();
+            lblNombreCliente.Text = data.Rows[0]["nombrecliente"].ToString();
+            lblTelCliente.Text = data.Rows[0]["telefono"].ToString();
+            lblEmailCliente.Text = data.Rows[0]["email"].ToString();
+            lblNombreEvento.Text = data.Rows[0]["nombre"].ToString();
+            lblFechaEvento.Text = Convert.ToDateTime(data.Rows[0]["fechaEvento"]).ToShortDateString();
+            lblHoraEvento.Text = data.Rows[0]["hora"].ToString();
+            lblDireccionEvento.Text = data.Rows[0]["calle"].ToString() + " " + data.Rows[0]["numero"].ToString() +
+                " " + data.Rows[0]["colonia"].ToString() + " " + data.Rows[0]["cp"].ToString();
+            lblSubtotal.Text = "$" + Convert.ToInt32(data.Rows[0]["subtotal"]).ToString();
+            lblIva.Text = "$" + Convert.ToInt32(data.Rows[0]["iva"]).ToString();
+            lblTotal.Text = "$" + Convert.ToInt32(data.Rows[0]["total"]).ToString();
         }
     }
 }

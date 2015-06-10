@@ -96,10 +96,43 @@ namespace Banquetes.Class
             ev.FechaEvento = fecha;
             ev.Comentario = comentario;
         }
+
         //Actualizar status de evento
-        public void ActualizarStatus(int folioEvento) { }
+        public void ActualizarStatus(int folioEvento, int status, bool existeComentario, string comentario) 
+        {
+            if (existeComentario)
+            {
+                Estructura objElements = new Estructura();
+                objElements.Sentencia = "proc_UpdateStatusWComentario";
+                objElements.Parametros = new SqlParameter[] {
+                new SqlParameter("folio", SqlDbType.Int),
+                new SqlParameter("status", SqlDbType.Int),
+                new SqlParameter("comentario", SqlDbType.Text)
+            };
+                objElements.Valores = new List<object>() { folioEvento, status, comentario };
+                Operaciones objOperaciones = new Operaciones();
+                objOperaciones.Elemento = objElements;
+                objOperaciones.AgregarInfo();
+            }
+
+            else
+            {
+                Estructura objElements = new Estructura();
+                objElements.Sentencia = "proc_UpdateStatus";
+                objElements.Parametros = new SqlParameter[] {
+                new SqlParameter("folio", SqlDbType.Int),
+                new SqlParameter("status", SqlDbType.Int)
+            };
+                objElements.Valores = new List<object>() { folioEvento, status };
+                Operaciones objOperaciones = new Operaciones();
+                objOperaciones.Elemento = objElements;
+                objOperaciones.AgregarInfo();
+            }
+        }
+
         //Cancelar evento
         public void Cancelar(int folioEvento) { }
+
         //Llamar todos los eventos
         public List<EventoClase> LlamarEventos() 
         {
@@ -134,14 +167,30 @@ namespace Banquetes.Class
             }
             return lstEventos;
         }
+
         //Llamar un evento
         public Evento LlamarEvento(int folioEvento)
         {
             Evento ev = new Evento();
             return ev;
         }
+
         //Actualizar fecha de un evento
-        public void ActualizarFecha(int folioEvento, DateTime nuevaFecha) { }
+        public void ActualizarFecha(int folioEvento, DateTime nuevaFecha) 
+        {
+            string tabla = "Eventos";
+            Estructura objElements = new Estructura();
+            objElements.Sentencia = "proc_UpdateFecha";
+            objElements.Parametros = new SqlParameter[] {
+                new SqlParameter("folio", SqlDbType.Int),
+                new SqlParameter("fecha", SqlDbType.Date) 
+            };
+            objElements.Valores = new List<object>() { folioEvento, nuevaFecha};
+            Operaciones objOperaciones = new Operaciones();
+            objOperaciones.Elemento = objElements;
+            objOperaciones.AgregarInfo();
+        }
+
         //Verificar que el evento a modificar/cancelar se encuentra a más de tres de días de ser realizado
         public bool VerificarFecha(int folioEvento) 
         { 

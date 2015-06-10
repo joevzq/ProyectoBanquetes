@@ -41,7 +41,7 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.grpFecha = new System.Windows.Forms.GroupBox();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaEvento = new System.Windows.Forms.DateTimePicker();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnAnalizar = new System.Windows.Forms.Button();
             this.grpFecha.SuspendLayout();
@@ -148,7 +148,7 @@
             // 
             this.grpFecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.grpFecha.Controls.Add(this.btnGuardar);
-            this.grpFecha.Controls.Add(this.dateTimePicker1);
+            this.grpFecha.Controls.Add(this.dtpFechaEvento);
             this.grpFecha.Location = new System.Drawing.Point(293, 297);
             this.grpFecha.Name = "grpFecha";
             this.grpFecha.Size = new System.Drawing.Size(215, 78);
@@ -167,14 +167,14 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // dateTimePicker1
+            // dtpFechaEvento
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(6, 19);
-            this.dateTimePicker1.MaxDate = new System.DateTime(2019, 12, 25, 0, 0, 0, 0);
-            this.dateTimePicker1.MinDate = new System.DateTime(2015, 3, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 0;
+            this.dtpFechaEvento.Location = new System.Drawing.Point(6, 19);
+            this.dtpFechaEvento.MaxDate = new System.DateTime(2019, 12, 25, 0, 0, 0, 0);
+            this.dtpFechaEvento.MinDate = new System.DateTime(2013, 3, 1, 0, 0, 0, 0);
+            this.dtpFechaEvento.Name = "dtpFechaEvento";
+            this.dtpFechaEvento.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaEvento.TabIndex = 0;
             // 
             // btnSalir
             // 
@@ -240,7 +240,7 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.GroupBox grpFecha;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFechaEvento;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnAnalizar;
