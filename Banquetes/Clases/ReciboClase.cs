@@ -18,7 +18,7 @@ namespace Banquetes.Clases
         #region Metodos
         public void GuardarRecibo()
         {
-            EventoClase evento = EventoClase.Evento;
+            EventoClase evento = EventoClase.LlamarEvento();
             Estructura objElementos = new Estructura();
             objElementos.Sentencia = "AddEvento";
 
@@ -50,7 +50,7 @@ namespace Banquetes.Clases
                 new SqlParameter("telefono", SqlDbType.NVarChar, 50),
                 new SqlParameter("email", SqlDbType.NVarChar, 50)
             };
-                objElementos.Valores = new List<object>() { EventoClase.Evento.FolioEvento, cliente.Nombre, cliente.ApPaterno, cliente.ApMaterno, cliente.Telefono, cliente.Email };
+                objElementos.Valores = new List<object>() { EventoClase.LlamarEvento().FolioEvento, cliente.Nombre, cliente.ApPaterno, cliente.ApMaterno, cliente.Telefono, cliente.Email };
 
 
                 objOperaciones.Elemento = objElementos;
@@ -66,7 +66,7 @@ namespace Banquetes.Clases
                 new SqlParameter("nombre", SqlDbType.NVarChar, 50),
                 new SqlParameter("email", SqlDbType.NVarChar, 50)
                 };
-                    objElementos.Valores = new List<object>() { EventoClase.Evento.FolioEvento, inv[i].Nombre, inv[i].Email };
+                    objElementos.Valores = new List<object>() { EventoClase.LlamarEvento().FolioEvento, inv[i].Nombre, inv[i].Email };
 
                     objOperaciones.Elemento = objElementos;
                     objOperaciones.AgregarInfo();
@@ -81,7 +81,7 @@ namespace Banquetes.Clases
                 new SqlParameter("total", SqlDbType.NVarChar, 50),
                 new SqlParameter("iva", SqlDbType.NVarChar, 50)
             };
-                objElementos.Valores = new List<object>() { EventoClase.Evento.FolioEvento, DateTime.Now.ToShortDateString() };
+                objElementos.Valores = new List<object>() { EventoClase.LlamarEvento().FolioEvento, DateTime.Now.ToShortDateString() };
 
 
                 objOperaciones.Elemento = objElementos;
@@ -113,7 +113,7 @@ namespace Banquetes.Clases
             Operaciones objOperaciones = new Operaciones();
             objOperaciones.Elemento = objElementos;
             int folio = (objOperaciones.ObtenerScalar());
-            EventoClase.Evento.FolioEvento = folio;
+            EventoClase.LlamarEvento().FolioEvento = folio;
             return folio;
         }
         #endregion

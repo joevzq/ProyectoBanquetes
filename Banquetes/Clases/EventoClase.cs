@@ -11,7 +11,8 @@ namespace Banquetes.Class
 {
     public class EventoClase
     {
-        public static EventoClase Evento = new EventoClase();
+        private static EventoClase Evento = new EventoClase();
+        private static List<EventoClase> lstEventos = new List<EventoClase>();
         #region Variables
         private int status;
         public int Status
@@ -133,8 +134,8 @@ namespace Banquetes.Class
         //Cancelar evento
         public void Cancelar(int folioEvento) { }
 
-        //Llamar todos los eventos
-        public static EventoClase ObtenerEvento() 
+        /*Llamar todos los eventos*/
+        public List<EventoClase> LlamarEventos()
         {
 
             string tabla = "Eventos";
@@ -168,17 +169,15 @@ namespace Banquetes.Class
             return lstEventos;
         }
 
-        //Llamar un evento
-        public Evento LlamarEvento(int folioEvento)
+        /*Llamar un evento*/
+        public static EventoClase LlamarEvento()
         {
-            Evento ev = new Evento();
-            return ev;
+            return Evento;
         }
 
         //Actualizar fecha de un evento
         public void ActualizarFecha(int folioEvento, DateTime nuevaFecha) 
         {
-            string tabla = "Eventos";
             Estructura objElements = new Estructura();
             objElements.Sentencia = "proc_UpdateFecha";
             objElements.Parametros = new SqlParameter[] {
