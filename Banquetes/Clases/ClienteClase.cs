@@ -51,7 +51,7 @@ namespace Banquetes.Class
 
        #region Métodos
        public static List<Cliente> lstCli = new List<Cliente>();
-       private static ClienteClase Cliente = new ClienteClase();
+       public static ClienteClase Cliente = new ClienteClase();
        //Método para crear Cliente
        public void crearEmpleado(string nombre, string Apaterno, string Amaterno, string telefono, string email)
        {

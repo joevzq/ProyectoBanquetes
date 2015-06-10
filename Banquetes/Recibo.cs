@@ -33,7 +33,7 @@ namespace Banquetes
             lblTelCliente.Text = cli.Telefono;
             lblNombreCliente.Text = cli.Nombre + " " + cli.ApPaterno + " " + cli.ApMaterno;
             lblEmailCliente.Text = cli.Email;
-            EventoClase eve = EventoClase.ObtenerEvento();
+            EventoClase eve = EventoClase.Evento;
             lblNombreEvento.Text = eve.NombreEvento;
             lblFechaEvento.Text = eve.FechaEvento.ToShortDateString();
             lblHoraEvento.Text = eve.HoraEvento.ToString();

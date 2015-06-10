@@ -39,7 +39,7 @@ namespace Banquetes.Clases
             objOperaciones.AgregarInfo();
 
 
-            ClienteClase cliente = ClienteClase.ObtenerCliente();
+            ClienteClase cliente = ClienteClase.Cliente;
                 objElementos.Sentencia = "AddCliente";
 
                 objElementos.Parametros = new SqlParameter[]{
@@ -56,7 +56,7 @@ namespace Banquetes.Clases
                 objOperaciones.Elemento = objElementos;
                 objOperaciones.AgregarInfo();
 
-                List<InvitadoClase> inv = InvitadoClase.ObtenerInvitados();
+                List<InvitadoClase> inv = InvitadoClase.lstInvitados;
                 for (int i = 0; i < inv.Count; i++)
                 {
                     objElementos.Sentencia = "AddInvitado";
