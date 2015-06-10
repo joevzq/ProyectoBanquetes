@@ -51,20 +51,17 @@ namespace Banquetes.Class
 
        #region Métodos
        public static List<Cliente> lstCli = new List<Cliente>();
-  
-
-
-       
+       private static ClienteClase Cliente = new ClienteClase();
        //Método para crear Cliente
        public void crearEmpleado(string nombre, string Apaterno, string Amaterno, string telefono, string email)
        {
            bool exist = false;
-           ClienteClase newCli = new ClienteClase();
-           newCli.nombre = nombre;
-           newCli.apPaterno = Apaterno;
-           newCli.apMaterno = Amaterno;
-           newCli.telefono = telefono;
-           newCli.email = email;
+
+           Cliente.nombre = nombre;
+           Cliente.apPaterno = Apaterno;
+           Cliente.apMaterno = Amaterno;
+           Cliente.telefono = telefono;
+           Cliente.email = email;
 
            //for (int i = 0; i < lstCli.Count; i++)
            //{
@@ -78,6 +75,9 @@ namespace Banquetes.Class
        public void Editar(int folioEvento) 
        {
 
+       }
+       public static ClienteClase ObtenerCliente() {
+           return Cliente;
        }
        #endregion
    }

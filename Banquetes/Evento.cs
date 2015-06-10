@@ -49,8 +49,7 @@ namespace Banquetes
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            try
-            {
+
                 EventoClase evento = new EventoClase();
                 string nombre = txtNombre.Text;
                 string calle = txtCalle.Text;
@@ -63,13 +62,9 @@ namespace Banquetes
 
 
                 //Crear un nuevo evento en la clase EventoClase
-                EventoClase ev = new EventoClase();
-                //evento.Crear(nombre, calle, colonia, Cp, numero, hora, comentario, fecha, ev);
+                evento.Crear(nombre, calle, colonia, Cp, numero, hora, comentario, fecha);
                 
-            }
-            catch (Exception) {
-                MessageBox.Show("Lo sentimos, algo ha salido mal ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                
             
             Recibo recibo = new Recibo();
             recibo.Show();

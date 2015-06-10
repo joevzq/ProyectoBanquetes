@@ -31,11 +31,11 @@ namespace Banquetes
         public Menu()
         {
             InitializeComponent();
-            menuCl.MostrarMenu();
-            crearArray();
-            llenarControles();
-            actualizarListView();
-            actualizarControles();
+            //menuCl.MostrarMenu();
+            //crearArray();
+            //llenarControles();
+            //actualizarListView();
+            //actualizarControles();
             
         }
         

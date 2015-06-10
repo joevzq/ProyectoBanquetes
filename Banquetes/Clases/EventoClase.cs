@@ -11,7 +11,7 @@ namespace Banquetes.Class
 {
     public class EventoClase
     {
-        private static List<EventoClase> lstEventos = new List<EventoClase>();
+        public static EventoClase Evento = new EventoClase();
         #region Variables
         private int status;
         public int Status
@@ -86,15 +86,15 @@ namespace Banquetes.Class
         #region Métodos
         //Crear evento
         public void Crear(string nombre,string calle,string colonia,int cp,string numero,string hora,string comentario,DateTime fecha) {
-            EventoClase ev = new EventoClase();
-            ev.NombreEvento = nombre;
-            ev.Calle = calle;
-            ev.Colonia = colonia;
-            ev.Cp = cp;
-            ev.Numero = numero;
-            ev.HoraEvento = hora;
-            ev.FechaEvento = fecha;
-            ev.Comentario = comentario;
+
+            Evento.NombreEvento = nombre;
+            Evento.Calle = calle;
+            Evento.Colonia = colonia;
+            Evento.Cp = cp;
+            Evento.Numero = numero;
+            Evento.HoraEvento = hora;
+            Evento.FechaEvento = fecha;
+            Evento.Comentario = comentario;
         }
 
         //Actualizar status de evento
@@ -134,7 +134,7 @@ namespace Banquetes.Class
         public void Cancelar(int folioEvento) { }
 
         //Llamar todos los eventos
-        public List<EventoClase> LlamarEventos() 
+        public static EventoClase ObtenerEvento() 
         {
 
             string tabla = "Eventos";
