@@ -54,6 +54,7 @@
             this.lstPorRealizar.Name = "lstPorRealizar";
             this.lstPorRealizar.Size = new System.Drawing.Size(159, 238);
             this.lstPorRealizar.TabIndex = 0;
+            this.lstPorRealizar.SelectedIndexChanged += new System.EventHandler(this.lst_SelectedIndexChanged);
             // 
             // lblPorRealizar
             // 
@@ -80,6 +81,7 @@
             this.lstRealizados.Name = "lstRealizados";
             this.lstRealizados.Size = new System.Drawing.Size(159, 238);
             this.lstRealizados.TabIndex = 4;
+            this.lstRealizados.SelectedIndexChanged += new System.EventHandler(this.lst_SelectedIndexChanged);
             // 
             // lstCancelados
             // 
@@ -88,6 +90,7 @@
             this.lstCancelados.Name = "lstCancelados";
             this.lstCancelados.Size = new System.Drawing.Size(159, 238);
             this.lstCancelados.TabIndex = 6;
+            this.lstCancelados.SelectedIndexChanged += new System.EventHandler(this.lst_SelectedIndexChanged);
             // 
             // lblCancelados
             // 
