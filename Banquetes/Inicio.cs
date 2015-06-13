@@ -41,24 +41,49 @@ namespace Banquetes
 
         private void picModificar_Click(object sender, EventArgs e)
         {
-            ReciboClase.nuevo = false;
-            ClienteClase cli = new ClienteClase();
-            InvitadoClase invitado = new InvitadoClase();
+            int folio;
+            bool folioValido = Int32.TryParse(txtModificar.Text, out folio);
             EventoClase ev = new EventoClase();
-            int folio = int.Parse(txtModificar.Text);
-            Menu menu = new Menu(folio);
-            cli.ObtenerCliente(folio);
-            invitado.ObtenerInvitados(folio);
-            ev.ObtenerEvento(folio);
-            menu.Show();
-            this.Hide();
+            bool statusValido = ev.checarFolioEvento(folio);
+            if (folioValido && statusValido)
+            {
+                if (ev.VerificarFecha(folio))
+                {
+                    ReciboClase.nuevo = false;
+                    ClienteClase cli = new ClienteClase();
+                    InvitadoClase invitado = new InvitadoClase();
+                    Menu menu = new Menu(folio);
+                    cli.ObtenerCliente(folio);
+                    invitado.ObtenerInvitados(folio);
+                    ev.ObtenerEvento(folio);
+                    menu.Show();
+                    this.Hide();
+                }
+                else
+                    MessageBox.Show("El evento se realizará en 3 días o menos.\nYa no puede ser modificado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+                MessageBox.Show("Ingresa un folio válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void picCancelar_Click(object sender, EventArgs e)
         {
-            int folio = int.Parse(txtCancelar.Text);
-            CancelarEvento cancelar = new CancelarEvento(folio, 'i');
-            cancelar.ShowDialog();
+            int folio;
+            bool folioValido = Int32.TryParse(txtCancelar.Text, out folio);
+            EventoClase ev = new EventoClase();
+            bool statusValido = ev.checarFolioEvento(folio);
+            if (folioValido && statusValido)
+            {
+                if (ev.VerificarFecha(folio))
+                {
+                    CancelarEvento cancelar = new CancelarEvento(folio, 'i');
+                    cancelar.ShowDialog();
+                }
+                else
+                    MessageBox.Show("El evento se realizará en 3 días o menos.\nYa no puede ser cancelado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+                MessageBox.Show("Ingresa un folio válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnAdmin_Click(object sender, EventArgs e)
@@ -75,8 +100,10 @@ namespace Banquetes
 
         private void Inicio_Load(object sender, EventArgs e)
         {
+            EventoClase eventoCl = new EventoClase();
             MenuClase menuCl = new MenuClase();
             menuCl.ObtenerMenuCompleto();
+            eventoCl.ActualizarStatusPorFecha();
         }
 
     }

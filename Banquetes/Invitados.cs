@@ -35,48 +35,44 @@ namespace Banquetes
             System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(System.Drawing.ColorTranslator.FromHtml("#D85846"));
             System.Drawing.Graphics formGraphics;
             formGraphics = this.CreateGraphics();
-            formGraphics.FillRectangle(myBrush, new Rectangle(265, 9, 200, 22));
+            formGraphics.FillRectangle(myBrush, new Rectangle(270, 9, 262, 22));
             myBrush.Dispose();
             formGraphics.Dispose();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            bool existente = false;
-            string InvitadoNom = null;
-            string InvitadoEm = null;
-            InvitadoNom = txtNombre.Text;
             try
             {
-                if (!string.IsNullOrEmpty(txtEmail.Text))
-                    InvitadoEm = new MailAddress(txtEmail.Text).ToString();
-            }
-            catch { MessageBox.Show("Por favor ingrese un E-mail con el formato correcto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-            if (string.IsNullOrEmpty(InvitadoNom) || string.IsNullOrEmpty(InvitadoEm))
-                MessageBox.Show("Por favor ingrese el nombre y el Email del invitado para poder ser agregado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else
-            {
+                string nombre = txtNombre.Text;
+                string email = new MailAddress(txtEmail.Text).ToString();
+
+                if (String.IsNullOrWhiteSpace(nombre))
+                {
+                    MessageBox.Show("Favor de llenar todos los campos requeridos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                for (int i = 0; i < InvitadoClase.lstInvitados.Count; i++)
+                    if (email == InvitadoClase.lstInvitados[i].Email)
+                    {
+                        MessageBox.Show("El correo del invitado ya existe en la lista de invitados.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
                 InvitadoClase invitado = new InvitadoClase();
-                invitado.Nombre = InvitadoNom;
-                invitado.Email = InvitadoEm;
+                invitado.Nombre = nombre;
+                invitado.Email = email;
                 InvitadoClase.lstInvitados.Add(invitado);
 
-                string elemento = InvitadoNom + "  " + InvitadoEm;
+                string elemento = nombre + " - " + email;
+                lstInvitados.Items.Add(elemento);
 
-                for (int i = 0; i < lstInvitados.Items.Count; i++)
-                {
-                    if (lstInvitados.Items[i].ToString() == elemento)
-                        existente = true;
-                }
-                if (!string.IsNullOrEmpty(InvitadoEm))
-                    if (existente != true)
-                    {
-                        lstInvitados.Items.Add(elemento);
-                        txtNombre.Text = "";
-                        txtEmail.Text = "";
-                    }
-                    else
-                        MessageBox.Show("El Invitado ingresao ya existe en la lista de invitados.", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtEmail.Text = String.Empty;
+                txtNombre.Text = String.Empty;
+            }
+            catch
+            {
+                MessageBox.Show("Email no válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -84,7 +80,7 @@ namespace Banquetes
         {
             if (lstInvitados.SelectedItem != null)
             {
-                DialogResult result = MessageBox.Show("Esta seguro de eliminar al invitado " + lstInvitados.SelectedItem.ToString() + "?", "Atencion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show("¿Estás seguro de eliminar al invitado " + lstInvitados.SelectedItem.ToString() + "?", "Atencion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == System.Windows.Forms.DialogResult.Yes)
                 {
                     int index = lstInvitados.SelectedIndex;
@@ -94,7 +90,7 @@ namespace Banquetes
             }
             else
             {
-                MessageBox.Show("Seleccione al invitado que desea eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Selecciona al invitado que deseas eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -117,6 +113,12 @@ namespace Banquetes
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
+            if (InvitadoClase.lstInvitados.Count == 0)
+            {
+                MessageBox.Show("No has ingresado ningún invitado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             Evento evento = new Evento();
             evento.Show();
             this.Close();
@@ -140,9 +142,7 @@ namespace Banquetes
         private void llenarLista()
         {
             foreach (InvitadoClase item in InvitadoClase.lstInvitados)
-            {
-                lstInvitados.Items.Add(item.Nombre + " " + item.Email);
-            }
+                lstInvitados.Items.Add(item.Nombre + " - " + item.Email);
         }
     }
 }

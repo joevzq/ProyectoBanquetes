@@ -1070,7 +1070,7 @@
             this.pnlTuMenu.Controls.Add(this.lblSeparator);
             this.pnlTuMenu.Location = new System.Drawing.Point(324, 62);
             this.pnlTuMenu.Name = "pnlTuMenu";
-            this.pnlTuMenu.Size = new System.Drawing.Size(196, 200);
+            this.pnlTuMenu.Size = new System.Drawing.Size(255, 200);
             this.pnlTuMenu.TabIndex = 3;
             // 
             // lstvMenu
@@ -1082,7 +1082,7 @@
             this.lstvMenu.GridLines = true;
             this.lstvMenu.Location = new System.Drawing.Point(3, 3);
             this.lstvMenu.Name = "lstvMenu";
-            this.lstvMenu.Size = new System.Drawing.Size(188, 141);
+            this.lstvMenu.Size = new System.Drawing.Size(247, 141);
             this.lstvMenu.TabIndex = 23;
             this.lstvMenu.UseCompatibleStateImageBehavior = false;
             this.lstvMenu.View = System.Windows.Forms.View.Details;
@@ -1090,23 +1090,23 @@
             // colPlatillo
             // 
             this.colPlatillo.Text = "Platillo";
-            this.colPlatillo.Width = 109;
+            this.colPlatillo.Width = 142;
             // 
             // colPorciones
             // 
             this.colPorciones.Text = "Porciones";
             this.colPorciones.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.colPorciones.Width = 34;
+            this.colPorciones.Width = 59;
             // 
             // colPU
             // 
             this.colPU.Text = "Precio";
-            this.colPU.Width = 41;
+            this.colPU.Width = 42;
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(75, 174);
+            this.lblTotal.Location = new System.Drawing.Point(129, 172);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(100, 13);
             this.lblTotal.TabIndex = 2;
@@ -1118,9 +1118,9 @@
             this.lblSeparator.AutoSize = true;
             this.lblSeparator.Location = new System.Drawing.Point(3, 159);
             this.lblSeparator.Name = "lblSeparator";
-            this.lblSeparator.Size = new System.Drawing.Size(191, 13);
+            this.lblSeparator.Size = new System.Drawing.Size(251, 13);
             this.lblSeparator.TabIndex = 1;
-            this.lblSeparator.Text = "**********************************************";
+            this.lblSeparator.Text = "*************************************************************";
             // 
             // pnllRojoTuMenu
             // 
@@ -1142,7 +1142,7 @@
             // 
             // btnSiguiente
             // 
-            this.btnSiguiente.Location = new System.Drawing.Point(445, 273);
+            this.btnSiguiente.Location = new System.Drawing.Point(504, 271);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(75, 23);
             this.btnSiguiente.TabIndex = 27;
@@ -1156,7 +1156,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(536, 306);
+            this.ClientSize = new System.Drawing.Size(591, 306);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.pnllRojoTuMenu);

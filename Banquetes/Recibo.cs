@@ -101,7 +101,7 @@ namespace Banquetes
         }
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Evento agendado.");
             ReciboClase recibo = new ReciboClase();
             recibo.GuardarRecibo();
             Inicio inicio = new Inicio();

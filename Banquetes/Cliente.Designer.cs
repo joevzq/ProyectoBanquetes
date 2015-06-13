@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cliente));
             this.grbOne = new System.Windows.Forms.GroupBox();
+            this.txtTel = new System.Windows.Forms.MaskedTextBox();
             this.txtMail = new System.Windows.Forms.TextBox();
-            this.txtTel = new System.Windows.Forms.TextBox();
             this.txtMaterno = new System.Windows.Forms.TextBox();
             this.txtPaterno = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -53,8 +53,8 @@
             // grbOne
             // 
             this.grbOne.BackColor = System.Drawing.Color.White;
-            this.grbOne.Controls.Add(this.txtMail);
             this.grbOne.Controls.Add(this.txtTel);
+            this.grbOne.Controls.Add(this.txtMail);
             this.grbOne.Controls.Add(this.txtMaterno);
             this.grbOne.Controls.Add(this.txtPaterno);
             this.grbOne.Controls.Add(this.txtNombre);
@@ -67,44 +67,46 @@
             this.grbOne.Controls.Add(this.label1);
             this.grbOne.Location = new System.Drawing.Point(13, 45);
             this.grbOne.Name = "grbOne";
-            this.grbOne.Size = new System.Drawing.Size(268, 166);
+            this.grbOne.Size = new System.Drawing.Size(304, 166);
             this.grbOne.TabIndex = 0;
             this.grbOne.TabStop = false;
+            // 
+            // txtTel
+            // 
+            this.txtTel.Location = new System.Drawing.Point(155, 101);
+            this.txtTel.Mask = "(999) 000-0000";
+            this.txtTel.Name = "txtTel";
+            this.txtTel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtTel.Size = new System.Drawing.Size(82, 20);
+            this.txtTel.TabIndex = 3;
             // 
             // txtMail
             // 
             this.txtMail.Location = new System.Drawing.Point(155, 127);
             this.txtMail.Name = "txtMail";
-            this.txtMail.Size = new System.Drawing.Size(100, 20);
-            this.txtMail.TabIndex = 20;
-            // 
-            // txtTel
-            // 
-            this.txtTel.Location = new System.Drawing.Point(155, 101);
-            this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(100, 20);
-            this.txtTel.TabIndex = 19;
+            this.txtMail.Size = new System.Drawing.Size(143, 20);
+            this.txtMail.TabIndex = 4;
             // 
             // txtMaterno
             // 
             this.txtMaterno.Location = new System.Drawing.Point(155, 75);
             this.txtMaterno.Name = "txtMaterno";
-            this.txtMaterno.Size = new System.Drawing.Size(100, 20);
-            this.txtMaterno.TabIndex = 18;
+            this.txtMaterno.Size = new System.Drawing.Size(143, 20);
+            this.txtMaterno.TabIndex = 2;
             // 
             // txtPaterno
             // 
             this.txtPaterno.Location = new System.Drawing.Point(155, 49);
             this.txtPaterno.Name = "txtPaterno";
-            this.txtPaterno.Size = new System.Drawing.Size(100, 20);
-            this.txtPaterno.TabIndex = 17;
+            this.txtPaterno.Size = new System.Drawing.Size(143, 20);
+            this.txtPaterno.TabIndex = 1;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(155, 23);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtNombre.TabIndex = 16;
+            this.txtNombre.Size = new System.Drawing.Size(143, 20);
+            this.txtNombre.TabIndex = 0;
             // 
             // lblMaterno
             // 
@@ -124,18 +126,18 @@
             this.lblMail.Name = "lblMail";
             this.lblMail.Size = new System.Drawing.Size(39, 13);
             this.lblMail.TabIndex = 14;
-            this.lblMail.Text = "E-Mail:";
+            this.lblMail.Text = "*Email:";
             // 
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefono.ForeColor = System.Drawing.Color.Black;
-            this.lblTelefono.Location = new System.Drawing.Point(50, 104);
+            this.lblTelefono.Location = new System.Drawing.Point(46, 104);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(52, 13);
+            this.lblTelefono.Size = new System.Drawing.Size(56, 13);
             this.lblTelefono.TabIndex = 13;
-            this.lblTelefono.Text = "Teléfono:";
+            this.lblTelefono.Text = "*Teléfono:";
             // 
             // label3
             // 
@@ -152,22 +154,22 @@
             this.lblPaterno.AutoSize = true;
             this.lblPaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPaterno.ForeColor = System.Drawing.Color.Black;
-            this.lblPaterno.Location = new System.Drawing.Point(15, 52);
+            this.lblPaterno.Location = new System.Drawing.Point(11, 52);
             this.lblPaterno.Name = "lblPaterno";
-            this.lblPaterno.Size = new System.Drawing.Size(87, 13);
+            this.lblPaterno.Size = new System.Drawing.Size(91, 13);
             this.lblPaterno.TabIndex = 11;
-            this.lblPaterno.Text = "Apellido Paterno:";
+            this.lblPaterno.Text = "*Apellido Paterno:";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.Black;
-            this.lblNombre.Location = new System.Drawing.Point(55, 26);
+            this.lblNombre.Location = new System.Drawing.Point(51, 26);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(47, 13);
+            this.lblNombre.Size = new System.Drawing.Size(51, 13);
             this.lblNombre.TabIndex = 1;
-            this.lblNombre.Text = "Nombre:";
+            this.lblNombre.Text = "*Nombre:";
             // 
             // label1
             // 
@@ -200,17 +202,17 @@
             // 
             // btnAnterior
             // 
-            this.btnAnterior.Location = new System.Drawing.Point(125, 217);
+            this.btnAnterior.Location = new System.Drawing.Point(161, 217);
             this.btnAnterior.Name = "btnAnterior";
             this.btnAnterior.Size = new System.Drawing.Size(75, 23);
-            this.btnAnterior.TabIndex = 4;
+            this.btnAnterior.TabIndex = 7;
             this.btnAnterior.Text = "Anterior";
             this.btnAnterior.UseVisualStyleBackColor = true;
             this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
             // btnSiguiente
             // 
-            this.btnSiguiente.Location = new System.Drawing.Point(206, 217);
+            this.btnSiguiente.Location = new System.Drawing.Point(242, 217);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(75, 23);
             this.btnSiguiente.TabIndex = 5;
@@ -234,7 +236,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(294, 254);
+            this.ClientSize = new System.Drawing.Size(329, 254);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnSiguiente);
@@ -267,10 +269,10 @@
         private System.Windows.Forms.Button btnSiguiente;
         private System.Windows.Forms.Label lblMaterno;
         private System.Windows.Forms.TextBox txtMail;
-        private System.Windows.Forms.TextBox txtTel;
         private System.Windows.Forms.TextBox txtMaterno;
         private System.Windows.Forms.TextBox txtPaterno;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.MaskedTextBox txtTel;
     }
 }

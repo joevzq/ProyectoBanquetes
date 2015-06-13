@@ -87,7 +87,7 @@ namespace Banquetes.Class
         #endregion
 
         #region Métodos
-        //Crear evento
+        /*Guardar evento en la base de datos*/
         public void GuardarEvento()
         {
             if (ReciboClase.nuevo)
@@ -133,7 +133,7 @@ namespace Banquetes.Class
             }
         }
 
-        //Actualizar status de evento
+        /*Actualizar status de evento*/
         public void ActualizarStatus(int folioEvento, int status, bool existeComentario, string comentario) 
         {
             if (existeComentario)
@@ -166,10 +166,18 @@ namespace Banquetes.Class
             }
         }
 
-        //Cancelar evento
-        public void Cancelar(int folioEvento) { }
-
-        /*Llamar todos los eventos*/
+        /*Actualizar automáticamente status de eventos que ya han sido realizados*/
+        public void ActualizarStatusPorFecha()
+        {
+            Estructura objElements = new Estructura();
+            objElements.Sentencia = "proc_updateStatusPorFecha";
+            objElements.Parametros = new SqlParameter[] { };
+            objElements.Valores = new List<object>() { };
+            Operaciones objOperaciones = new Operaciones();
+            objOperaciones.Elemento = objElements;
+            objOperaciones.AgregarInfo();
+        }
+        /*Llamar todos los eventos para la ventana de Admin*/
         public List<EventoClase> LlamarEventos()
         {
             string tabla = "Eventos";
@@ -203,7 +211,7 @@ namespace Banquetes.Class
             return lstEventos;
         }
 
-        /*Llamar un evento de la base de datos*/
+        /*Obtener información de un evento de la base de datos*/
         public void ObtenerEvento(int folio)
         {
             string tabla = "Eventos";
@@ -227,7 +235,7 @@ namespace Banquetes.Class
             Evento.comentario = data.Rows[0]["comentario"].ToString();
         }
 
-        //Actualizar fecha de un evento
+        /*Actualizar fecha de un evento*/
         public void ActualizarFecha(int folioEvento, DateTime nuevaFecha) 
         {
             Estructura objElements = new Estructura();
@@ -242,12 +250,26 @@ namespace Banquetes.Class
             objOperaciones.AgregarInfo();
         }
 
-        //Verificar que el evento a modificar/cancelar se encuentra a más de tres de días de ser realizado
-        public bool VerificarFecha(int folioEvento) 
-        { 
-            return true; 
+        /*Verificar que el evento a modificar/cancelar se encuentra a más de tres de días de ser realizado*/
+        public bool VerificarFecha(int folio) 
+        {
+            Estructura objElemento = new Estructura();
+            string tabla = "Eventos";
+            objElemento.Sentencia = "proc_getFechaEvento";
+            objElemento.Parametros = new SqlParameter[]{
+                new SqlParameter("folio", SqlDbType.Int)
+            };
+            objElemento.Valores = new List<object>(){folio};
+            Operaciones objOperacion = new Operaciones();
+            objOperacion.Elemento = objElemento;
+            DataTable data = objOperacion.ObtenerDataTable(tabla);
+            DateTime fechaEvento = Convert.ToDateTime(data.Rows[0]["fechaEvento"]);
+            double dias = (fechaEvento - DateTime.Today).TotalDays;
+            bool valido = dias > 3 ? true : false;
+            return valido;
         }
 
+        /*Limpiar objeto estático de evento*/
         public void BorrarEvento()
         {
             Evento.nombreEvento = null;
@@ -258,6 +280,24 @@ namespace Banquetes.Class
             Evento.numero = null;
             Evento.cp = null;
             Evento.comentario = null;
+        }
+
+        /*Checar que el folio existe en la base de datos y tiene status = 1 (Evento por realizar)*/
+        public bool checarFolioEvento(int folio)
+        {
+            bool valido;
+
+            Estructura objElements = new Estructura();
+            Operaciones objOperaciones = new Operaciones();
+            objElements.Sentencia = "proc_checkFolio";
+            objElements.Parametros = new SqlParameter[]{
+                new SqlParameter("folio", SqlDbType.Int)
+            };
+            objElements.Valores = new List<object>() { folio };
+            objOperaciones.Elemento = objElements;
+            int select = objOperaciones.ObtenerScalar();
+            valido = select > 0 ? true : false;
+            return valido;
         }
         #endregion
     }

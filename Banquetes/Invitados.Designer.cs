@@ -66,20 +66,20 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(68, 107);
+            this.lblEmail.Location = new System.Drawing.Point(67, 107);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(38, 13);
+            this.lblEmail.Size = new System.Drawing.Size(39, 13);
             this.lblEmail.TabIndex = 1;
-            this.lblEmail.Text = "E-mail:";
+            this.lblEmail.Text = "*Email:";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(12, 81);
+            this.lblNombre.Location = new System.Drawing.Point(55, 81);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(94, 13);
+            this.lblNombre.Size = new System.Drawing.Size(51, 13);
             this.lblNombre.TabIndex = 0;
-            this.lblNombre.Text = "Nombre Completo:";
+            this.lblNombre.Text = "*Nombre:";
             // 
             // btnEliminar
             // 
@@ -88,7 +88,7 @@
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnEliminar.Location = new System.Drawing.Point(279, 203);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 25);
+            this.btnEliminar.Size = new System.Drawing.Size(90, 25);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -99,9 +99,9 @@
             this.btnEliminarTodo.BackColor = System.Drawing.Color.Transparent;
             this.btnEliminarTodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarTodo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnEliminarTodo.Location = new System.Drawing.Point(360, 203);
+            this.btnEliminarTodo.Location = new System.Drawing.Point(375, 203);
             this.btnEliminarTodo.Name = "btnEliminarTodo";
-            this.btnEliminarTodo.Size = new System.Drawing.Size(96, 25);
+            this.btnEliminarTodo.Size = new System.Drawing.Size(151, 25);
             this.btnEliminarTodo.TabIndex = 1;
             this.btnEliminarTodo.Text = "Eliminar todos";
             this.btnEliminarTodo.UseVisualStyleBackColor = false;
@@ -126,7 +126,7 @@
             this.btnAnterior.BackColor = System.Drawing.Color.Transparent;
             this.btnAnterior.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnterior.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAnterior.Location = new System.Drawing.Point(279, 234);
+            this.btnAnterior.Location = new System.Drawing.Point(370, 234);
             this.btnAnterior.Name = "btnAnterior";
             this.btnAnterior.Size = new System.Drawing.Size(75, 25);
             this.btnAnterior.TabIndex = 4;
@@ -145,7 +145,7 @@
             this.btnSiguiente.BackColor = System.Drawing.Color.Transparent;
             this.btnSiguiente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSiguiente.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSiguiente.Location = new System.Drawing.Point(380, 234);
+            this.btnSiguiente.Location = new System.Drawing.Point(451, 234);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(75, 25);
             this.btnSiguiente.TabIndex = 7;
@@ -196,12 +196,12 @@
             // lblInfo
             // 
             this.lblInfo.AutoSize = true;
-            this.lblInfo.Location = new System.Drawing.Point(25, 37);
+            this.lblInfo.Location = new System.Drawing.Point(29, 37);
             this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(222, 26);
+            this.lblInfo.Size = new System.Drawing.Size(218, 26);
             this.lblInfo.TabIndex = 13;
-            this.lblInfo.Text = "*Ingrese el nombre completo y el E-mail de los\r\n invitados deseados para su event" +
-    "o";
+            this.lblInfo.Text = "Ingrese el nombre completo y el E-mail de los\r\n invitados deseados para su evento" +
+    "";
             this.lblInfo.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // lstInvitados
@@ -209,7 +209,7 @@
             this.lstInvitados.FormattingEnabled = true;
             this.lstInvitados.Location = new System.Drawing.Point(279, 37);
             this.lstInvitados.Name = "lstInvitados";
-            this.lstInvitados.Size = new System.Drawing.Size(176, 160);
+            this.lstInvitados.Size = new System.Drawing.Size(247, 160);
             this.lstInvitados.TabIndex = 14;
             // 
             // Cancelar
@@ -231,7 +231,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(471, 272);
+            this.ClientSize = new System.Drawing.Size(538, 272);
             this.Controls.Add(this.Cancelar);
             this.Controls.Add(this.lstInvitados);
             this.Controls.Add(this.lblInfo);

@@ -38,11 +38,6 @@ namespace Banquetes
             actualizarControles();
         }
         
-        public ICollection<controls> ArrControles
-        {
-            get { return arrControles; }
-        }
-        
         public Menu(int folio)
         {
             InitializeComponent();
@@ -89,9 +84,14 @@ namespace Banquetes
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-            Cliente cliente = new Cliente();
-            cliente.Show();
-            this.Close();
+            if (menuCliente.Count > 0)
+            {
+                Cliente cliente = new Cliente();
+                cliente.Show();
+                this.Close();
+            }
+            else
+                MessageBox.Show("No has seleccionado ningún platillo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         
         private void crearArray()
@@ -208,16 +208,21 @@ namespace Banquetes
         private void img_Click(object sender, EventArgs e)
         {
             int i = 0;
+            int id = 0;
             while (i < 12)
             {
                 if (arrControles[i].picture.Name == ((PictureBox)sender).Name)
                 {
-                    Entrada entrada = new Entrada(i);
-                    entrada.ShowDialog();
+                    id = i;
                     break;
                 }
                 i++;
             }
+            Entrada entrada = new Entrada(id);
+            entrada.ShowDialog();
+            if (entrada.agregado)
+                arrControles[id].checkbox.Checked = true;
+            
         }
 
         private void check_Changed(object sender, EventArgs e)
@@ -257,7 +262,7 @@ namespace Banquetes
             }
         }
         
-        private void actualizarListView()
+        public void actualizarListView()
         {
             lstvMenu.Items.Clear();
             foreach (MenuClase item in menuCliente)

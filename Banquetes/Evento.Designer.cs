@@ -77,7 +77,7 @@
             // 
             this.txtNombre.Location = new System.Drawing.Point(91, 54);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.Size = new System.Drawing.Size(144, 20);
             this.txtNombre.TabIndex = 2;
             // 
             // dtpFecha
@@ -96,7 +96,7 @@
             this.txtHora.Location = new System.Drawing.Point(91, 105);
             this.txtHora.Mask = "00:00";
             this.txtHora.Name = "txtHora";
-            this.txtHora.Size = new System.Drawing.Size(34, 20);
+            this.txtHora.Size = new System.Drawing.Size(36, 20);
             this.txtHora.TabIndex = 4;
             this.txtHora.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtHora.ValidatingType = typeof(System.DateTime);
@@ -104,34 +104,34 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(12, 57);
+            this.lblNombre.Location = new System.Drawing.Point(8, 57);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(47, 13);
+            this.lblNombre.Size = new System.Drawing.Size(51, 13);
             this.lblNombre.TabIndex = 5;
-            this.lblNombre.Text = "Nombre:";
+            this.lblNombre.Text = "*Nombre:";
             // 
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(19, 83);
+            this.lblFecha.Location = new System.Drawing.Point(15, 83);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(40, 13);
+            this.lblFecha.Size = new System.Drawing.Size(44, 13);
             this.lblFecha.TabIndex = 6;
-            this.lblFecha.Text = "Fecha:";
+            this.lblFecha.Text = "*Fecha:";
             // 
             // lblHora
             // 
             this.lblHora.AutoSize = true;
-            this.lblHora.Location = new System.Drawing.Point(26, 108);
+            this.lblHora.Location = new System.Drawing.Point(22, 109);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(33, 13);
+            this.lblHora.Size = new System.Drawing.Size(37, 13);
             this.lblHora.TabIndex = 7;
-            this.lblHora.Text = "Hora:";
+            this.lblHora.Text = "*Hora:";
             // 
             // lbl24h
             // 
             this.lbl24h.AutoSize = true;
-            this.lbl24h.Location = new System.Drawing.Point(131, 108);
+            this.lbl24h.Location = new System.Drawing.Point(133, 108);
             this.lbl24h.Name = "lbl24h";
             this.lbl24h.Size = new System.Drawing.Size(31, 13);
             this.lbl24h.TabIndex = 8;
@@ -140,66 +140,66 @@
             // lblCalle
             // 
             this.lblCalle.AutoSize = true;
-            this.lblCalle.Location = new System.Drawing.Point(224, 57);
+            this.lblCalle.Location = new System.Drawing.Point(261, 57);
             this.lblCalle.Name = "lblCalle";
-            this.lblCalle.Size = new System.Drawing.Size(33, 13);
+            this.lblCalle.Size = new System.Drawing.Size(37, 13);
             this.lblCalle.TabIndex = 9;
-            this.lblCalle.Text = "Calle:";
+            this.lblCalle.Text = "*Calle:";
             // 
             // txtCalle
             // 
-            this.txtCalle.Location = new System.Drawing.Point(274, 54);
+            this.txtCalle.Location = new System.Drawing.Point(315, 50);
             this.txtCalle.Name = "txtCalle";
-            this.txtCalle.Size = new System.Drawing.Size(100, 20);
+            this.txtCalle.Size = new System.Drawing.Size(144, 20);
             this.txtCalle.TabIndex = 10;
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(274, 80);
+            this.txtNumero.Location = new System.Drawing.Point(315, 80);
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(100, 20);
+            this.txtNumero.Size = new System.Drawing.Size(144, 20);
             this.txtNumero.TabIndex = 11;
             // 
             // txtColonia
             // 
-            this.txtColonia.Location = new System.Drawing.Point(274, 106);
+            this.txtColonia.Location = new System.Drawing.Point(315, 106);
             this.txtColonia.Name = "txtColonia";
-            this.txtColonia.Size = new System.Drawing.Size(100, 20);
+            this.txtColonia.Size = new System.Drawing.Size(144, 20);
             this.txtColonia.TabIndex = 12;
             // 
             // txtCP
             // 
-            this.txtCP.Location = new System.Drawing.Point(274, 132);
+            this.txtCP.Location = new System.Drawing.Point(315, 132);
             this.txtCP.Name = "txtCP";
-            this.txtCP.Size = new System.Drawing.Size(100, 20);
+            this.txtCP.Size = new System.Drawing.Size(144, 20);
             this.txtCP.TabIndex = 13;
             // 
             // lblNumero
             // 
             this.lblNumero.AutoSize = true;
-            this.lblNumero.Location = new System.Drawing.Point(210, 83);
+            this.lblNumero.Location = new System.Drawing.Point(247, 83);
             this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(47, 13);
+            this.lblNumero.Size = new System.Drawing.Size(51, 13);
             this.lblNumero.TabIndex = 14;
-            this.lblNumero.Text = "Número:";
+            this.lblNumero.Text = "*Número:";
             // 
             // lblColonia
             // 
             this.lblColonia.AutoSize = true;
-            this.lblColonia.Location = new System.Drawing.Point(212, 109);
+            this.lblColonia.Location = new System.Drawing.Point(249, 109);
             this.lblColonia.Name = "lblColonia";
-            this.lblColonia.Size = new System.Drawing.Size(45, 13);
+            this.lblColonia.Size = new System.Drawing.Size(49, 13);
             this.lblColonia.TabIndex = 15;
-            this.lblColonia.Text = "Colonia:";
+            this.lblColonia.Text = "*Colonia:";
             // 
             // lblCP
             // 
             this.lblCP.AutoSize = true;
-            this.lblCP.Location = new System.Drawing.Point(233, 135);
+            this.lblCP.Location = new System.Drawing.Point(270, 135);
             this.lblCP.Name = "lblCP";
-            this.lblCP.Size = new System.Drawing.Size(24, 13);
+            this.lblCP.Size = new System.Drawing.Size(28, 13);
             this.lblCP.TabIndex = 16;
-            this.lblCP.Text = "CP:";
+            this.lblCP.Text = "*CP:";
             // 
             // lblComentario
             // 
@@ -215,12 +215,12 @@
             this.txtComent.Location = new System.Drawing.Point(15, 185);
             this.txtComent.Multiline = true;
             this.txtComent.Name = "txtComent";
-            this.txtComent.Size = new System.Drawing.Size(359, 94);
+            this.txtComent.Size = new System.Drawing.Size(444, 94);
             this.txtComent.TabIndex = 18;
             // 
             // btnAnterior
             // 
-            this.btnAnterior.Location = new System.Drawing.Point(218, 285);
+            this.btnAnterior.Location = new System.Drawing.Point(303, 285);
             this.btnAnterior.Name = "btnAnterior";
             this.btnAnterior.Size = new System.Drawing.Size(75, 23);
             this.btnAnterior.TabIndex = 19;
@@ -230,7 +230,7 @@
             // 
             // btnSiguiente
             // 
-            this.btnSiguiente.Location = new System.Drawing.Point(299, 285);
+            this.btnSiguiente.Location = new System.Drawing.Point(384, 285);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(75, 23);
             this.btnSiguiente.TabIndex = 20;
@@ -254,7 +254,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(389, 323);
+            this.ClientSize = new System.Drawing.Size(471, 323);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.btnAnterior);

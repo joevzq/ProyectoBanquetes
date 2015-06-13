@@ -13,10 +13,13 @@ namespace Banquetes
 {
     public partial class Entrada : Form
     {
+        int idEntrada;
+        public bool agregado { get; set; } 
         List<MenuClase.Entrada> entradas = MenuClase.llamarEntradas();
         public Entrada(int id)
         {
             InitializeComponent();
+            idEntrada = id;
             lblNombreEntrada.Text = entradas[id].nombre;
             picEntrada.ImageLocation = entradas[id].imagen;
             lblDescripcion.Text = entradas[id].descripcion;
@@ -24,8 +27,9 @@ namespace Banquetes
             lstIngredientes.Items.Clear();
             foreach (string ing in entradas[id].ingredientes)
             {
-                lstIngredientes.Items.Add(ing);
+                lstIngredientes.Items.Add("● " + ing);
             }
+            agregado = false;
         }
 
         private void pnlNombre_Paint(object sender, PaintEventArgs e)
@@ -41,6 +45,12 @@ namespace Banquetes
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            this.agregado = true;
+            MessageBox.Show("Platillo agregado.");
         }
     }
 }

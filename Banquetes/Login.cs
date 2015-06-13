@@ -52,7 +52,7 @@ namespace Banquetes
                 this.Hide();
             }
             else
-                MessageBox.Show("Usuario y/o contraseña incorrectos.");
+                MessageBox.Show("Usuario y/o contraseña incorrectos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             
         }
     }

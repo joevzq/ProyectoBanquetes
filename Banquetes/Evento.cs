@@ -26,7 +26,7 @@ namespace Banquetes
             System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(System.Drawing.ColorTranslator.FromHtml("#D85846"));
             System.Drawing.Graphics formGraphics;
             formGraphics = this.CreateGraphics();
-            formGraphics.FillRectangle(myBrush, new Rectangle(5, 9, 378, 22));
+            formGraphics.FillRectangle(myBrush, new Rectangle(5, 9, 460, 22));
             myBrush.Dispose();
             formGraphics.Dispose();
         }
@@ -76,6 +76,29 @@ namespace Banquetes
             string numero = txtNumero.Text;
             string comentario = txtComent.Text;
 
+            if (String.IsNullOrWhiteSpace(nombre) || String.IsNullOrWhiteSpace(hora) || String.IsNullOrWhiteSpace(calle) ||
+                String.IsNullOrWhiteSpace(colonia) || String.IsNullOrWhiteSpace(cp) || String.IsNullOrWhiteSpace(numero))
+            {
+                MessageBox.Show("Favor de llenar todos los campos requeridos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            DateTime hoy = DateTime.Now;
+            hoy = hoy.AddDays(3);
+            int result = DateTime.Compare(fecha, hoy);
+
+            if (result < 0)
+            {
+                MessageBox.Show("Fecha no válida.\nLa fecha debe estar a mínimo 3 días de la fecha actual.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (!evaluarHora(hora))
+            {
+                MessageBox.Show("Hora no válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
             GuardarEvento(nombre, fecha, hora, calle, colonia, cp, numero, comentario);
                 
             Recibo recibo = new Recibo();
@@ -105,6 +128,31 @@ namespace Banquetes
             EventoClase.Evento.Cp = cp;
             EventoClase.Evento.Numero = num;
             EventoClase.Evento.Comentario = com;
+        }
+
+        private bool evaluarHora(string hora)
+        {
+            string horaNumeros = String.Empty;
+
+            for (int i = 0; i < hora.Length; i++)
+                if (Char.IsNumber(hora[i]))
+                    horaNumeros += hora[i];
+
+            if (horaNumeros.Length < 4)
+                return false;
+
+            string horas = horaNumeros.Substring(0, 2);
+            string minutos = horaNumeros.Substring(2, 2);
+            int horaInt = int.Parse(horas);
+            int minutosInt = int.Parse(minutos);
+
+            if (horaInt > 24)
+                return false;
+
+            if (minutosInt > 60)
+                return false;
+
+            return true;
         }
     }
 }

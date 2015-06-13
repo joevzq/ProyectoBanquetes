@@ -46,7 +46,7 @@
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(3, 0);
+            this.lblDescripcion.Location = new System.Drawing.Point(3, 3);
             this.lblDescripcion.MaximumSize = new System.Drawing.Size(190, 70);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(186, 39);
@@ -67,7 +67,7 @@
             "[Ingrediente 6]",
             "[Ingrediente 7]",
             "[Ingrediente 8]"});
-            this.lstIngredientes.Location = new System.Drawing.Point(22, 112);
+            this.lstIngredientes.Location = new System.Drawing.Point(10, 101);
             this.lstIngredientes.Name = "lstIngredientes";
             this.lstIngredientes.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.lstIngredientes.Size = new System.Drawing.Size(167, 117);
@@ -107,7 +107,7 @@
             // 
             this.lblIngredientes.AutoSize = true;
             this.lblIngredientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIngredientes.Location = new System.Drawing.Point(7, 96);
+            this.lblIngredientes.Location = new System.Drawing.Point(7, 83);
             this.lblIngredientes.Name = "lblIngredientes";
             this.lblIngredientes.Size = new System.Drawing.Size(91, 15);
             this.lblIngredientes.TabIndex = 21;
@@ -133,6 +133,7 @@
             this.btnAgregar.TabIndex = 23;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnRegresar
             // 
