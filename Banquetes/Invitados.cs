@@ -17,11 +17,7 @@ namespace Banquetes
         public Invitados()
         {
             InitializeComponent();
-        }
-
-        public Invitados(int folio)
-        {
-            InitializeComponent();
+            llenarLista();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -60,7 +56,10 @@ namespace Banquetes
                 MessageBox.Show("Por favor ingrese el nombre y el Email del invitado para poder ser agregado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
-                InvitadoClase.AgregarInvitado(InvitadoNom, InvitadoEm);
+                InvitadoClase invitado = new InvitadoClase();
+                invitado.Nombre = InvitadoNom;
+                invitado.Email = InvitadoEm;
+                InvitadoClase.lstInvitados.Add(invitado);
 
                 string elemento = InvitadoNom + "  " + InvitadoEm;
 
@@ -111,21 +110,39 @@ namespace Banquetes
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
-            Banquetes.Inicio.cliente.Show();
-            this.Hide();
+            Cliente cliente = new Cliente();
+            cliente.Show();
+            this.Close();
         }
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            Banquetes.Inicio.evento.Show();
-            this.Hide();
+            Evento evento = new Evento();
+            evento.Show();
+            this.Close();
         }
 
         private void Cancelar_Click(object sender, EventArgs e)
         {
+            MenuClase menu = new MenuClase();
+            EventoClase ev = new EventoClase();
+            ClienteClase cli = new ClienteClase();
+            InvitadoClase inv = new InvitadoClase();
+            cli.BorrarCliente();
+            ev.BorrarEvento();
+            inv.BorrarInvitados();
+            menu.BorrarMenucliente();
             Inicio inicio = new Inicio();
             inicio.Show();
-            this.Hide();
+            this.Close();
+        }
+
+        private void llenarLista()
+        {
+            foreach (InvitadoClase item in InvitadoClase.lstInvitados)
+            {
+                lstInvitados.Items.Add(item.Nombre + " " + item.Email);
+            }
         }
     }
 }

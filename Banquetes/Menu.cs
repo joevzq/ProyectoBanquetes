@@ -17,6 +17,7 @@ namespace Banquetes
         List<MenuClase.Entrada> entradas = MenuClase.llamarEntradas();
         List<MenuClase> menuCliente = MenuClase.llamarMenuCliente();
         MenuClase menuCl = new MenuClase();
+
         public bool evitarActualizacion = false;
 
         public class controls
@@ -31,12 +32,11 @@ namespace Banquetes
         public Menu()
         {
             InitializeComponent();
-            menuCl.MostrarMenu();
+            menuCl.ObtenerMenuCompleto();
             crearArray();
             llenarControles();
             actualizarListView();
             actualizarControles();
-            
         }
         
         public ICollection<controls> ArrControles
@@ -47,10 +47,10 @@ namespace Banquetes
         public Menu(int folio)
         {
             InitializeComponent();
-            menuCl.MostrarMenu();
+            menuCl.ObtenerMenuCompleto();
             crearArray();
             llenarControles();
-            menuCl.ActualizarMenu(folio);
+            menuCl.ObtenerMenuCliente(folio);
             actualizarListView();
             actualizarControles();
         }
@@ -78,15 +78,22 @@ namespace Banquetes
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             menuCliente.Clear();
+            ClienteClase cli = new ClienteClase();
+            EventoClase ev = new EventoClase();
+            InvitadoClase inv = new InvitadoClase();
+            cli.BorrarCliente();
+            ev.BorrarEvento();
+            inv.BorrarInvitados();
             Inicio inicio = new Inicio();
             inicio.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-            Banquetes.Inicio.cliente.Show();
-            this.Hide();
+            Cliente cliente = new Cliente();
+            cliente.Show();
+            this.Close();
         }
         
         private void crearArray()
@@ -241,16 +248,12 @@ namespace Banquetes
                 while (i < 12)
                 {
                     if (arrControles[i].num.Name == ((NumericUpDown)sender).Name)
-                    {
                         for (int j = 0; j < menuCliente.Count; j++)
-                        {
                             if (menuCliente[j].IdEntrada == entradas[i].idEntrada)
                             {
                                 menuCliente[j].Porciones = (int)arrControles[i].num.Value;
                                 actualizarListView();
                             }
-                        }
-                    }
                     i++;
                 }
             }
@@ -271,17 +274,13 @@ namespace Banquetes
         {
             evitarActualizacion = true;
             for (int i = 0; i < menuCliente.Count; i++)
-            {
                 for (int j = 0; j < entradas.Count; j++)
-                {
                     if (menuCliente[i].IdEntrada == entradas[j].idEntrada)
                     {
                         arrControles[j].num.Value = menuCliente[i].Porciones;
                         arrControles[j].checkbox.Checked = true;
                         break;
                     }
-                }
-            }
             evitarActualizacion = false;
         }
     }

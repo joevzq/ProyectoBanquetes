@@ -1,4 +1,5 @@
-﻿using Banquetes.Class;
+﻿using Banquetes.Clases;
+using Banquetes.Class;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,13 +18,6 @@ namespace Banquetes
         {
             InitializeComponent();
         }
-        public static int folio;
-        public static Cliente clienteFolio = new Cliente(folio);
-        public static Cliente cliente = new Cliente();
-        public static Invitados invitadosFolio = new Invitados(folio);
-        public static Invitados invitados = new Invitados();
-        public static Evento eventoFolio = new Evento(folio);
-        public static Evento evento = new Evento();
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -37,6 +31,9 @@ namespace Banquetes
 
         private void picCrear_Click(object sender, EventArgs e)
         {
+            ReciboClase recibo = new ReciboClase();
+            EventoClase.Evento.FolioEvento = recibo.ObtenerFolio();
+            ReciboClase.nuevo = true;
             Menu menu = new Menu();
             menu.Show();
             this.Hide();
@@ -44,19 +41,24 @@ namespace Banquetes
 
         private void picModificar_Click(object sender, EventArgs e)
         {
-            folio = int.Parse(txtModificar.Text);
+            ReciboClase.nuevo = false;
+            ClienteClase cli = new ClienteClase();
+            InvitadoClase invitado = new InvitadoClase();
+            EventoClase ev = new EventoClase();
+            int folio = int.Parse(txtModificar.Text);
             Menu menu = new Menu(folio);
+            cli.ObtenerCliente(folio);
+            invitado.ObtenerInvitados(folio);
+            ev.ObtenerEvento(folio);
             menu.Show();
             this.Hide();
-
         }
 
         private void picCancelar_Click(object sender, EventArgs e)
         {
             int folio = int.Parse(txtCancelar.Text);
             CancelarEvento cancelar = new CancelarEvento(folio, 'i');
-            cancelar.Show();
-            this.Hide();
+            cancelar.ShowDialog();
         }
 
         private void btnAdmin_Click(object sender, EventArgs e)

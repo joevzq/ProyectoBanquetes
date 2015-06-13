@@ -1,4 +1,5 @@
-﻿using Nivel_de_acceso.Clases;
+﻿using Banquetes.Clases;
+using Nivel_de_acceso.Clases;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,8 +12,9 @@ namespace Banquetes.Class
 {
     public class EventoClase
     {
-        private static EventoClase Evento = new EventoClase();
+        public static EventoClase Evento = new EventoClase();
         private static List<EventoClase> lstEventos = new List<EventoClase>();
+
         #region Variables
         private int status;
         public int Status
@@ -34,7 +36,7 @@ namespace Banquetes.Class
             set { nombreEvento = value; }
         }
 
-        private DateTime fechaEvento;
+        private DateTime fechaEvento = DateTime.Today;
         public DateTime FechaEvento
         {
             get { return fechaEvento; }
@@ -69,8 +71,8 @@ namespace Banquetes.Class
             set { numero = value; }
         }
 
-        private int cp;
-        public int Cp
+        private string cp;
+        public string Cp
         {
             get { return cp; }
             set { cp = value; }
@@ -86,16 +88,49 @@ namespace Banquetes.Class
 
         #region Métodos
         //Crear evento
-        public void Crear(string nombre,string calle,string colonia,int cp,string numero,string hora,string comentario,DateTime fecha) {
-
-            Evento.NombreEvento = nombre;
-            Evento.Calle = calle;
-            Evento.Colonia = colonia;
-            Evento.Cp = cp;
-            Evento.Numero = numero;
-            Evento.HoraEvento = hora;
-            Evento.FechaEvento = fecha;
-            Evento.Comentario = comentario;
+        public void GuardarEvento()
+        {
+            if (ReciboClase.nuevo)
+            {
+                Estructura objElementos = new Estructura();
+                objElementos.Sentencia = "proc_setEvento";
+                objElementos.Parametros = new SqlParameter[]{
+                    new SqlParameter("nombre", SqlDbType.NVarChar, 30),
+                    new SqlParameter("fecha", SqlDbType.Date),
+                    new SqlParameter("hora", SqlDbType.NVarChar, 5),
+                    new SqlParameter("calle", SqlDbType.NVarChar, 50),
+                    new SqlParameter("numero", SqlDbType.NVarChar, 20),
+                    new SqlParameter("colonia", SqlDbType.NVarChar, 50),
+                    new SqlParameter("cp", SqlDbType.NVarChar, 5),
+                    new SqlParameter("comentario", SqlDbType.Text)
+                };
+                objElementos.Valores = new List<object>() {Evento.nombreEvento, Evento.fechaEvento, Evento.horaEvento, Evento.calle, Evento.numero, 
+                Evento.colonia, Evento.cp, Evento.comentario};
+                Operaciones objOperaciones = new Operaciones();
+                objOperaciones.Elemento = objElementos;
+                objOperaciones.AgregarInfo();
+            }
+            else
+            {
+                Estructura objElementos = new Estructura();
+                objElementos.Sentencia = "proc_updateEvento";
+                objElementos.Parametros = new SqlParameter[]{
+                    new SqlParameter("folio", SqlDbType.Int),
+                    new SqlParameter("nombre", SqlDbType.NVarChar, 30),
+                    new SqlParameter("fecha", SqlDbType.Date),
+                    new SqlParameter("hora", SqlDbType.NVarChar, 5),
+                    new SqlParameter("calle", SqlDbType.NVarChar, 50),
+                    new SqlParameter("numero", SqlDbType.NVarChar, 20),
+                    new SqlParameter("colonia", SqlDbType.NVarChar, 50),
+                    new SqlParameter("cp", SqlDbType.NVarChar, 5),
+                    new SqlParameter("comentario", SqlDbType.Text)
+                };
+                objElementos.Valores = new List<object>() { Evento.folioEvento, Evento.nombreEvento, Evento.fechaEvento, Evento.horaEvento, Evento.calle, Evento.numero, 
+                Evento.colonia, Evento.cp, Evento.comentario};
+                Operaciones objOperaciones = new Operaciones();
+                objOperaciones.Elemento = objElementos;
+                objOperaciones.AgregarInfo();
+            }
         }
 
         //Actualizar status de evento
@@ -137,7 +172,6 @@ namespace Banquetes.Class
         /*Llamar todos los eventos*/
         public List<EventoClase> LlamarEventos()
         {
-
             string tabla = "Eventos";
             Estructura objElements = new Estructura();
             objElements.Sentencia = "proc_getEventos";
@@ -162,17 +196,35 @@ namespace Banquetes.Class
                     ev.calle = data.Rows[i]["calle"].ToString();
                     ev.colonia = data.Rows[i]["colonia"].ToString();
                     ev.numero = data.Rows[i]["numero"].ToString();
-                    ev.cp = Convert.ToInt32(data.Rows[i]["cp"]);
+                    ev.cp = data.Rows[i]["cp"].ToString();
                     lstEventos.Add(ev);
                 }
             }
             return lstEventos;
         }
 
-        /*Llamar un evento*/
-        public static EventoClase LlamarEvento()
+        /*Llamar un evento de la base de datos*/
+        public void ObtenerEvento(int folio)
         {
-            return Evento;
+            string tabla = "Eventos";
+            Estructura est = new Estructura();
+            est.Sentencia = "proc_getEvento";
+            est.Parametros = new SqlParameter[]{
+                new SqlParameter("@folio", SqlDbType.Int)
+            };
+            est.Valores = new List<object>() { folio };
+            Operaciones op = new Operaciones();
+            op.Elemento = est;
+            DataTable data = op.ObtenerDataTable(tabla);
+            Evento.folioEvento = folio;
+            Evento.nombreEvento = data.Rows[0]["nombre"].ToString();
+            Evento.fechaEvento = Convert.ToDateTime(data.Rows[0]["fechaEvento"]);
+            Evento.horaEvento = data.Rows[0]["hora"].ToString();
+            Evento.calle = data.Rows[0]["calle"].ToString();
+            Evento.colonia = data.Rows[0]["colonia"].ToString();
+            Evento.numero = data.Rows[0]["numero"].ToString();
+            Evento.cp = data.Rows[0]["cp"].ToString();
+            Evento.comentario = data.Rows[0]["comentario"].ToString();
         }
 
         //Actualizar fecha de un evento
@@ -194,6 +246,18 @@ namespace Banquetes.Class
         public bool VerificarFecha(int folioEvento) 
         { 
             return true; 
+        }
+
+        public void BorrarEvento()
+        {
+            Evento.nombreEvento = null;
+            Evento.fechaEvento = DateTime.Today;
+            Evento.horaEvento = null;
+            Evento.calle = null;
+            Evento.colonia = null;
+            Evento.numero = null;
+            Evento.cp = null;
+            Evento.comentario = null;
         }
         #endregion
     }

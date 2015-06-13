@@ -1,4 +1,5 @@
-﻿using Nivel_de_acceso.Clases;
+﻿using Banquetes.Clases;
+using Nivel_de_acceso.Clases;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -73,8 +74,9 @@ namespace Banquetes.Class
                 lstMenuCliente.Add(entrada);
             }
         }
-        /*Método para Actualizar Menú*/
-        public void ActualizarMenu(int folio) 
+
+        /*Obtener menú del cliente de la base de datos*/
+        public void ObtenerMenuCliente(int folio) 
         {
             string tabla = "Menu";
             Estructura objElements = new Estructura();
@@ -98,27 +100,52 @@ namespace Banquetes.Class
                 }
             }
         }
-        /*Método para Crear Menú */
-        public void CrearMenu() 
+        
+        /*Método para insertar o actualizar menú a la base de datos*/
+        public void GuardarMenu() 
         {
+            Estructura objElementos = new Estructura();
+            Operaciones objOperaciones = new Operaciones();
 
+            if (!ReciboClase.nuevo)
+            {
+                objElementos.Sentencia = "proc_deleteMenu";
+                objElementos.Parametros = new SqlParameter[]{
+                    new SqlParameter("folio", SqlDbType.Int)
+                };
+                objElementos.Valores = new List<object>() { EventoClase.Evento.FolioEvento };
+                objOperaciones.Elemento = objElementos;
+                objOperaciones.AgregarInfo();
+            }
+
+            for (int i = 0; i < lstMenuCliente.Count; i++)
+            {
+                objElementos.Sentencia = "proc_setMenu";
+                objElementos.Parametros = new SqlParameter[]{
+                new SqlParameter("folio", SqlDbType.Int),
+                new SqlParameter("identrada", SqlDbType.Int),
+                new SqlParameter("porciones", SqlDbType.Int)
+                };
+                objElementos.Valores = new List<object>() { EventoClase.Evento.FolioEvento, lstMenuCliente[i].idEntrada, lstMenuCliente[i].porciones};
+
+                objOperaciones.Elemento = objElementos;
+                objOperaciones.AgregarInfo();
+            }
         }
+        
         /*Método para Calcular el Precio de los elementos del menú*/
         public int CalcularPrecioMenu() 
         {
             int total = 0;
             for (int i = 0; i < lstMenuCliente.Count; i++)
-            {
                 for (int j = 0; j < lstEntradas.Count; j++)
-        {
                     if (lstMenuCliente[i].idEntrada == lstEntradas[j].idEntrada)
                         total += lstMenuCliente[i].Porciones * lstEntradas[j].precioUnit;
-                }
-            }
             return total;
         }
-        /*Método para mostrar elementos del menú*/
-        public void MostrarMenu() 
+        
+        /*Método para obtener todo el menú de la base de datos*/
+        public void ObtenerMenuCompleto() 
         {
             string tabla = "Entradas";
             Estructura objElements = new Estructura();
@@ -163,10 +190,10 @@ namespace Banquetes.Class
                 }
             }
         }
-        /*Métosdo para Mostar más información del platillo*/
-        public void MostrarPlatillo() 
-        {
 
+        public void BorrarMenucliente()
+        {
+            lstMenuCliente.Clear();
         }
         #endregion
     }

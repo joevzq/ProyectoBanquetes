@@ -1,5 +1,9 @@
-﻿using System;
+﻿using Banquetes.Clases;
+using Nivel_de_acceso.Clases;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +14,7 @@ namespace Banquetes.Class
    public class ClienteClase
    {
        #region Variables
+
        private string nombre;
 
        public string Nombre
@@ -49,26 +54,30 @@ namespace Banquetes.Class
 
        #endregion 
 
-       #region Métodos
-       public static List<Cliente> lstCli = new List<Cliente>();
        public static ClienteClase Cliente = new ClienteClase();
-       //Método para crear Cliente
-       public void crearEmpleado(string nombre, string Apaterno, string Amaterno, string telefono, string email)
+
+       #region Métodos
+
+       /*Método para guardar cliente en base de datos*/
+       public void GuardarCliente()
        {
-           bool exist = false;
+           string proc;
+           proc = ReciboClase.nuevo ? "proc_setCliente" : "proc_updateCliente";
 
-           Cliente.nombre = nombre;
-           Cliente.apPaterno = Apaterno;
-           Cliente.apMaterno = Amaterno;
-           Cliente.telefono = telefono;
-           Cliente.email = email;
-
-           //for (int i = 0; i < lstCli.Count; i++)
-           //{
-           //    if (newCli.nombre == lstCli[i].nombre && newCli.apPaterno == lstCli[i].apPaterno && newCli.ApMaterno == lstCli[i].apMaterno && newCli.telefono == lstCli[i].telefono && newCli.email == lstCli[i].email)
-           //        exist = true;
-           //}
-         
+           Estructura objElementos = new Estructura();
+           objElementos.Sentencia = proc;
+           objElementos.Parametros = new SqlParameter[]{
+                new SqlParameter("folio", SqlDbType.Int),
+                new SqlParameter("nombre", SqlDbType.NVarChar, 50),
+                new SqlParameter("aPaterno", SqlDbType.NVarChar, 50),
+                new SqlParameter("aMaterno", SqlDbType.NVarChar, 50),
+                new SqlParameter("telefono", SqlDbType.NVarChar, 50),
+                new SqlParameter("email", SqlDbType.NVarChar, 50)
+           };
+           objElementos.Valores = new List<object>() { EventoClase.Evento.FolioEvento, Cliente.nombre, Cliente.apPaterno, Cliente.apMaterno, Cliente.telefono, Cliente.email };
+           Operaciones objOperaciones = new Operaciones();
+           objOperaciones.Elemento = objElementos;
+           objOperaciones.AgregarInfo();
        }
           
        //Método para editar Cliente
@@ -76,8 +85,35 @@ namespace Banquetes.Class
        {
 
        }
-       public static ClienteClase ObtenerCliente() {
-           return Cliente;
+
+       /*Llamar cliente de base de datos*/
+       public void ObtenerCliente(int folio)
+       {
+           string tabla = "Clientes";
+           Estructura objElements = new Estructura();
+           objElements.Sentencia = "proc_getCliente";
+           objElements.Parametros = new SqlParameter[] {
+                new SqlParameter("@folio", SqlDbType.Int) 
+           };
+           objElements.Valores = new List<object>() {folio};
+           Operaciones objOperaciones = new Operaciones();
+           objOperaciones.Elemento = objElements;
+           DataTable data = objOperaciones.ObtenerDataTable(tabla);
+
+           Cliente.nombre = data.Rows[0]["nombre"].ToString();
+           Cliente.apPaterno = data.Rows[0]["apPaterno"].ToString();
+           Cliente.apMaterno = data.Rows[0]["apMaterno"].ToString();
+           Cliente.telefono = data.Rows[0]["telefono"].ToString();
+           Cliente.email = data.Rows[0]["email"].ToString();
+       }
+
+       public void BorrarCliente()
+       {
+           Cliente.nombre = null;
+           Cliente.apPaterno = null;
+           Cliente.apMaterno = null;
+           Cliente.telefono = null;
+           Cliente.email = null;
        }
        #endregion
    }

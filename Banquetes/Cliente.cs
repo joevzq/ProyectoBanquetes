@@ -14,17 +14,11 @@ namespace Banquetes
 {
     public partial class Cliente : Form
     {
+        ClienteClase cli = new ClienteClase();
         public Cliente()
         {
-            
-            List<Cliente> lista = new List<Cliente>();
             InitializeComponent();
-           
-        }
-
-        public Cliente(int folio)
-        {
-            InitializeComponent();
+            actualizarControles();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -39,6 +33,13 @@ namespace Banquetes
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
+            string name = txtNombre.Text;
+            string Apaterno = txtPaterno.Text;
+            string Amaterno = txtMaterno.Text;
+            string telefono = txtTel.Text;
+            string email = txtMail.Text;
+
+            GuardarCliente(name, Apaterno, Amaterno, telefono, email);
             Menu menu = new Menu();
             menu.Show();
             this.Hide();
@@ -46,59 +47,42 @@ namespace Banquetes
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            try
-            {
-                ClienteClase cli = new ClienteClase();
+            //try
+            //{
                 string name = txtNombre.Text;
                 string Apaterno = txtPaterno.Text;
                 string Amaterno = txtMaterno.Text;
                 string telefono = txtTel.Text;
-                string mail = new MailAddress(txtMail.Text).ToString();
+                string email = new MailAddress(txtMail.Text).ToString();
 
-                if (String.IsNullOrWhiteSpace(name) || String.IsNullOrWhiteSpace(Apaterno) ||
-                  String.IsNullOrWhiteSpace(Amaterno) ||
-                  String.IsNullOrWhiteSpace(telefono) ||
-                  String.IsNullOrWhiteSpace(mail))
-                    MessageBox.Show("Lo sentimos, no se han completado todos los campos", "Información incompleta");
-                else 
-                {
-                    bool phonenumber = telLengt(telefono);
-                     //verificar que se ha ingresado correctamente
-                    if (!phonenumber)
-                        MessageBox.Show("numero de télefono incompleto.");
-                    else 
-                    {
-                        ClienteClase newCli = new ClienteClase();
-                        cli.crearEmpleado(name, Apaterno, Amaterno, telefono, mail);
+                //if (String.IsNullOrWhiteSpace(name) || String.IsNullOrWhiteSpace(Apaterno) ||
+                //  String.IsNullOrWhiteSpace(Amaterno) || String.IsNullOrWhiteSpace(telefono) || String.IsNullOrWhiteSpace(email))
+                //    MessageBox.Show("Lo sentimos, no se han completado todos los campos", "Información incompleta");
+                //else 
+                //{
+                //    bool phonenumber = telLengt(telefono);
+                //     //verificar que se ha ingresado correctamente
+                //    if (!phonenumber)
+                //        MessageBox.Show("numero de télefono incompleto.");
 
+                //    else
+                //    {
+                        GuardarCliente(name, Apaterno, Amaterno, telefono, email);
+            //        }
                         
-                    }
-                    
+            //    }
+            //}
+            //catch(Exception)
+            //{
+            //    MessageBox.Show("Lo sentimos, ha ocurrido un error.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                }
-
-            }
-            catch(Exception)
-            {
-                MessageBox.Show("Lo sentimos, ha ocurrido un error.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
+            //}
 
             ///continuar con el siguiete formulario
-            Banquetes.Inicio.invitados.Show();
-            this.Hide();
+            Invitados inv = new Invitados();
+            inv.Show();
+            this.Close();
         }
-
-        private void crearEmpleado(string name, string Apaterno, string Amaterno, string telefono, string mail)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void crearEmpleado()
-        {
-            throw new NotImplementedException();
-        }
-
      
         //método para validar número de teléfono 
         public bool telLengt(string numeros) 
@@ -119,9 +103,34 @@ namespace Banquetes
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            MenuClase menu = new MenuClase();
+            EventoClase ev = new EventoClase();
+            InvitadoClase inv = new InvitadoClase();
+            cli.BorrarCliente();
+            ev.BorrarEvento();
+            inv.BorrarInvitados();
+            menu.BorrarMenucliente();
             Inicio inicio = new Inicio();
             inicio.Show();
-            this.Hide();
+            this.Close();
+        }
+
+        private void actualizarControles()
+        {
+            txtNombre.Text = ClienteClase.Cliente.Nombre;
+            txtPaterno.Text = ClienteClase.Cliente.ApPaterno;
+            txtMaterno.Text = ClienteClase.Cliente.ApMaterno;
+            txtTel.Text = ClienteClase.Cliente.Telefono;
+            txtMail.Text = ClienteClase.Cliente.Email;
+        }
+
+        public void GuardarCliente(string nom, string pat, string mat, string tel, string email)
+        {
+            ClienteClase.Cliente.Nombre = nom;
+            ClienteClase.Cliente.ApPaterno = pat;
+            ClienteClase.Cliente.ApMaterno = mat;
+            ClienteClase.Cliente.Telefono = tel;
+            ClienteClase.Cliente.Email = email;
         }
     }
 }

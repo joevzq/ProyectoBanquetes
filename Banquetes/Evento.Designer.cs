@@ -85,7 +85,7 @@
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFecha.Location = new System.Drawing.Point(91, 80);
             this.dtpFecha.MaxDate = new System.DateTime(2019, 12, 25, 23, 59, 59, 0);
-            this.dtpFecha.MinDate = new System.DateTime(2015, 5, 31, 20, 53, 8, 0);
+            this.dtpFecha.MinDate = new System.DateTime(2014, 1, 1, 0, 0, 0, 0);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(100, 20);
             this.dtpFecha.TabIndex = 3;

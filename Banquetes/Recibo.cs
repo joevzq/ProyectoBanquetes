@@ -23,29 +23,14 @@ namespace Banquetes
             InitializeComponent();
             deAdmin = true;
             llenarReciboDS();
+            llenarMenuListView();
         }
         public Recibo(int folio)
         {
             deAdmin = false;
             InitializeComponent();
             llenarReciboDB(folio);
-
-        }
-        private void rellenarCampos() { 
-            ClienteClase cli = ClienteClase.ObtenerCliente();
-            lblTelCliente.Text = cli.Telefono;
-            lblNombreCliente.Text = cli.Nombre + " " + cli.ApPaterno + " " + cli.ApMaterno;
-            lblEmailCliente.Text = cli.Email;
-            EventoClase eve = EventoClase.Evento;
-            lblNombreEvento.Text = eve.NombreEvento;
-            lblFechaEvento.Text = eve.FechaEvento.ToShortDateString();
-            lblHoraEvento.Text = eve.HoraEvento.ToString();
-            ReciboClase rec = new ReciboClase();
-            lblFolio.Text = rec.ObtenerFolio().ToString();
-            lblDireccionEvento.Text = eve.Calle + " " + eve.Numero +" Colonia " + eve.Colonia+" Cp: "+ eve.Cp;
-            lblFechaRecibo.Text = DateTime.Now.ToShortDateString();
-
-            
+            llenarMenuListView();
         }
 
         #region PaintPanels
@@ -107,21 +92,21 @@ namespace Banquetes
         {
 
         }
-
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
 
             ReciboClase recibo = new ReciboClase();
-                    recibo.GuardarRecibo();
-                    Inicio inicio = new Inicio();
-                    inicio.Show();
-                    this.Hide();
-                }
+            recibo.GuardarRecibo();
+            Inicio inicio = new Inicio();
+            inicio.Show();
+            this.Close();
+        }
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
-            Banquetes.Inicio.evento.Show();
-            this.Hide();
+            Evento ev = new Evento();
+            ev.Show();
+            this.Close();
         }
 
         private void llenarReciboDB(int folio)
@@ -136,28 +121,47 @@ namespace Banquetes
             lblNombreEvento.Text = data.Rows[0]["nombre"].ToString();
             lblFechaEvento.Text = Convert.ToDateTime(data.Rows[0]["fechaEvento"]).ToShortDateString();
             lblHoraEvento.Text = data.Rows[0]["hora"].ToString();
-            lblDireccionEvento.Text = data.Rows[0]["calle"].ToString() + " " + data.Rows[0]["numero"].ToString() +
-                " " + data.Rows[0]["colonia"].ToString() + " " + data.Rows[0]["cp"].ToString();
-            lblSubtotal.Text = "$" + Convert.ToInt32(data.Rows[0]["subtotal"]).ToString();
+            lblDireccionEvento.Text = data.Rows[0]["calle"].ToString() + ", " + data.Rows[0]["numero"].ToString() +
+                ", " + data.Rows[0]["colonia"].ToString() + ", " + data.Rows[0]["cp"].ToString();
+            lblSubtotal.Text = "$" + Convert.ToInt32(data.Rows[0]["subtotal"]).ToString() + ".00";
             lblIva.Text = "$" + Convert.ToInt32(data.Rows[0]["iva"]).ToString();
             lblTotal.Text = "$" + Convert.ToInt32(data.Rows[0]["total"]).ToString();
         }
 
         private void llenarReciboDS()
         {
-            ClienteClase cli = ClienteClase.ObtenerCliente();
-            lblTelCliente.Text = cli.Telefono;
-            lblNombreCliente.Text = cli.Nombre + " " + cli.ApPaterno + " " + cli.ApMaterno;
-            lblEmailCliente.Text = cli.Email;
-            EventoClase eve = EventoClase.LlamarEvento();
-            lblNombreEvento.Text = eve.NombreEvento;
-            lblFechaEvento.Text = eve.FechaEvento.ToShortDateString();
-            lblHoraEvento.Text = eve.HoraEvento.ToString();
-            ReciboClase rec = new ReciboClase();
-            lblFolio.Text = rec.ObtenerFolio().ToString();
-            lblDireccionEvento.Text = eve.Calle + " " + eve.Numero + " Colonia " + eve.Colonia + " Cp: " + eve.Cp;
-            lblFechaRecibo.Text = DateTime.Now.ToShortDateString();
+            MenuClase menu = new MenuClase();
+
+            ReciboClase.recibo.Subtotal = Convert.ToDouble(menu.CalcularPrecioMenu());
+            ReciboClase.recibo.Subtotal *= InvitadoClase.lstInvitados.Count;
+            ReciboClase.recibo.Iva = ReciboClase.recibo.Subtotal * 0.16;
+            ReciboClase.recibo.Total = ReciboClase.recibo.Iva + ReciboClase.recibo.Subtotal;
+            lblFolio.Text = EventoClase.Evento.FolioEvento.ToString();
+            lblFechaRecibo.Text = DateTime.Today.ToShortDateString();
+            lblNombreCliente.Text = ClienteClase.Cliente.Nombre + " " + ClienteClase.Cliente.ApPaterno + " " + ClienteClase.Cliente.ApMaterno;
+            lblTelCliente.Text = ClienteClase.Cliente.Telefono;
+            lblEmailCliente.Text = ClienteClase.Cliente.Email;
+            lblNombreEvento.Text = EventoClase.Evento.NombreEvento;
+            lblFechaEvento.Text = EventoClase.Evento.FechaEvento.ToShortDateString();
+            lblHoraEvento.Text = EventoClase.Evento.HoraEvento;
+            lblDireccionEvento.Text = EventoClase.Evento.Calle + ", " + EventoClase.Evento.Numero + ", " + EventoClase.Evento.Colonia
+                + ", " + EventoClase.Evento.Cp;
+            lblSubtotal.Text = "$" + ReciboClase.recibo.Subtotal.ToString();
+            lblIva.Text = "$" + ReciboClase.recibo.Iva.ToString();
+            lblTotal.Text = "$" + ReciboClase.recibo.Total.ToString();
         }
-#endregion
+
+        private void llenarMenuListView()
+        {
+            List<MenuClase> menuCliente = MenuClase.llamarMenuCliente();
+            List<MenuClase.Entrada> entradas = MenuClase.llamarEntradas();
+            lstvMenu.Items.Clear();
+            foreach (MenuClase item in menuCliente)
+            {
+                string[] row = { (item.Porciones.ToString()), "$" + ((int)entradas[item.IdEntrada - 1].precioUnit * item.Porciones).ToString() };
+                lstvMenu.Items.Add(entradas[item.IdEntrada - 1].nombre).SubItems.AddRange(row);
+            }
+        }
+        #endregion
     }
 }

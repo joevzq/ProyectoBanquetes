@@ -12,84 +12,68 @@ namespace Banquetes.Clases
 {
     class ReciboClase
     {
+        public static bool nuevo; //Si es true, se inserta un nuevo evento a la base de datos, si es false, se modifica un evento existente.
+        public static ReciboClase recibo = new ReciboClase();
+
         #region Variables
-        public int NumeroFolio;
+
+        private double subtotal;
+        public double Subtotal
+        {
+            get { return subtotal; }
+            set { subtotal = value; }
+        }
+        
+        private double iva;
+        public double Iva
+        {
+            get { return iva; }
+            set { iva = value; }
+        }
+
+        private double total;
+        public double Total
+        {
+            get { return total; }
+            set { total = value; }
+        }
         #endregion
+
         #region Metodos
         public void GuardarRecibo()
         {
-            EventoClase evento = EventoClase.LlamarEvento();
+            EventoClase evento = new EventoClase();
+            evento.GuardarEvento();
+            MenuClase menu = new MenuClase();
+            menu.GuardarMenu();
+            InvitadoClase inv = new InvitadoClase();
+            inv.GuardarInvitados();
+            ClienteClase cli = new ClienteClase();
+            cli.GuardarCliente();
+
+            string proc;
+            proc = nuevo ? "proc_setRecibo" : "proc_updateRecibo";
+
             Estructura objElementos = new Estructura();
-            objElementos.Sentencia = "AddEvento";
+            objElementos.Sentencia = proc;
 
             objElementos.Parametros = new SqlParameter[]{
-                new SqlParameter("nombre", SqlDbType.NVarChar, 30),
-                new SqlParameter("fecha", SqlDbType.Date),
-                new SqlParameter("hora", SqlDbType.NVarChar, 5),
-                new SqlParameter("calle", SqlDbType.NVarChar, 50),
-                new SqlParameter("numero", SqlDbType.NVarChar, 5),
-                new SqlParameter("colonia", SqlDbType.NVarChar, 50),
-                new SqlParameter("cp", SqlDbType.NVarChar, 5),
-                new SqlParameter("status", SqlDbType.Int),
-                new SqlParameter("comentario", SqlDbType.Text)
-            };
-            objElementos.Valores = new List<object>() { evento.NombreEvento, evento.FechaEvento.ToShortDateString(), evento.HoraEvento, evento.Calle, evento.Numero, evento.Colonia, evento.Cp, 1, evento.Comentario};
-            Operaciones objOperaciones = new Operaciones();
-            objOperaciones.Elemento = objElementos;
-            objOperaciones.AgregarInfo();
-
-
-            ClienteClase cliente = ClienteClase.Cliente;
-                objElementos.Sentencia = "AddCliente";
-
-                objElementos.Parametros = new SqlParameter[]{
-                new SqlParameter("folio", SqlDbType.Int),
-                new SqlParameter("nombre", SqlDbType.NVarChar, 50),
-                new SqlParameter("aPaterno", SqlDbType.NVarChar, 50),
-                new SqlParameter("aMaterno", SqlDbType.NVarChar, 50),
-                new SqlParameter("telefono", SqlDbType.NVarChar, 50),
-                new SqlParameter("email", SqlDbType.NVarChar, 50)
-            };
-                objElementos.Valores = new List<object>() { EventoClase.LlamarEvento().FolioEvento, cliente.Nombre, cliente.ApPaterno, cliente.ApMaterno, cliente.Telefono, cliente.Email };
-
-
-                objOperaciones.Elemento = objElementos;
-                objOperaciones.AgregarInfo();
-
-                List<InvitadoClase> inv = InvitadoClase.lstInvitados;
-                for (int i = 0; i < inv.Count; i++)
-                {
-                    objElementos.Sentencia = "AddInvitado";
-
-                    objElementos.Parametros = new SqlParameter[]{
-                new SqlParameter("folio", SqlDbType.Int),
-                new SqlParameter("nombre", SqlDbType.NVarChar, 50),
-                new SqlParameter("email", SqlDbType.NVarChar, 50)
-                };
-                    objElementos.Valores = new List<object>() { EventoClase.LlamarEvento().FolioEvento, inv[i].Nombre, inv[i].Email };
-
-                    objOperaciones.Elemento = objElementos;
-                    objOperaciones.AgregarInfo();
-                }
-
-                objElementos.Sentencia = "AddRecibo";
-
-                objElementos.Parametros = new SqlParameter[]{
                 new SqlParameter("folio", SqlDbType.Int),
                 new SqlParameter("fecha", SqlDbType.NVarChar, 50),
                 new SqlParameter("subtotal", SqlDbType.NVarChar, 50),
                 new SqlParameter("total", SqlDbType.NVarChar, 50),
                 new SqlParameter("iva", SqlDbType.NVarChar, 50)
             };
-                objElementos.Valores = new List<object>() { EventoClase.LlamarEvento().FolioEvento, DateTime.Now.ToShortDateString() };
+            objElementos.Valores = new List<object>() { EventoClase.Evento.FolioEvento, DateTime.Now.ToShortDateString(), recibo.subtotal, recibo.iva, recibo.total};
 
+            Operaciones objOperaciones = new Operaciones();
 
-                objOperaciones.Elemento = objElementos;
-                objOperaciones.AgregarInfo();
+            objOperaciones.Elemento = objElementos;
+            objOperaciones.AgregarInfo();
 
-
-  
         }
+
+
         public DataTable ConsultarRecibo(int folio)
         {
             string tabla = "Eventos";
@@ -104,16 +88,17 @@ namespace Banquetes.Clases
             DataTable data = objOperaciones.ObtenerDataTable(tabla);
             return data;
         }
+        
+        /*Obtener último folio de la base de datos para ponerlo en el recibo*/
         public int ObtenerFolio() {
             Estructura objElementos = new Estructura();
-            objElementos.Sentencia = "GetMaxFolio";
+            objElementos.Sentencia = "proc_getMaxFolio";
 
             objElementos.Parametros = new SqlParameter[]{};
             objElementos.Valores = new List<object>() { };
             Operaciones objOperaciones = new Operaciones();
             objOperaciones.Elemento = objElementos;
-            int folio = (objOperaciones.ObtenerScalar());
-            EventoClase.LlamarEvento().FolioEvento = folio;
+            int folio = (objOperaciones.ObtenerScalar()) + 1;
             return folio;
         }
         #endregion
