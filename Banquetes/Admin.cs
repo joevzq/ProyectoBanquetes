@@ -100,27 +100,30 @@ namespace Banquetes
             string evento;
             if (lstBool)
             {
-                lstBool = false;
-                if (((ListBox)sender).Name == "lstPorRealizar")
+                if (index != -1)
                 {
-                    lstCancelados.ClearSelected();
-                    lstRealizados.ClearSelected();
-                    evento = lstPorRealizar.Items[index].ToString();
+                    lstBool = false;
+                    if (((ListBox)sender).Name == "lstPorRealizar")
+                    {
+                        lstCancelados.ClearSelected();
+                        lstRealizados.ClearSelected();
+                        evento = lstPorRealizar.Items[index].ToString();
+                    }
+                    else if (((ListBox)sender).Name == "lstRealizados")
+                    {
+                        lstCancelados.ClearSelected();
+                        lstPorRealizar.ClearSelected();
+                        evento = lstRealizados.Items[index].ToString();
+                    }
+                    else
+                    {
+                        lstPorRealizar.ClearSelected();
+                        lstRealizados.ClearSelected();
+                        evento = lstCancelados.Items[index].ToString();
+                    }
+                    getFolio(evento);
+                    lstBool = true;
                 }
-                else if (((ListBox)sender).Name == "lstRealizados")
-                {
-                    lstCancelados.ClearSelected();
-                    lstPorRealizar.ClearSelected();
-                    evento = lstRealizados.Items[index].ToString();
-                }
-                else
-                {
-                    lstPorRealizar.ClearSelected();
-                    lstRealizados.ClearSelected();
-                    evento = lstCancelados.Items[index].ToString();
-                }
-                getFolio(evento);
-                lstBool = true;
             }
         }
 

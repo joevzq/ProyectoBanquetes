@@ -61,8 +61,8 @@ namespace Banquetes.Clases
                 new SqlParameter("folio", SqlDbType.Int),
                 new SqlParameter("fecha", SqlDbType.NVarChar, 50),
                 new SqlParameter("subtotal", SqlDbType.NVarChar, 50),
-                new SqlParameter("total", SqlDbType.NVarChar, 50),
-                new SqlParameter("iva", SqlDbType.NVarChar, 50)
+                new SqlParameter("iva", SqlDbType.NVarChar, 50),
+                new SqlParameter("total", SqlDbType.NVarChar, 50)
             };
             objElementos.Valores = new List<object>() { EventoClase.Evento.FolioEvento, DateTime.Now.ToShortDateString(), recibo.subtotal, recibo.iva, recibo.total};
 

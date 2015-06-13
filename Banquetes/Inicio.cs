@@ -73,5 +73,11 @@ namespace Banquetes
             Application.Exit();
         }
 
+        private void Inicio_Load(object sender, EventArgs e)
+        {
+            MenuClase menuCl = new MenuClase();
+            menuCl.ObtenerMenuCompleto();
+        }
+
     }
 }

@@ -306,7 +306,7 @@
             // lblSubtotal
             // 
             this.lblSubtotal.AutoSize = true;
-            this.lblSubtotal.Location = new System.Drawing.Point(464, 381);
+            this.lblSubtotal.Location = new System.Drawing.Point(445, 381);
             this.lblSubtotal.Name = "lblSubtotal";
             this.lblSubtotal.Size = new System.Drawing.Size(31, 13);
             this.lblSubtotal.TabIndex = 23;
@@ -333,7 +333,7 @@
             // lblIva
             // 
             this.lblIva.AutoSize = true;
-            this.lblIva.Location = new System.Drawing.Point(464, 398);
+            this.lblIva.Location = new System.Drawing.Point(445, 398);
             this.lblIva.Name = "lblIva";
             this.lblIva.Size = new System.Drawing.Size(31, 13);
             this.lblIva.TabIndex = 26;
@@ -360,7 +360,7 @@
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(458, 421);
+            this.lblTotal.Location = new System.Drawing.Point(439, 421);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(37, 13);
             this.lblTotal.TabIndex = 29;

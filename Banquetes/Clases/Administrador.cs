@@ -1,5 +1,9 @@
-﻿using System;
+﻿using Intro_POO.Classes;
+using Nivel_de_acceso.Clases;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,10 +46,26 @@ namespace Banquetes.Class
 
        //Método para verificar existencia de credencial
 
-       public Administrador(string usr, string pwd) 
+       public int ChecarUsuario(string usr, string pwd) 
        {
-           usuario = usr;
-           password = pwd;
+           Credencial objCredential = new Credencial(usr, pwd); //Create new Credential object with override method and encapsulate password
+           Estructura objElements = new Estructura(); //Create new Estructura object
+
+           //Query to select user level, username and password from database
+           objElements.Sentencia = "proc_getCountAdmin";
+
+           //Create new SqlParameters
+           objElements.Parametros = new SqlParameter[]{
+                        new SqlParameter("usr", SqlDbType.VarChar, 50),
+                        new SqlParameter("pwd", SqlDbType.VarChar, 50)
+                    };
+
+           //Don't really understand this line
+           objElements.Valores = new List<object>() { objCredential.usuario, objCredential.Password };
+
+           Operaciones objOperaciones = new Operaciones();
+           objOperaciones.Elemento = objElements; 
+           return objOperaciones.ObtenerScalar(); 
        }
        
        #endregion

@@ -32,7 +32,6 @@ namespace Banquetes
         public Menu()
         {
             InitializeComponent();
-            menuCl.ObtenerMenuCompleto();
             crearArray();
             llenarControles();
             actualizarListView();
@@ -47,7 +46,6 @@ namespace Banquetes
         public Menu(int folio)
         {
             InitializeComponent();
-            menuCl.ObtenerMenuCompleto();
             crearArray();
             llenarControles();
             menuCl.ObtenerMenuCliente(folio);

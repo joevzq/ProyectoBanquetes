@@ -42,25 +42,18 @@ namespace Banquetes
         {
             string user = txtUsuario.Text;
             string password = txtContra.Text;
+            Administrador admin = new Administrador();
+            int checarUsuario = admin.ChecarUsuario(user, password);
 
-            try
+            if (checarUsuario > 0)
             {
-                Administrador objAdmin = new Administrador(user, password); /// crea nueva credencial
-                Estructura objElementos = new Estructura();///nueva estructura
-                objElementos.Sentencia = "";
+                Admin adm = new Admin();
+                adm.Show();
+                this.Hide();
             }
-            catch (Exception) 
-            {
-               
-                MessageBox.Show("Lo sentimos, algo ha salido mal");
-
-            }
+            else
+                MessageBox.Show("Usuario y/o contraseña incorrectos.");
             
-            ///concder ingreso
-            Admin admin = new Admin();
-            admin.Show();
-            this.Hide();
-            ///acceder... 
         }
     }
 }

@@ -74,6 +74,7 @@
     <Compile Include="Cliente.Designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Conexiones\Credencial.cs" />
     <Compile Include="Conexiones\Estructura.cs" />
     <Compile Include="Conexiones\Operaciones.cs" />
     <Compile Include="Entrada.cs">

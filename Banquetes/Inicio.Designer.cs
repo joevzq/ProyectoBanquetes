@@ -156,6 +156,7 @@
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Banquetes IntelliJED";
+            this.Load += new System.EventHandler(this.Inicio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picCancelar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picModificar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCrear)).EndInit();

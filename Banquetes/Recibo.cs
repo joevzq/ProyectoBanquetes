@@ -18,6 +18,7 @@ namespace Banquetes
     public partial class Recibo : Form
     {
         private bool deAdmin;
+
         public Recibo()
         {
             InitializeComponent();
@@ -25,12 +26,18 @@ namespace Banquetes
             llenarReciboDS();
             llenarMenuListView();
         }
+
+        /*Constructor para llamar recibo desde ventana de admin*/
         public Recibo(int folio)
         {
+            MenuClase menu = new MenuClase();
+            menu.ObtenerMenuCliente(folio);
             deAdmin = false;
             InitializeComponent();
             llenarReciboDB(folio);
             llenarMenuListView();
+            btnAnterior.Enabled = false;
+            btnConfirmar.Enabled = false;
         }
 
         #region PaintPanels
@@ -109,6 +116,7 @@ namespace Banquetes
             this.Close();
         }
 
+        /*Llenar recibo con información directa de la base de datos*/
         private void llenarReciboDB(int folio)
         {
             ReciboClase recCl = new ReciboClase();
@@ -124,10 +132,11 @@ namespace Banquetes
             lblDireccionEvento.Text = data.Rows[0]["calle"].ToString() + ", " + data.Rows[0]["numero"].ToString() +
                 ", " + data.Rows[0]["colonia"].ToString() + ", " + data.Rows[0]["cp"].ToString();
             lblSubtotal.Text = "$" + Convert.ToInt32(data.Rows[0]["subtotal"]).ToString() + ".00";
-            lblIva.Text = "$" + Convert.ToInt32(data.Rows[0]["iva"]).ToString();
-            lblTotal.Text = "$" + Convert.ToInt32(data.Rows[0]["total"]).ToString();
+            lblIva.Text = "$" + Convert.ToDouble(data.Rows[0]["iva"]).ToString();
+            lblTotal.Text = "$" + Convert.ToDouble(data.Rows[0]["total"]).ToString();
         }
 
+        /*Llenar recibo con estructuras de datos locales*/
         private void llenarReciboDS()
         {
             MenuClase menu = new MenuClase();
